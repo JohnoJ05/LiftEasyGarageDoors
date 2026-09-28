@@ -28,18 +28,18 @@
 
   /* Layout: one container and one fluid gutter for every section */
   --container:1400px;
-  --gutter:clamp(1.25rem,4vw,3.5rem);
-  --section-y:clamp(3.5rem,8vw,7rem);
+  --gutter:clamp(1.5rem,4vw,3.5rem);
+  --section-y:clamp(4rem,8vw,7rem);
   --section-y-sm:clamp(2.5rem,6vw,4.5rem);
-  --stack:clamp(1.75rem,4vw,3rem);
+  --stack:clamp(2.25rem,4vw,3rem);
 
   /* Type scale (fluid headings) */
-  --fs-display:clamp(2.75rem,6.2vw,5.75rem);
+  --fs-display:clamp(2.625rem,6.2vw,5.75rem);
   --fs-page-title:clamp(2.5rem,5.2vw,4.75rem);
-  --fs-cta:clamp(2.5rem,8vw,7rem);
-  --fs-cta-compact:clamp(2.25rem,5.5vw,4.5rem);
-  --fs-h2-xl:clamp(2.125rem,5vw,3.75rem);
-  --fs-h2-lg:clamp(2rem,4.6vw,3.5rem);
+  --fs-cta:clamp(2.25rem,8vw,7rem);
+  --fs-cta-compact:clamp(2rem,5.5vw,4.5rem);
+  --fs-h2-xl:clamp(1.875rem,5vw,3.75rem);
+  --fs-h2-lg:clamp(1.875rem,4.6vw,3.5rem);
   --fs-h2-md:clamp(1.75rem,3.6vw,2.75rem);
   --fs-lede:clamp(1.1875rem,2.2vw,1.5rem);
   --fs-body-lg:1.125rem;
@@ -72,11 +72,10 @@ svg{display:block}
 .header__inner{padding-block:12px;display:flex;align-items:center;gap:10px}
 .brand{display:flex;flex-direction:column;justify-content:center;min-height:var(--tap);line-height:1;margin-right:auto;min-width:0}
 .brand__name{font-weight:800;font-size:clamp(1.125rem,2.2vw,1.375rem);color:var(--yellow);letter-spacing:-.01em;text-transform:uppercase}
-.brand__sub{display:flex;flex-wrap:wrap;column-gap:.4em;font-weight:800;font-size:.75rem;color:var(--white);letter-spacing:.12em;text-transform:uppercase;margin-top:3px}
+.brand__sub{display:flex;flex-wrap:wrap;column-gap:.4em;font-weight:800;font-size:.75rem;color:var(--white);letter-spacing:clamp(.06em,.19vw,.12em);text-transform:uppercase;margin-top:3px}
 .brand__sub > span{white-space:nowrap}
-.brand__dot{display:none}
-@media (max-width:479px){.brand__sub{flex-direction:column;row-gap:2px}}
-@media (min-width:480px){.brand__dot{display:inline}}
+@media (max-width:399px){.brand__sub{flex-direction:column;row-gap:2px}.brand__dot{display:none}}
+
 .nav{display:none;gap:4px;align-items:center}
 .nav a{color:var(--white);font-weight:600;font-size:.875rem;padding:12px;white-space:nowrap}
 .nav a:hover,.nav a[aria-current="page"]{color:var(--yellow)}
@@ -410,4 +409,56 @@ a.tile:hover{background:#fffbe0}
 @media (min-width:768px){
   .mobile-call{display:none}
   .footer{padding-bottom:0}
+}
+
+/* ---------- Phones: a calmer, shorter page ----------
+ * Below 768px the fixed call bar is always on screen, so repeated phone
+ * buttons, duplicate facts and decorative extras are dropped, and spacing is
+ * loosened. Everything removed here is still shown elsewhere on the page. */
+@media (max-width:767px){
+  .header__call{display:none}
+
+  /* Hero: one-line label, stacked full-width buttons, no byline/tags (repeated in the header and service cards) */
+  .hero__grid{padding-block:2.25rem 1.5rem;grid-template-areas:"copy" "media"}
+  .hero__media{margin-bottom:22px}
+  .hero__copy{gap:18px}
+  .hero__kicker-text > span:last-child,.hero__meta{display:none}
+  .hero__lede{font-size:1.125rem}
+  .hero__ctas{flex-direction:column;align-items:stretch;gap:10px}
+  .call-big{max-width:none;flex:0 0 auto}
+  .btn-outline{min-height:52px;padding:12px 20px}
+  .hero__badge{padding:8px 12px}
+  .hero__badge strong{font-size:1.25rem}
+  .hero__badge span{font-size:.6875rem}
+
+  /* Trust strip: 2x2 of headlines. "30+ years" is already on the hero badge;
+     "Repairs only" keeps its explanation */
+  .trust__grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .trust__item:first-child{display:none}
+  .trust__item:last-child:nth-child(odd){grid-column:auto}
+  .trust__item{padding:14px 16px}
+  .trust__item strong{font-size:1.125rem}
+  .trust__item span{display:none}
+  .trust__item:last-child span{display:block}
+
+  /* Tighter cards and lists */
+  .card{padding:22px}
+  .card__tick{font-size:.9375rem}
+  .problems div{padding:13px 16px;font-size:.9375rem}
+  .fast__copy p,.about__copy > p,.intro{font-size:1rem}
+  .services .section-head{padding-bottom:24px}
+
+  /* Repeated call bars and duplicate facts */
+  .fast .call-bar,.brands__cta,.about .note,.area__tags,.cta__facts{display:none}
+
+  /* About teaser photo: a set shape instead of a tall block */
+  .about__photo{min-height:0;aspect-ratio:16/10}
+
+  /* Brand logos: compact 3x2 grid, logos only */
+  .logos{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .logo{min-height:0;padding:14px 10px}
+  .logo img{height:44px}
+  .logo span{display:none}
+
+  .area__head h2{font-size:1.5rem}
 }
