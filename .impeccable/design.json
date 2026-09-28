@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-28T00:00:00Z",
+  "title": "Design System: Lift Easy Garage Doors",
+  "extensions": {
+    "colorMeta": {
+      "site-yellow": { "role": "primary", "displayName": "Site Yellow", "canonical": "#FFD400", "tonalRamp": ["#3d3200", "#665400", "#997f00", "#cca900", "#FFD400", "#ffdf4d", "#ffe985", "#fff6c2"] },
+      "garage-black": { "role": "neutral", "displayName": "Garage Black", "canonical": "#111111", "tonalRamp": ["#000000", "#0a0a0a", "#111111", "#262626", "#3d3d3d", "#6b6560", "#a8a4a0", "#f3f2f2"] },
+      "paper": { "role": "neutral", "displayName": "Paper", "canonical": "#f3f2f2" },
+      "white": { "role": "neutral", "displayName": "White", "canonical": "#ffffff" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Homepage hero h1 only." },
+      "headline": { "displayName": "Headline", "purpose": "Section h2 headings." },
+      "title": { "displayName": "Title", "purpose": "Card and tile h3 headings; the one heading level in sentence case." },
+      "body": { "displayName": "Body", "purpose": "Paragraph copy, capped at 46-58ch." },
+      "label": { "displayName": "Label", "purpose": "Eyebrows, chips, button text, form labels." }
+    },
+    "shadows": [],
+    "motion": [],
+    "breakpoints": [
+      { "name": "narrow-phone-to-phone", "value": "360px" },
+      { "name": "phone-to-large-phone", "value": "480px" },
+      { "name": "phone-to-tablet", "value": "768px" },
+      { "name": "tablet-to-laptop", "value": "1024px" },
+      { "name": "laptop-to-desktop", "value": "1200px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Oversized call-to-action, typically a phone link, with a bold label line and a larger number line.",
+      "html": "<a href=\"tel:07939500544\" class=\"ds-btn-primary\"><svg width=\"22\" height=\"22\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z\"/></svg><span class=\"ds-btn-primary__text\"><span class=\"ds-btn-primary__label\">Call Steve</span><span class=\"ds-btn-primary__num\">07939 500544</span></span></a>",
+      "css": ".ds-btn-primary { display: flex; align-items: center; gap: 14px; background: #FFD400; color: #111111; padding: 16px 22px; min-height: 64px; border-radius: 0; font-family: Archivo, system-ui, sans-serif; } .ds-btn-primary__text { display: flex; flex-direction: column; line-height: 1.05; } .ds-btn-primary__label { font-size: 0.8125rem; font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase; } .ds-btn-primary__num { font-size: 1.5rem; font-weight: 800; letter-spacing: -0.01em; white-space: nowrap; } .ds-btn-primary:hover { background: #ffe14d; } .ds-btn-primary:focus-visible { outline: 3px solid #FFD400; outline-offset: 2px; }"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Secondary action on a dark background; fills solid on hover.",
+      "html": "<a href=\"#\" class=\"ds-btn-outline\"><span>Get in touch</span><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14\"/><path d=\"m12 5 7 7-7 7\"/></svg></a>",
+      "css": ".ds-btn-outline { display: flex; align-items: center; justify-content: space-between; gap: 14px; border: 2px solid #ffffff; color: #ffffff; padding: 16px 22px; min-height: 64px; border-radius: 0; font-weight: 800; font-size: 0.9375rem; letter-spacing: 0.08em; text-transform: uppercase; font-family: Archivo, system-ui, sans-serif; } .ds-btn-outline:hover { background: #ffffff; color: #111111; } .ds-btn-outline:focus-visible { outline: 3px solid #FFD400; outline-offset: 2px; }"
+    },
+    {
+      "name": "Text Link",
+      "kind": "custom",
+      "refersTo": "more-link",
+      "description": "Chrome-free link: bold uppercase label with a yellow underline offset below the text.",
+      "html": "<a href=\"#\" class=\"ds-text-link\"><span>More about Steve</span><svg width=\"16\" height=\"16\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14\"/><path d=\"m12 5 7 7-7 7\"/></svg></a>",
+      "css": ".ds-text-link { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; font-weight: 800; font-size: 0.875rem; letter-spacing: 0.08em; text-transform: uppercase; text-decoration: underline 2px #FFD400; text-underline-offset: 8px; color: #111111; font-family: Archivo, system-ui, sans-serif; } .ds-text-link:hover { color: #6b6560; }"
+    },
+    {
+      "name": "Card",
+      "kind": "card",
+      "refersTo": "card",
+      "description": "Light service card with tick-marked feature list and a trailing more-link.",
+      "html": "<a href=\"#\" class=\"ds-card\"><div class=\"ds-card__top\"><span class=\"ds-card__letter\">B</span></div><h3 class=\"ds-card__title\">Garage door servicing</h3><p class=\"ds-card__text\">Inspection, adjustment and servicing of your existing door.</p><span class=\"ds-card__more\"><span>Servicing</span><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14\"/><path d=\"m12 5 7 7-7 7\"/></svg></span></a>",
+      "css": ".ds-card { background: #ffffff; color: #111111; padding: clamp(24px, 3vw, 36px); display: flex; flex-direction: column; gap: 18px; border-radius: 0; font-family: Archivo, system-ui, sans-serif; } .ds-card:hover { background: #fffbe0; } .ds-card__letter { font-size: 0.8125rem; font-weight: 800; letter-spacing: 0.12em; } .ds-card__title { font-size: clamp(1.5rem, 2.4vw, 1.75rem); font-weight: 800; line-height: 1.05; letter-spacing: -0.02em; margin: 0; } .ds-card__text { font-size: 1rem; line-height: 1.5; margin: 0; } .ds-card__more { margin-top: auto; display: flex; align-items: center; gap: 8px; min-height: 44px; font-weight: 800; font-size: 0.875rem; letter-spacing: 0.08em; text-transform: uppercase; padding-top: 14px; border-top: 2px solid #111111; }"
+    },
+    {
+      "name": "Card Dark",
+      "kind": "card",
+      "refersTo": "card-dark",
+      "description": "Inverted card used to make the lead offering in a set visually dominant.",
+      "html": "<a href=\"#\" class=\"ds-card-dark\"><div class=\"ds-card-dark__top\"><span class=\"ds-card-dark__letter\">A</span></div><h3 class=\"ds-card-dark__title\">Garage door repairs</h3><div class=\"ds-card-dark__tick\">Springs and cables</div><span class=\"ds-card-dark__more\"><span>Garage door repairs</span><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M5 12h14\"/><path d=\"m12 5 7 7-7 7\"/></svg></span></a>",
+      "css": ".ds-card-dark { background: #111111; color: #ffffff; padding: clamp(24px, 3vw, 36px); display: flex; flex-direction: column; gap: 18px; border-radius: 0; font-family: Archivo, system-ui, sans-serif; } .ds-card-dark:hover { background: #1c1c1c; } .ds-card-dark__letter { color: #FFD400; font-size: 0.8125rem; font-weight: 800; letter-spacing: 0.12em; } .ds-card-dark__title { font-size: clamp(1.5rem, 2.4vw, 1.75rem); font-weight: 800; line-height: 1.05; letter-spacing: -0.02em; margin: 0; } .ds-card-dark__tick { font-size: 1rem; padding-top: 10px; border-top: 1px solid #333333; } .ds-card-dark__more { margin-top: auto; display: flex; align-items: center; gap: 8px; min-height: 44px; font-weight: 800; font-size: 0.875rem; letter-spacing: 0.08em; text-transform: uppercase; padding-top: 14px; border-top: 2px solid #333333; color: #FFD400; }"
+    },
+    {
+      "name": "Input Field",
+      "kind": "input",
+      "refersTo": "form-input",
+      "description": "Enquiry form field: square, high-contrast border, yellow focus outline.",
+      "html": "<label class=\"ds-field\"><span>Name</span><input class=\"ds-field__input\" placeholder=\"Your name\"></label>",
+      "css": ".ds-field { display: flex; flex-direction: column; gap: 6px; font-size: 0.875rem; font-weight: 800; font-family: Archivo, system-ui, sans-serif; color: #111111; } .ds-field__input { width: 100%; border: 2px solid #111111; border-radius: 0; padding: 12px 14px; min-height: 48px; font-size: 1rem; font-weight: 400; background: #ffffff; color: #111111; } .ds-field__input:focus-visible { outline: 3px solid #FFD400; outline-offset: 0; }"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "header-nav",
+      "description": "Sticky dark header: brand mark, inline nav (desktop) or hamburger (mobile), and a yellow call button.",
+      "html": "<header class=\"ds-header\"><a href=\"#\" class=\"ds-header__brand\"><span class=\"ds-header__name\">Lift Easy</span></a><nav class=\"ds-header__nav\"><a href=\"#\" aria-current=\"page\">Repairs</a><a href=\"#\">Servicing</a><a href=\"#\">Contact</a></nav><a href=\"tel:07939500544\" class=\"ds-header__call\">07939 500544</a></header>",
+      "css": ".ds-header { background: #111111; border-bottom: 2px solid #FFD400; display: flex; align-items: center; gap: 24px; padding: 12px 24px; font-family: Archivo, system-ui, sans-serif; } .ds-header__brand { color: #FFD400; font-weight: 800; text-transform: uppercase; margin-right: auto; } .ds-header__nav { display: flex; gap: 4px; } .ds-header__nav a { color: #ffffff; font-weight: 600; font-size: 0.875rem; padding: 12px; } .ds-header__nav a:hover, .ds-header__nav a[aria-current=\"page\"] { color: #FFD400; } .ds-header__call { background: #FFD400; color: #111111; font-weight: 800; font-size: 0.9375rem; padding: 0 16px; min-height: 44px; display: flex; align-items: center; } .ds-header__call:hover { background: #ffe14d; }"
+    },
+    {
+      "name": "Fact Strip",
+      "kind": "custom",
+      "refersTo": "trust-strip",
+      "description": "Signature component: a grid of stamped, bordered fact tiles separated by thin dark gaps rather than prose.",
+      "html": "<div class=\"ds-fact-strip\"><div class=\"ds-fact-strip__item\"><strong>30+ years</strong><span>Experience with domestic garage doors</span></div><div class=\"ds-fact-strip__item\"><strong>Same-day</strong><span>Repair service</span></div></div>",
+      "css": ".ds-fact-strip { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px; background: #111111; font-family: Archivo, system-ui, sans-serif; } .ds-fact-strip__item { background: #FFD400; color: #111111; padding: 18px 24px; display: flex; flex-direction: column; gap: 4px; } .ds-fact-strip__item strong { font-size: 1.375rem; font-weight: 800; line-height: 1.1; letter-spacing: -0.02em; } .ds-fact-strip__item span { font-size: 0.875rem; font-weight: 600; line-height: 1.35; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Site Van Nameplate",
+    "overview": "This is the visual language of stencilled signage on the side of a work van, not a software product. Every surface reads as bold, load-bearing, and built to be understood at a glance from across a driveway: heavy uppercase Archivo type, hard black rules, and a single hazard-bright yellow that appears only where it means \"look here\" — a call button, a tick mark, a fact worth noticing. Nothing about the system is decorative; every line, border, and block of color is doing a structural job.\n\nThe system is deliberately flat and edged, never soft. There are no rounded corners anywhere in the implementation and no shadows — depth and separation come from hard 2px borders, dark-background \"grid dividers\" (thin gaps between white/yellow cells that read as mortar lines), and strong color blocking between ink-black and paper-white sections. The layout alternates full-bleed black bands (hero, fast-response, footer) with lighter paper/white bands (services, about, area), giving the page a stamped, sign-panel rhythm rather than a continuous scroll.\n\nMobile is treated as the primary reading device, not a shrunk desktop: the base CSS is phone-first, a fixed yellow call bar anchors the bottom of the screen below 768px, and a dedicated max-width:767px block actively removes repeated content rather than just shrinking type — the phone experience is edited down, not just resized.",
+    "keyCharacteristics": [
+      "Hazard-bright single accent color used sparingly and always with intent (calls, checkmarks, key facts)",
+      "Zero border-radius anywhere; every edge is a hard 90° corner",
+      "No shadows; separation comes from 2px borders and thin dark grid-line gaps between grouped cells",
+      "Heavy uppercase Archivo (weight 800) for all display type; tight, negative letter-spacing on large headings",
+      "Full-bleed alternating ink-black and paper/white section bands",
+      "Fluid type and spacing throughout via clamp(), not fixed breakpoint jumps",
+      "Phone view is content-edited (things removed), not just visually compressed"
+    ],
+    "rules": [
+      { "name": "The One Accent Rule", "body": "Site Yellow is the only saturated color in the system. If a second bright color is ever needed, that's a sign the hierarchy is unclear, not a sign to add a color.", "section": "colors" },
+      { "name": "The Shout-or-Speak Rule", "body": "Display, headline, label, and button text are always uppercase and heavy (weight 800) — they shout. Body copy and card/tile titles are sentence case and lighter — they speak. Nothing sits ambiguously between the two registers.", "section": "typography" },
+      { "name": "The No-Shadow Rule", "body": "Depth is never simulated with box-shadow. If something needs to feel separated or grouped, it gets a hard border or a background-color change — never a soft edge.", "section": "elevation" },
+      { "name": "The Square Corner Rule", "body": "border-radius: 0 everywhere, without exception. A rounded corner would read as software chrome, not signage.", "section": "shapes" }
+    ],
+    "dos": [
+      "Do keep Site Yellow rare — it should mark \"the thing to act on,\" never a general accent for decoration.",
+      "Do use square corners (0px radius) on every new element; a rounded corner is off-brand by construction.",
+      "Do convey grouping and separation with hard borders and 2px grid gaps, not shadows.",
+      "Do set headings, labels, and buttons in true uppercase with weight 800 and negative letter-spacing at large sizes.",
+      "Do treat the phone layout as an edited version of the page (removing duplicate content), not just a shrunk one — follow the pattern already established in the max-width:767px block in css/site.css.",
+      "Do size any primary call-to-action (especially phone actions) as an oversized, unmissable tap target — this is a trade site where the phone call is the entire conversion goal."
+    ],
+    "donts": [
+      "Don't add border-radius anywhere, including on images, badges, or form controls.",
+      "Don't add box-shadow for depth or hover \"lift\" — use a background-color or border change instead.",
+      "Don't introduce a second saturated accent color alongside Site Yellow.",
+      "Don't set body copy or card/tile titles in uppercase — that register is reserved for display type, labels, and buttons.",
+      "Don't let phone-width sections just shrink desktop content; actively decide what to cut, per the existing mobile block's own rule (\"everything removed here is still shown elsewhere on the page\")."
+    ]
+  }
+}

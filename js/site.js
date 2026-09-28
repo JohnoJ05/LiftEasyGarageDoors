@@ -6,6 +6,7 @@
   toggle.addEventListener('click', function () {
     var open = nav.classList.toggle('is-open');
     toggle.setAttribute('aria-expanded', String(open));
+    document.body.style.overflow = open ? 'hidden' : '';
   });
 })();
 

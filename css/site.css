@@ -81,7 +81,7 @@ svg{display:block}
 .nav a:hover,.nav a[aria-current="page"]{color:var(--yellow)}
 .nav-toggle{display:flex;align-items:center;justify-content:center;width:var(--tap);height:var(--tap);flex:none;padding:0;background:transparent;color:var(--white);border:2px solid var(--line-dark);cursor:pointer}
 .nav-toggle:hover{border-color:var(--yellow);color:var(--yellow)}
-.nav.is-open{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--ink);border-bottom:2px solid var(--yellow);padding:4px var(--gutter) 16px;max-height:calc(100vh - 70px);overflow-y:auto}
+.nav.is-open{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;gap:0;background:var(--ink);border-bottom:2px solid var(--yellow);padding:4px var(--gutter) 16px;min-height:calc(100vh - 70px);max-height:calc(100vh - 70px);overflow-y:auto}
 .nav.is-open a{padding:14px 0;font-size:1.0625rem;border-bottom:1px solid var(--line-dark)}
 .header__call{display:flex;align-items:center;justify-content:center;gap:10px;flex:none;background:var(--yellow);color:var(--ink);font-weight:800;font-size:.9375rem;min-width:var(--tap);min-height:var(--tap);padding:0 12px;white-space:nowrap}
 .header__call span{display:none}
@@ -231,8 +231,7 @@ a.card--dark:hover{background:#1c1c1c}
 .fast__copy p{font-size:var(--fs-body-lg);line-height:1.55;color:var(--soft);max-width:48ch;text-wrap:pretty}
 .fast__side{display:flex;flex-direction:column;gap:24px}
 .fast .more-link:hover{color:var(--yellow)}
-.problems{display:grid;grid-template-columns:minmax(0,1fr);gap:2px;background:var(--line-dark);border:2px solid var(--line-dark)}
-@media (min-width:480px){.problems{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.problems{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px;background:var(--line-dark);border:2px solid var(--line-dark)}
 .problems div{background:var(--ink);padding:16px 18px;display:flex;align-items:center;gap:12px;font-size:1rem;font-weight:600;line-height:1.3}
 .problems div::before{content:"";flex:none;width:10px;height:10px;background:var(--yellow)}
 @media (min-width:768px){.problems div{padding:18px 20px;font-size:1.0625rem}}
@@ -402,7 +401,7 @@ a.tile:hover{background:#fffbe0}
 }
 
 /* ---------- Mobile call bar (phones and tablets) ---------- */
-.mobile-call{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;align-items:center;justify-content:space-between;gap:12px;background:var(--yellow);color:var(--ink);padding:10px var(--gutter);padding-bottom:max(10px,env(safe-area-inset-bottom));min-height:60px;border-top:2px solid var(--ink)}
+.mobile-call{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:60;align-items:center;justify-content:space-between;gap:12px;background:var(--yellow);color:var(--ink);padding:10px var(--gutter);padding-bottom:max(10px,env(safe-area-inset-bottom));min-height:60px;border-top:4px solid var(--ink)}
 .mobile-call__label{display:flex;align-items:center;gap:12px;font-size:.9375rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
 .mobile-call__num{font-size:clamp(1.25rem,5.6vw,1.375rem);font-weight:800;white-space:nowrap}
 .footer{padding-bottom:64px}
@@ -448,8 +447,19 @@ a.tile:hover{background:#fffbe0}
   .fast__copy p,.about__copy > p,.intro{font-size:1rem}
   .services .section-head{padding-bottom:24px}
 
-  /* Repeated call bars and duplicate facts */
-  .fast .call-bar,.brands__cta,.about .note,.area__tags,.cta__facts{display:none}
+  /* Repeated call bars and duplicate facts. The "repair specialist" note
+     stays: it carries the core no-sales-pitch positioning and isn't
+     restated anywhere else on the phone view besides one small footer line. */
+  .fast .call-bar,.brands__cta,.area__tags,.cta__facts{display:none}
+
+  /* Extra top/bottom breathing room on the two yellow-on-dark and
+     yellow-on-yellow bands that sit closest to the fixed call bar, so their
+     headings clear the bar during scroll instead of grazing it. */
+  .fast .wrap,.cta .wrap{padding-block:calc(var(--section-y) + 24px)}
+
+  /* Footer nav: the hamburger already covers all six links, so the phone
+     footer keeps only the two most useful ones. */
+  .footer__nav a:nth-child(1),.footer__nav a:nth-child(2),.footer__nav a:nth-child(3),.footer__nav a:nth-child(4){display:none}
 
   /* About teaser photo: a set shape instead of a tall block */
   .about__photo{min-height:0;aspect-ratio:16/10}

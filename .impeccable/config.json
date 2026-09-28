@@ -1,0 +1,68 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-28T14:11:04.366Z",
+        "reason": "Agent: pre-existing .hero__photo border-bottom:4px yellow underline, a documented DESIGN.md emphasis-border accent, not an AI-slop card side-tab"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-28T14:11:04.372Z",
+        "reason": "Agent: outer section/div wrappers intentionally carry no padding of their own (padding lives on nested .wrap/.trust__item/.note per the site's full-bleed color-band pattern); the .note div specifically already has 18-24px padding in source, confirming this is a detector miss"
+      },
+      {
+        "rule": "all-caps-body",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-28T14:11:04.379Z",
+        "reason": "Agent: flagged passages are h1/h2 headings (hero h1, .cta h2), not body paragraphs, under DESIGN.md's Shout-or-Speak Rule that display/headline type is always uppercase"
+      },
+      {
+        "rule": "kicker-above-heading",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-28T14:11:04.417Z",
+        "reason": "Agent: pre-existing site-wide numbered eyebrow pattern (01-05) used consistently on every page; independent design critique on 2026-09-28 called this a positive wayfinding characteristic, not slop"
+      },
+      {
+        "rule": "numbered-section-labels",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-28T14:11:04.423Z",
+        "reason": "Agent: same pre-existing site-wide eyebrow/number pattern as kicker-above-heading; consistent across every page, already reviewed positively in this session's critique"
+      },
+      {
+        "rule": "repeating-stripes-gradient",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-28T14:11:04.430Z",
+        "reason": "Agent: temporary photo-to-add placeholder texture (.photo-slot) standing in for missing photography per PRODUCT.md, not decorative treatment on real content"
+      },
+      {
+        "rule": "design-system-color",
+        "value": "rgb(27, 27, 27)",
+        "createdAt": "2026-09-28T14:11:04.436Z",
+        "reason": "Agent: background of the same temporary photo placeholder; superseded once real photos are added, not a persistent token gap"
+      }
+    ]
+  }
+}
