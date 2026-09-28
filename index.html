@@ -83,11 +83,11 @@ svg{display:block}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chip{border:2px solid var(--yellow);color:var(--yellow);font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:6px 10px}
 .hero__media{position:relative;min-width:0;margin-bottom:36px}
-.hero__photo{position:relative;aspect-ratio:1266/738;overflow:hidden;background:#1b1b1b;border-bottom:4px solid var(--yellow)}
+.hero__photo{position:relative;aspect-ratio:16/9;overflow:hidden;background:#1b1b1b;border-bottom:4px solid var(--yellow)}
 .hero__photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.hero__photo::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,var(--ink) 0%,rgba(17,17,17,.55) 9%,rgba(17,17,17,0) 26%)}
+.hero__photo:has(img)::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,var(--ink) 0%,rgba(17,17,17,.55) 9%,rgba(17,17,17,0) 26%)}
 .hero__badge{position:absolute;left:clamp(16px,7%,48px);bottom:0;transform:translateY(50%);background:var(--yellow);color:var(--ink);padding:14px 20px;display:flex;flex-direction:column;line-height:1.05;border:2px solid var(--ink)}
-@media (max-width:1023px){.hero__photo::after{display:none}}
+@media (max-width:1023px){.hero__photo:has(img)::after{display:none}}
 @media (max-width:639px){
   .hero__media{margin-inline:calc(var(--hero-pad) * -1)}
   .hero__badge{left:var(--hero-pad);padding:10px 14px}
@@ -168,6 +168,8 @@ a.card:hover{background:#fffbe0}
 .about{background:var(--paper);scroll-margin-top:70px}
 .about .wrap{padding:var(--section-y) var(--pad-x);gap:clamp(32px,5vw,64px);align-items:stretch}
 .about__photo{position:relative;min-height:clamp(320px,40vw,520px);border:2px solid var(--ink);overflow:hidden;background:#2a2a2a}
+.photo-slot{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:24px;text-align:center;background:repeating-linear-gradient(135deg,#1c1c1c 0 14px,#171717 14px 28px);color:var(--grey);font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.photo-slot svg{color:var(--yellow)}
 .about__photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:45% 30%}
 .about__copy{display:flex;flex-direction:column;gap:22px;justify-content:center}
 .about__copy > p{font-size:18px;line-height:1.55;max-width:52ch;text-wrap:pretty}
@@ -307,7 +309,11 @@ a.card:hover{background:#fffbe0}
     </div>
     <div class="hero__media">
       <div class="hero__photo">
-        <img src="assets/hero-van.jpg" alt="The Lift Easy Garage Doors van parked outside a customer's garage" width="1266" height="738" fetchpriority="high">
+        <!-- Replace with a photo of Steve's van: <img src="assets/..." alt="..."> -->
+        <div class="photo-slot" role="img" aria-label="Photo coming soon: Steve's van">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
+          <span>Photo coming soon</span>
+        </div>
       </div>
       <div class="hero__badge">
         <strong>30+ years</strong>
@@ -453,7 +459,11 @@ a.card:hover{background:#fffbe0}
 <section id="about" class="about" aria-labelledby="about-title">
   <div class="wrap grid-2">
     <div class="about__photo">
-      <img src="assets/steve-at-work.jpg" alt="Steve Procter repairing a sectional garage door" loading="lazy">
+      <!-- Replace with a photo of Steve at work: <img src="assets/..." alt="..."> -->
+      <div class="photo-slot" role="img" aria-label="Photo coming soon: Steve at work">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
+        <span>Photo coming soon</span>
+      </div>
     </div>
     <div class="about__copy">
       <span class="eyebrow">06 — About Steve</span>
