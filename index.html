@@ -7,274 +7,43 @@
 <meta name="description" content="Garage door repairs, servicing and remote controls across West Yorkshire, North Yorkshire, Teesside and County Durham. Over 30 years' experience, fast response and same-day repairs. Call Steve Procter on 07939 500544.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&display=swap" rel="stylesheet">
-<style>
-:root{
-  --yellow:#FFD400;
-  --yellow-hover:#ffe14d;
-  --ink:#111;
-  --paper:#f3f2f2;
-  --white:#fff;
-  --muted:#6b6560;
-  --soft:#d8d6d4;
-  --grey:#a8a4a0;
-  --line-dark:#333;
-  --line-light:#c9c6c3;
-  --pad-x:clamp(20px,4vw,40px);
-  --hero-max:1480px;
-  --hero-pad:clamp(20px,4vw,56px);
-  --section-y:clamp(56px,8vw,112px);
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--ink);color:var(--ink);font-family:"Archivo",system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden;line-height:1.5}
-a{color:inherit;text-decoration:none}
-input,textarea,button{font:inherit}
-img{display:block;max-width:100%}
-h1,h2,h3{margin:0;font-weight:800}
-p{margin:0}
-:focus-visible{outline:3px solid var(--yellow);outline-offset:2px}
-svg{display:block}
-
-.page{min-height:100vh;background:var(--paper)}
-.wrap{max-width:1240px;margin:0 auto}
-.eyebrow{font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
-.eyebrow--yellow{color:var(--yellow)}
-.grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr))}
-
-/* Header */
-.header{position:sticky;top:0;z-index:50;background:var(--ink);border-bottom:2px solid var(--yellow)}
-.header__inner{max-width:var(--hero-max);padding:12px var(--hero-pad);display:flex;align-items:center;gap:24px}
-.brand{display:flex;flex-direction:column;line-height:1;margin-right:auto}
-.brand__name{font-weight:800;font-size:clamp(18px,2.2vw,22px);color:var(--yellow);letter-spacing:-.01em;text-transform:uppercase}
-.brand__sub{font-weight:800;font-size:clamp(11px,1.2vw,12px);color:var(--white);letter-spacing:.14em;text-transform:uppercase;margin-top:2px;white-space:nowrap}
-.nav{display:none;gap:4px;align-items:center}
-.nav a{color:var(--white);font-weight:600;font-size:14px;padding:8px 12px;white-space:nowrap}
-.nav a:hover{color:var(--yellow)}
-@media (min-width:1100px){.nav{display:flex}}
-.header__call{display:flex;align-items:center;gap:10px;background:var(--yellow);color:var(--ink);font-weight:800;font-size:15px;padding:12px 16px;min-height:44px;white-space:nowrap}
-.header__call:hover{background:var(--yellow-hover)}
-@media (max-width:479px){.header__call{padding:12px}.header__call span{display:none}.brand__sub{white-space:normal}}
-
-/* Buttons */
-.btn-yellow{background:var(--yellow);color:var(--ink)}
-.btn-yellow:hover{background:var(--yellow-hover)}
-
-/* Hero */
-.hero{background:var(--ink);color:var(--white);overflow-x:clip}
-.hero__grid{max-width:var(--hero-max);margin:0 auto;padding:clamp(40px,6vw,88px) var(--hero-pad) clamp(48px,6vw,88px);display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(40px,5vw,72px);align-items:center}
-@media (min-width:1024px){.hero__grid{grid-template-columns:minmax(0,56fr) minmax(0,44fr);column-gap:40px}}
-@media (min-width:1280px){.hero__grid{grid-template-columns:minmax(0,47fr) minmax(0,53fr);column-gap:clamp(48px,4vw,72px)}}
-.hero__copy{min-width:0;display:flex;flex-direction:column;gap:24px}
-.hero__kicker{display:flex;align-items:flex-start;gap:10px;font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--yellow)}
-.hero__kicker::before{content:"";flex:none;width:28px;height:2px;margin-top:.6em;background:var(--yellow)}
-.hero h1{font-size:clamp(46px,6.2vw,92px);line-height:.92;letter-spacing:-.035em;text-transform:uppercase}
-.hero h1 span{color:var(--yellow)}
-.hero__lede{font-size:clamp(19px,2.2vw,24px);line-height:1.35;font-weight:600;max-width:30ch;text-wrap:pretty}
-.hero__ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
-.call-big{display:flex;align-items:center;gap:14px;padding:16px 22px;min-height:64px;flex:1 1 260px;max-width:420px}
-.call-big__text{display:flex;flex-direction:column;line-height:1.05}
-.call-big__label{font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
-.call-big__num{font-size:clamp(24px,3vw,30px);font-weight:800;letter-spacing:-.01em;white-space:nowrap}
-.btn-outline{display:flex;align-items:center;justify-content:space-between;gap:14px;border:2px solid var(--white);color:var(--white);padding:16px 22px;min-height:64px;font-weight:800;font-size:15px;letter-spacing:.08em;text-transform:uppercase;flex:0 1 220px}
-.btn-outline:hover{background:var(--white);color:var(--ink)}
-.hero__byline{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:15px;font-weight:600;color:var(--soft);padding-top:20px;border-top:2px solid var(--line-dark)}
-.hero__byline .slash{color:var(--yellow)}
-.chips{display:flex;flex-wrap:wrap;gap:8px}
-.chip{border:2px solid var(--yellow);color:var(--yellow);font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:6px 10px}
-.hero__media{position:relative;min-width:0;margin-bottom:36px}
-.hero__photo{position:relative;aspect-ratio:16/9;overflow:hidden;background:#1b1b1b;border-bottom:4px solid var(--yellow)}
-.hero__photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.hero__photo:has(img)::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,var(--ink) 0%,rgba(17,17,17,.55) 9%,rgba(17,17,17,0) 26%)}
-.hero__badge{position:absolute;left:clamp(16px,7%,48px);bottom:0;transform:translateY(50%);background:var(--yellow);color:var(--ink);padding:14px 20px;display:flex;flex-direction:column;line-height:1.05;border:2px solid var(--ink)}
-@media (max-width:1023px){.hero__photo:has(img)::after{display:none}}
-@media (max-width:639px){
-  .hero__media{margin-inline:calc(var(--hero-pad) * -1)}
-  .hero__badge{left:var(--hero-pad);padding:10px 14px}
-}
-.hero__badge strong{font-size:clamp(24px,2.6vw,36px);font-weight:800;letter-spacing:-.02em}
-.hero__badge span{font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
-
-/* Trust strip */
-.trust{background:var(--yellow);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
-.trust__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:2px;background:var(--ink)}
-.trust__item{background:var(--yellow);padding:22px clamp(20px,3vw,32px);display:flex;flex-direction:column;gap:2px}
-.trust__item strong{font-size:28px;font-weight:800;letter-spacing:-.02em}
-.trust__item span{font-size:15px;font-weight:600}
-
-/* Section headings */
-.section-head{gap:24px 48px;align-items:end}
-.section-head__title{display:flex;flex-direction:column;gap:14px}
-.h2-xl{font-size:clamp(34px,5vw,60px);line-height:.98;letter-spacing:-.03em;text-transform:uppercase;text-wrap:balance}
-.h2-lg{font-size:clamp(34px,4.6vw,56px);line-height:1;letter-spacing:-.03em;text-wrap:balance}
-.h2-md{font-size:clamp(30px,3.6vw,44px);line-height:1;letter-spacing:-.03em;text-wrap:balance}
-.intro{font-size:18px;line-height:1.5;max-width:46ch;text-wrap:pretty}
-
-/* Services */
-.services{background:var(--paper)}
-.services .wrap{padding:var(--section-y) var(--pad-x)}
-.services .section-head{padding-bottom:32px;border-bottom:2px solid var(--ink)}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:2px;background:var(--ink);border:2px solid var(--ink);border-top:0}
-.card{background:var(--white);padding:clamp(24px,3vw,36px);display:flex;flex-direction:column;gap:18px}
-a.card:hover{background:#fffbe0}
-.card--dark{background:var(--ink);color:var(--white)}
-.card__top{display:flex;align-items:center;justify-content:space-between}
-.card__letter{font-size:13px;font-weight:800;letter-spacing:.12em}
-.card--dark .card__letter{color:var(--yellow)}
-.card h3{font-size:28px;line-height:1.05;letter-spacing:-.02em}
-.card p{font-size:16px;line-height:1.5;text-wrap:pretty}
-.card__tick{display:flex;gap:10px;align-items:flex-start;font-size:16px;line-height:1.35;padding-top:10px;border-top:1px solid var(--line-dark)}
-.card__tick svg{flex:none;margin-top:1px}
-.card__more{margin-top:auto;display:flex;align-items:center;gap:8px;font-weight:800;font-size:14px;letter-spacing:.08em;text-transform:uppercase;padding-top:14px;border-top:2px solid var(--ink)}
-
-/* Fast response */
-.fast{background:var(--ink);color:var(--white);border-top:2px solid var(--ink)}
-.fast .wrap{padding:var(--section-y) var(--pad-x);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:48px}
-.fast__copy{display:flex;flex-direction:column;gap:20px}
-.fast__copy p{font-size:18px;line-height:1.55;color:var(--soft);max-width:48ch;text-wrap:pretty}
-.fast__side{display:flex;flex-direction:column;gap:24px}
-.problems{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:2px;background:var(--line-dark);border:2px solid var(--line-dark)}
-.problems div{background:var(--ink);padding:18px 20px;display:flex;align-items:center;gap:12px;font-size:17px;font-weight:600;line-height:1.3}
-.problems div::before{content:"";flex:none;width:10px;height:10px;background:var(--yellow)}
-.call-bar{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;padding:20px 24px}
-.call-bar__msg{font-size:clamp(18px,2vw,22px);font-weight:800;line-height:1.2}
-.call-bar__num{display:flex;align-items:center;gap:10px;font-size:clamp(22px,2.6vw,28px);font-weight:800;white-space:nowrap}
-
-/* Servicing + remotes */
-.duo{background:var(--paper)}
-.duo .wrap{padding:var(--section-y) var(--pad-x);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,440px),1fr));gap:2px;background:var(--ink);background-clip:content-box}
-.duo__col{background:var(--paper);display:flex;flex-direction:column;gap:18px;scroll-margin-top:90px;padding-bottom:40px}
-.duo__col:first-child{padding-right:clamp(0px,3vw,40px)}
-.duo__col:last-child{padding-left:clamp(0px,3vw,40px)}
-.duo__col p{font-size:17px;line-height:1.55;max-width:46ch;text-wrap:pretty}
-.checklist{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
-.checklist li{display:flex;gap:12px;align-items:flex-start;padding:14px 0;border-bottom:1px solid var(--line-light);font-size:17px;line-height:1.35}
-.checklist svg{flex:none;margin-top:1px}
-
-/* Brands */
-.brands{background:var(--white);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
-.brands .wrap{padding:clamp(56px,7vw,96px) var(--pad-x);display:flex;flex-direction:column;gap:32px}
-.brands .section-head{gap:20px 48px}
-.logos{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,170px),1fr));gap:2px;background:var(--ink);border:2px solid var(--ink)}
-.logo{background:var(--white);padding:28px 20px 18px;display:flex;flex-direction:column;gap:16px;justify-content:space-between;min-height:150px}
-.logo img{width:100%;height:56px;object-fit:contain}
-.logo span{font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
-.brands__cta{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;background:var(--ink);color:var(--white);padding:20px 24px}
-.brands__cta:hover{background:#222}
-.brands__cta span:first-child{font-size:clamp(17px,1.8vw,20px);font-weight:600;line-height:1.3}
-.brands__cta span:last-child{font-size:clamp(22px,2.6vw,28px);font-weight:800;color:var(--yellow);white-space:nowrap}
-
-/* About */
-.about{background:var(--paper);scroll-margin-top:70px}
-.about .wrap{padding:var(--section-y) var(--pad-x);gap:clamp(32px,5vw,64px);align-items:stretch}
-.about__photo{position:relative;min-height:clamp(320px,40vw,520px);border:2px solid var(--ink);overflow:hidden;background:#2a2a2a}
-.photo-slot{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;padding:24px;text-align:center;background:repeating-linear-gradient(135deg,#1c1c1c 0 14px,#171717 14px 28px);color:var(--grey);font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
-.photo-slot svg{color:var(--yellow)}
-.about__photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:45% 30%}
-.about__copy{display:flex;flex-direction:column;gap:22px;justify-content:center}
-.about__copy > p{font-size:18px;line-height:1.55;max-width:52ch;text-wrap:pretty}
-.note{background:var(--ink);color:var(--white);padding:24px;display:flex;flex-direction:column;gap:10px}
-.note p{font-size:17px;line-height:1.5;text-wrap:pretty}
-.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:2px;background:var(--ink);border:2px solid var(--ink)}
-.stats div{background:var(--white);padding:16px 18px;display:flex;flex-direction:column}
-.stats div:first-child{background:var(--yellow)}
-.stats strong{font-size:30px;font-weight:800;letter-spacing:-.02em;line-height:1}
-.stats span{font-size:14px;font-weight:600}
-
-/* Area */
-.area{background:var(--white);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
-.area .wrap{padding:clamp(40px,6vw,72px) var(--pad-x);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,380px),1fr));gap:24px 48px;align-items:center}
-.area__head{display:flex;gap:18px;align-items:flex-start}
-.area__head svg{flex:none}
-.area__head div{display:flex;flex-direction:column;gap:8px}
-.area__head h2{font-size:clamp(28px,3.6vw,42px);line-height:1.02;letter-spacing:-.03em;text-wrap:balance}
-.area__side{display:flex;flex-direction:column;gap:14px}
-.area__tags{display:flex;flex-wrap:wrap;gap:8px}
-.area__tags span{border:2px solid var(--ink);font-weight:800;font-size:15px;padding:8px 12px}
-.area__side p{font-size:17px;line-height:1.5;text-wrap:pretty}
-.area__side p a{font-weight:800;border-bottom:2px solid var(--yellow)}
-
-/* Big CTA */
-.cta{background:var(--yellow);border-bottom:2px solid var(--ink)}
-.cta .wrap{padding:var(--section-y) var(--pad-x);display:flex;flex-direction:column;gap:28px}
-.cta h2{font-size:clamp(44px,8vw,112px);line-height:.9;letter-spacing:-.04em;text-transform:uppercase;text-wrap:balance}
-.cta__row{display:flex;flex-wrap:wrap;gap:12px;align-items:stretch}
-.cta__call{display:flex;align-items:center;gap:16px;background:var(--ink);color:var(--yellow);padding:18px 26px;min-height:72px}
-.cta__call:hover{background:#2a2a2a}
-.cta__call .call-big__label{color:var(--white)}
-.cta__call .call-big__num{font-size:clamp(26px,3.4vw,36px);letter-spacing:0}
-.cta__facts{display:flex;flex-direction:column;justify-content:center;gap:4px;font-size:17px;font-weight:600;padding:0 8px}
-
-/* Contact */
-.contact{background:var(--ink);color:var(--white);scroll-margin-top:70px}
-.contact .wrap{padding:var(--section-y) var(--pad-x);gap:clamp(40px,6vw,80px)}
-.contact__info{display:flex;flex-direction:column;gap:22px}
-.contact__lede{font-size:19px;line-height:1.45;font-weight:600}
-.contact__list{display:flex;flex-direction:column;border-top:2px solid var(--line-dark)}
-.contact__list > *{padding:18px 0;border-bottom:2px solid var(--line-dark);display:flex;flex-direction:column;gap:2px}
-.contact__list a:hover{color:var(--yellow)}
-.contact__label{font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--grey)}
-.form{background:var(--white);color:var(--ink);padding:clamp(24px,3vw,36px);display:flex;flex-direction:column;gap:16px;align-self:start;border-top:6px solid var(--yellow)}
-.form__head{display:flex;flex-direction:column;gap:4px}
-.form__head strong{font-size:24px;font-weight:800;letter-spacing:-.01em}
-.form__head span{font-size:15px;color:#5a5550}
-.form label{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:800}
-.form input,.form textarea{border:2px solid var(--ink);border-radius:0;padding:12px 14px;min-height:48px;font-size:16px;font-weight:400;background:var(--white);color:var(--ink)}
-.form textarea{resize:vertical}
-.form input:focus-visible,.form textarea:focus-visible{outline:3px solid var(--yellow);outline-offset:0}
-.form__row{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,200px),1fr));gap:16px}
-.form button{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--ink);color:var(--white);border:0;border-radius:0;padding:16px 20px;min-height:56px;font-weight:800;font-size:15px;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
-.form button:hover{background:var(--yellow);color:var(--ink)}
-.form__sent{font-size:14px;font-weight:600;background:#fff6c2;padding:10px 12px}
-.form__sent[hidden]{display:none}
-
-/* Footer */
-.footer{background:var(--ink);color:var(--grey);border-top:2px solid var(--yellow)}
-.footer .wrap{padding:28px var(--pad-x);display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justify-content:space-between;font-size:14px}
-.footer__brand{display:flex;flex-direction:column;line-height:1.2}
-.footer__brand strong{font-weight:800;color:var(--yellow);text-transform:uppercase}
-.footer__links{display:flex;flex-wrap:wrap;gap:8px 24px}
-.footer__links a{color:var(--white)}
-.footer__links a:first-child{font-weight:800}
-.footer__links a:hover{color:var(--yellow)}
-
-/* Mobile call bar */
-.mobile-call{display:none;position:fixed;left:0;right:0;bottom:0;z-index:60;align-items:center;justify-content:space-between;gap:12px;background:var(--yellow);color:var(--ink);padding:14px 20px;min-height:64px;border-top:2px solid var(--ink)}
-.mobile-call__label{display:flex;align-items:center;gap:12px;font-size:15px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
-.mobile-call__num{font-size:22px;font-weight:800}
-@media (max-width:719px){
-  .mobile-call{display:flex}
-  .footer .wrap{padding-bottom:96px}
-}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<script src="js/site.js" defer></script>
 </head>
 <body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
   <symbol id="i-arrow-right" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></g></symbol>
-  <symbol id="i-arrow-down" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></g></symbol>
   <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M3 6h18"/><path d="M3 12h18"/><path d="M3 18h18"/></g></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></g></symbol>
 </svg>
 
 <div class="page">
 
 <header class="header">
   <div class="wrap header__inner">
-    <a href="#top" class="brand">
+    <a href="index.html" class="brand">
       <span class="brand__name">Lift Easy</span>
       <span class="brand__sub">Garage Doors · by Steve Procter</span>
     </a>
-    <nav class="nav" aria-label="Main">
-      <a href="#repairs">Repairs</a>
-      <a href="#servicing">Servicing</a>
-      <a href="#remotes">Remotes</a>
-      <a href="#about">About Steve</a>
-      <a href="#contact">Contact</a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <a href="repairs.html">Repairs</a>
+      <a href="servicing.html">Servicing</a>
+      <a href="remotes.html">Remotes</a>
+      <a href="about.html">About Steve</a>
+      <a href="areas.html">Areas</a>
+      <a href="contact.html">Contact</a>
     </nav>
     <a href="tel:07939500544" class="header__call" aria-label="Call Steve on 07939 500544">
       <svg width="18" height="18"><use href="#i-phone"/></svg>
       <span>07939 500544</span>
     </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <svg width="22" height="22" aria-hidden="true"><use href="#i-menu"/></svg>
+      <span class="sr-only">Menu</span>
+    </button>
   </div>
 </header>
 
@@ -284,7 +53,7 @@ a.card:hover{background:#fffbe0}
     <div class="hero__copy">
       <div class="hero__kicker">Garage door repair specialist · Yorkshire, Teesside &amp; County Durham</div>
       <h1>Garage<br> door <span>not<br> working?</span></h1>
-      <p class="hero__lede">Don't struggle with it — give Steve a call.</p>
+      <p class="hero__lede">Don't struggle with it, give Steve a call.</p>
       <div class="hero__ctas">
         <a href="tel:07939500544" class="call-big btn-yellow">
           <svg width="26" height="26"><use href="#i-phone"/></svg>
@@ -293,7 +62,7 @@ a.card:hover{background:#fffbe0}
             <span class="call-big__num">07939 500544</span>
           </span>
         </a>
-        <a href="#contact" class="btn-outline">
+        <a href="contact.html" class="btn-outline">
           <span>Get in touch</span>
           <svg width="20" height="20"><use href="#i-arrow-right"/></svg>
         </a>
@@ -309,10 +78,11 @@ a.card:hover{background:#fffbe0}
     </div>
     <div class="hero__media">
       <div class="hero__photo">
-        <!-- Replace with a photo of Steve's van: <img src="assets/..." alt="..."> -->
-        <div class="photo-slot" role="img" aria-label="Photo coming soon: Steve's van">
-          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
-          <span>Photo coming soon</span>
+        <!-- PHOTO TO ADD: Steve's Lift Easy van parked outside a customer's garage. Replace this placeholder with <img src="assets/..." alt="..."> -->
+        <div class="photo-slot" role="img" aria-label="Photo to add: Steve's Lift Easy van parked outside a customer's garage">
+          <svg width="40" height="40" aria-hidden="true"><use href="#i-camera"/></svg>
+          <span>Photo to add</span>
+          <span class="photo-slot__desc">Steve's Lift Easy van parked outside a customer's garage</span>
         </div>
       </div>
       <div class="hero__badge">
@@ -329,62 +99,61 @@ a.card:hover{background:#fffbe0}
     <div class="trust__item"><strong>Fast response</strong><span>When your door lets you down</span></div>
     <div class="trust__item"><strong>Same-day</strong><span>Repair service</span></div>
     <div class="trust__item"><strong>Direct to Steve</strong><span>No call centre, no middleman</span></div>
+    <div class="trust__item"><strong>Repairs only</strong><span>No new door sales or installations</span></div>
   </div>
 </section>
 
-<section id="repairs" class="services">
+<section class="services">
   <div class="wrap">
     <div class="grid-2 section-head">
       <div class="section-head__title">
-        <span class="eyebrow">01 — What Steve does</span>
+        <span class="eyebrow">01 - What Steve does</span>
         <h2 class="h2-xl">Repairs, servicing and remote controls</h2>
       </div>
       <p class="intro">Whether your door has stopped dead or just isn't running like it used to, Steve will find the fault and put it right.</p>
     </div>
 
     <div class="cards">
-      <div class="card card--dark">
+      <a href="repairs.html" class="card card--dark">
         <div class="card__top">
           <span class="card__letter">A</span>
           <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#FFD400" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
         </div>
         <h3>Garage door repairs</h3>
-        <div class="card__tick"><svg width="18" height="18" style="color:#FFD400"><use href="#i-check"/></svg><span>Fault finding and repairs</span></div>
         <div class="card__tick"><svg width="18" height="18" style="color:#FFD400"><use href="#i-check"/></svg><span>Springs and cables</span></div>
-        <div class="card__tick"><svg width="18" height="18" style="color:#FFD400"><use href="#i-check"/></svg><span>Locks and handles</span></div>
-        <div class="card__tick"><svg width="18" height="18" style="color:#FFD400"><use href="#i-check"/></svg><span>Hinges and rollers</span></div>
-        <div class="card__tick"><svg width="18" height="18" style="color:#FFD400"><use href="#i-check"/></svg><span>Door adjustments</span></div>
+        <div class="card__tick"><svg width="18" height="18" style="color:#FFD400"><use href="#i-check"/></svg><span>Locks, handles, hinges and rollers</span></div>
         <div class="card__tick"><svg width="18" height="18" style="color:#FFD400"><use href="#i-check"/></svg><span>Sticking, noisy or difficult-to-operate doors</span></div>
-        <div class="card__tick"><svg width="18" height="18" style="color:#FFD400"><use href="#i-check"/></svg><span>General mechanical faults</span></div>
-      </div>
-      <a href="#servicing" class="card">
+        <div class="card__tick"><svg width="18" height="18" style="color:#FFD400"><use href="#i-check"/></svg><span>Faulty motors and general mechanical faults</span></div>
+        <span class="card__more"><span>Garage door repairs</span><svg width="18" height="18"><use href="#i-arrow-right"/></svg></span>
+      </a>
+      <a href="servicing.html" class="card">
         <div class="card__top">
           <span class="card__letter">B</span>
           <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z"/><circle cx="12" cy="12" r="3"/></svg>
         </div>
         <h3>Garage door servicing</h3>
-        <p>Inspection, adjustment and servicing of your existing door — catching small problems before they turn into bigger, more expensive ones.</p>
-        <span class="card__more"><span>Servicing</span><svg width="18" height="18"><use href="#i-arrow-down"/></svg></span>
+        <p>Inspection, adjustment and servicing of your existing door, catching small problems before they turn into bigger, more expensive ones.</p>
+        <span class="card__more"><span>Servicing</span><svg width="18" height="18"><use href="#i-arrow-right"/></svg></span>
       </a>
-      <a href="#remotes" class="card">
+      <a href="remotes.html" class="card">
         <div class="card__top">
           <span class="card__letter">C</span>
           <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.9 16.1C1 12.2 1 5.8 4.9 1.9"/><path d="M7.8 4.7a6.14 6.14 0 0 0-.8 7.5"/><circle cx="12" cy="9" r="2"/><path d="M16.2 4.8c2 2 2.26 5.11.8 7.47"/><path d="M19.1 1.9a9.96 9.96 0 0 1 0 14.1"/><path d="M9.5 18h5"/><path d="m8 22 4-11 4 11"/></svg>
         </div>
         <h3>Remote controls &amp; automatic doors</h3>
         <p>Replacement remotes, programming, opener servicing, and supply and fitting of remote-control systems.</p>
-        <span class="card__more"><span>Remotes &amp; automation</span><svg width="18" height="18"><use href="#i-arrow-down"/></svg></span>
+        <span class="card__more"><span>Remotes &amp; automation</span><svg width="18" height="18"><use href="#i-arrow-right"/></svg></span>
       </a>
     </div>
   </div>
 </section>
 
-<section class="fast" aria-labelledby="fast-title">
+<section class="fast">
   <div class="wrap">
     <div class="fast__copy">
-      <span class="eyebrow eyebrow--yellow">02 — Fast response repairs</span>
-      <h2 id="fast-title" class="h2-lg">Garage doors don't always choose a convenient time to stop working.</h2>
-      <p>That's why Steve runs a reactive, fast-response repair service — with same-day repairs wherever possible — to get your door moving again quickly.</p>
+      <span class="eyebrow eyebrow--yellow">02 - Fast response repairs</span>
+      <h2 class="h2-lg">Garage doors don't always choose a convenient time to stop working.</h2>
+      <p>That's why Steve runs a reactive, fast-response repair service, with same-day repairs wherever possible, to get your door moving again quickly.</p>
     </div>
     <div class="fast__side">
       <div class="problems">
@@ -403,31 +172,25 @@ a.card:hover{background:#fffbe0}
   </div>
 </section>
 
-<section class="duo">
-  <div class="wrap">
-    <div id="servicing" class="duo__col">
-      <span class="eyebrow">03 — Servicing</span>
-      <h2 class="h2-md">Keep your door running smoothly</h2>
-      <p>A regular service keeps an existing door safe, quiet and reliable — and spots wear before it becomes a breakdown.</p>
-      <ul class="checklist">
-        <li><svg width="20" height="20"><use href="#i-check"/></svg><span>Inspection of your existing garage door</span></li>
-        <li><svg width="20" height="20"><use href="#i-check"/></svg><span>Adjustments</span></li>
-        <li><svg width="20" height="20"><use href="#i-check"/></svg><span>Full servicing</span></li>
-        <li><svg width="20" height="20"><use href="#i-check"/></svg><span>Spotting problems before they get bigger — and more expensive</span></li>
-      </ul>
+<section class="about" aria-labelledby="about-title">
+  <div class="wrap grid-2">
+    <div class="about__photo">
+      <!-- PHOTO TO ADD: Steve at work on a customer's garage door. Replace this placeholder with <img src="assets/..." alt="..."> -->
+      <div class="photo-slot" role="img" aria-label="Photo to add: Steve at work on a customer's garage door">
+        <svg width="40" height="40" aria-hidden="true"><use href="#i-camera"/></svg>
+        <span>Photo to add</span>
+        <span class="photo-slot__desc">Steve at work on a customer's garage door</span>
+      </div>
     </div>
-    <div id="remotes" class="duo__col">
-      <span class="eyebrow">04 — Remotes &amp; automation</span>
-      <h2 class="h2-md">Remote controls &amp; automatic doors</h2>
-      <p>Lost a remote, or the opener's playing up? Steve repairs existing automatic systems and supplies and fits new remote-control systems.</p>
-      <ul class="checklist">
-        <li><svg width="20" height="20"><use href="#i-check"/></svg><span>Supply and fitting of remote-control systems</span></li>
-        <li><svg width="20" height="20"><use href="#i-check"/></svg><span>Replacement remotes</span></li>
-        <li><svg width="20" height="20"><use href="#i-check"/></svg><span>Remote programming</span></li>
-        <li><svg width="20" height="20"><use href="#i-check"/></svg><span>Automatic opener servicing</span></li>
-        <li><svg width="20" height="20"><use href="#i-check"/></svg><span>Fault finding</span></li>
-        <li><svg width="20" height="20"><use href="#i-check"/></svg><span>Repairs to existing automatic systems</span></li>
-      </ul>
+    <div class="about__copy">
+      <span class="eyebrow">03 - About Steve</span>
+      <h2 id="about-title" class="h2-lg">Over 30 years keeping garage doors working</h2>
+      <p>Steve Procter has spent over 30 years repairing and servicing domestic garage doors and automatic garage door systems. When you call Lift Easy, you speak to Steve, and Steve is the one who turns up and fixes it.</p>
+      <div class="note">
+        <span class="eyebrow eyebrow--yellow">A repair specialist</span>
+        <p>Lift Easy doesn't sell or install new garage doors. The focus is on repairing, servicing and keeping your existing door working safely and reliably, not pushing you towards a replacement.</p>
+      </div>
+      <a href="about.html" class="more-link"><span>More about Steve</span><svg width="18" height="18"><use href="#i-arrow-right"/></svg></a>
     </div>
   </div>
 </section>
@@ -436,18 +199,18 @@ a.card:hover{background:#fffbe0}
   <div class="wrap">
     <div class="grid-2 section-head">
       <div class="section-head__title">
-        <span class="eyebrow">05 — Makes</span>
+        <span class="eyebrow">04 - Makes</span>
         <h2 id="brands-title" class="h2-xl">Garage door makes we work on</h2>
       </div>
-      <p class="intro" style="max-width:44ch">Steve works on many popular domestic brands — including these, and plenty more.</p>
+      <p class="intro" style="max-width:44ch">Steve works on many popular domestic brands, including these, and plenty more.</p>
     </div>
     <div class="logos">
-      <div class="logo"><img src="assets/logo-hormann.png" alt="" loading="lazy"><span>Hörmann</span></div>
-      <div class="logo"><img src="assets/logo-garador.png" alt="" loading="lazy"><span>Garador</span></div>
-      <div class="logo"><img src="assets/logo-henderson.png" alt="" loading="lazy"><span>Henderson</span></div>
-      <div class="logo"><img src="assets/logo-cardale.png" alt="" loading="lazy"><span>Cardale</span></div>
-      <div class="logo"><img src="assets/logo-wessex.png" alt="" loading="lazy"><span>Wessex</span></div>
-      <div class="logo"><img src="assets/logo-gliderol.png" alt="" loading="lazy"><span>Gliderol</span></div>
+      <div class="logo"><img src="assets/logos/hormann.svg" alt="" loading="lazy"><span>Hörmann</span></div>
+      <div class="logo"><img src="assets/logos/garador.svg" alt="" loading="lazy"><span>Garador</span></div>
+      <div class="logo"><img src="assets/logos/henderson.svg" alt="" loading="lazy"><span>Henderson</span></div>
+      <div class="logo"><img src="assets/logos/cardale.svg" alt="" loading="lazy"><span>Cardale</span></div>
+      <div class="logo"><img src="assets/logos/wessex.svg" alt="" loading="lazy"><span>Wessex</span></div>
+      <div class="logo"><img src="assets/logos/gliderol.svg" alt="" loading="lazy"><span>Gliderol</span></div>
     </div>
     <a href="tel:07939500544" class="brands__cta">
       <span>Not sure whether we can repair your garage door? Give Steve a call.</span>
@@ -456,37 +219,12 @@ a.card:hover{background:#fffbe0}
   </div>
 </section>
 
-<section id="about" class="about" aria-labelledby="about-title">
-  <div class="wrap grid-2">
-    <div class="about__photo">
-      <!-- Replace with a photo of Steve at work: <img src="assets/..." alt="..."> -->
-      <div class="photo-slot" role="img" aria-label="Photo coming soon: Steve at work">
-        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
-        <span>Photo coming soon</span>
-      </div>
-    </div>
-    <div class="about__copy">
-      <span class="eyebrow">06 — About Steve</span>
-      <h2 id="about-title" class="h2-lg">Over 30 years keeping garage doors working</h2>
-      <p>Steve Procter has spent over 30 years repairing and servicing domestic garage doors and automatic garage door systems. When you call Lift Easy, you speak to Steve — and Steve is the one who turns up and fixes it.</p>
-      <div class="note">
-        <span class="eyebrow eyebrow--yellow">A repair specialist</span>
-        <p>Lift Easy doesn't sell or install new garage doors. The focus is on repairing, servicing and keeping your existing door working safely and reliably — not pushing you towards a replacement.</p>
-      </div>
-      <div class="stats">
-        <div><strong>30+</strong><span>years' experience</span></div>
-        <div><strong>1:1</strong><span>you deal with Steve</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="area" aria-labelledby="area-title">
   <div class="wrap">
     <div class="area__head">
       <svg width="44" height="44" viewBox="0 0 24 24" fill="#FFD400" stroke="#111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3" fill="#fff"/></svg>
       <div>
-        <span class="eyebrow">07 — Service area</span>
+        <span class="eyebrow">05 - Service area</span>
         <h2 id="area-title">Covering West Yorkshire, North Yorkshire, Teesside &amp; County Durham</h2>
       </div>
     </div>
@@ -498,6 +236,7 @@ a.card:hover{background:#fffbe0}
         <span>County Durham</span>
       </div>
       <p>Not sure if you're covered? <a href="tel:07939500544">Call Steve on 07939 500544</a>.</p>
+      <a href="areas.html" class="more-link"><span>Areas we cover</span><svg width="18" height="18"><use href="#i-arrow-right"/></svg></a>
     </div>
   </div>
 </section>
@@ -509,64 +248,19 @@ a.card:hover{background:#fffbe0}
       <a href="tel:07939500544" class="cta__call">
         <svg width="30" height="30"><use href="#i-phone"/></svg>
         <span class="call-big__text">
-          <span class="call-big__label">Call Steve</span>
+          <span class="call-big__label">Call or text Steve</span>
           <span class="call-big__num">07939 500544</span>
         </span>
+      </a>
+      <a href="contact.html" class="btn-outline btn-outline--dark">
+        <span>Send a message</span>
+        <svg width="20" height="20"><use href="#i-arrow-right"/></svg>
       </a>
       <div class="cta__facts">
         <span>Fast response · Same-day repair service</span>
         <span>Over 30 years' experience</span>
       </div>
     </div>
-  </div>
-</section>
-
-<section id="contact" class="contact" aria-labelledby="contact-title">
-  <div class="wrap grid-2">
-    <div class="contact__info">
-      <span class="eyebrow eyebrow--yellow">08 — Contact</span>
-      <h2 id="contact-title" class="h2-lg">Garage door not working?</h2>
-      <p class="contact__lede">Don't struggle with it — give Steve a call.</p>
-      <div class="contact__list">
-        <div>
-          <span style="font-size:20px;font-weight:800">Steve Procter</span>
-          <span style="font-size:16px;color:var(--soft)">Lift Easy Garage Doors</span>
-        </div>
-        <a href="tel:07939500544">
-          <span class="contact__label">Phone</span>
-          <span style="font-size:clamp(30px,4vw,44px);font-weight:800;letter-spacing:-.02em;color:var(--yellow)">07939 500544</span>
-        </a>
-        <a href="mailto:ste.procter@live.com">
-          <span class="contact__label">Email</span>
-          <span style="font-size:clamp(18px,2vw,22px);font-weight:800;word-break:break-word">ste.procter@live.com</span>
-        </a>
-      </div>
-    </div>
-    <form class="form" id="enquiry">
-      <div class="form__head">
-        <strong>Send Steve a message</strong>
-        <span>Prefer to write? Tell Steve what's wrong and he'll get back to you.</span>
-      </div>
-      <label>Name
-        <input name="name" required autocomplete="name">
-      </label>
-      <div class="form__row">
-        <label>Phone
-          <input name="phone" type="tel" autocomplete="tel">
-        </label>
-        <label>Email
-          <input name="email" type="email" autocomplete="email">
-        </label>
-      </div>
-      <label>Message
-        <textarea name="message" rows="5" required placeholder="e.g. My door has stopped halfway and won't close"></textarea>
-      </label>
-      <button type="submit">
-        <span>Get in touch</span>
-        <svg width="20" height="20"><use href="#i-arrow-right"/></svg>
-      </button>
-      <span class="form__sent" role="status" hidden>Your email app should open with your message ready to send. For anything urgent, call 07939 500544.</span>
-    </form>
   </div>
 </section>
 </main>
@@ -576,7 +270,16 @@ a.card:hover{background:#fffbe0}
     <div class="footer__brand">
       <strong>Lift Easy Garage Doors</strong>
       <span>by Steve Procter · West Yorkshire, North Yorkshire, Teesside &amp; County Durham</span>
+      <span class="footer__note">Garage door repairs and servicing only. We don't sell or install new garage doors.</span>
     </div>
+    <nav class="footer__nav" aria-label="Footer">
+      <a href="repairs.html">Repairs</a>
+      <a href="servicing.html">Servicing</a>
+      <a href="remotes.html">Remotes</a>
+      <a href="about.html">About Steve</a>
+      <a href="areas.html">Areas</a>
+      <a href="contact.html">Contact</a>
+    </nav>
     <div class="footer__links">
       <a href="tel:07939500544">07939 500544</a>
       <a href="mailto:ste.procter@live.com">ste.procter@live.com</a>
@@ -591,15 +294,5 @@ a.card:hover{background:#fffbe0}
 </a>
 
 </div>
-
-<script>
-document.getElementById('enquiry').addEventListener('submit', function (e) {
-  e.preventDefault();
-  var f = new FormData(e.target);
-  var body = 'Name: ' + f.get('name') + '\nPhone: ' + f.get('phone') + '\nEmail: ' + f.get('email') + '\n\n' + f.get('message');
-  window.location.href = 'mailto:ste.procter@live.com?subject=' + encodeURIComponent('Garage door enquiry') + '&body=' + encodeURIComponent(body);
-  e.target.querySelector('.form__sent').hidden = false;
-});
-</script>
 </body>
 </html>
