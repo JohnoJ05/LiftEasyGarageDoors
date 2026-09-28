@@ -21,6 +21,8 @@
   --line-dark:#333;
   --line-light:#c9c6c3;
   --pad-x:clamp(20px,4vw,40px);
+  --hero-max:1480px;
+  --hero-pad:clamp(20px,4vw,56px);
   --section-y:clamp(56px,8vw,112px);
 }
 *{box-sizing:border-box}
@@ -42,7 +44,7 @@ svg{display:block}
 
 /* Header */
 .header{position:sticky;top:0;z-index:50;background:var(--ink);border-bottom:2px solid var(--yellow)}
-.header__inner{padding:12px clamp(16px,4vw,40px);display:flex;align-items:center;gap:24px}
+.header__inner{max-width:var(--hero-max);padding:12px var(--hero-pad);display:flex;align-items:center;gap:24px}
 .brand{display:flex;flex-direction:column;line-height:1;margin-right:auto}
 .brand__name{font-weight:800;font-size:clamp(18px,2.2vw,22px);color:var(--yellow);letter-spacing:-.01em;text-transform:uppercase}
 .brand__sub{font-weight:800;font-size:clamp(11px,1.2vw,12px);color:var(--white);letter-spacing:.14em;text-transform:uppercase;margin-top:2px;white-space:nowrap}
@@ -59,29 +61,38 @@ svg{display:block}
 .btn-yellow:hover{background:var(--yellow-hover)}
 
 /* Hero */
-.hero{background:var(--ink);color:var(--white)}
-.hero__grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,480px),1fr))}
-.hero__copy{padding:clamp(40px,7vw,96px) var(--pad-x) clamp(40px,6vw,72px);display:flex;flex-direction:column;gap:24px;justify-content:center}
+.hero{background:var(--ink);color:var(--white);overflow-x:clip}
+.hero__grid{max-width:var(--hero-max);margin:0 auto;padding:clamp(40px,6vw,88px) var(--hero-pad) clamp(48px,6vw,88px);display:grid;grid-template-columns:minmax(0,1fr);gap:clamp(40px,5vw,72px);align-items:center}
+@media (min-width:1024px){.hero__grid{grid-template-columns:minmax(0,56fr) minmax(0,44fr);column-gap:40px}}
+@media (min-width:1280px){.hero__grid{grid-template-columns:minmax(0,47fr) minmax(0,53fr);column-gap:clamp(48px,4vw,72px)}}
+.hero__copy{min-width:0;display:flex;flex-direction:column;gap:24px}
 .hero__kicker{display:flex;align-items:center;gap:10px;font-size:13px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--yellow)}
 .hero__kicker::before{content:"";flex:none;width:28px;height:2px;background:var(--yellow)}
-.hero h1{font-size:clamp(46px,7.4vw,96px);line-height:.92;letter-spacing:-.035em;text-transform:uppercase;text-wrap:balance}
+.hero h1{font-size:clamp(46px,6.2vw,92px);line-height:.92;letter-spacing:-.035em;text-transform:uppercase}
 .hero h1 span{color:var(--yellow)}
 .hero__lede{font-size:clamp(19px,2.2vw,24px);line-height:1.35;font-weight:600;max-width:30ch;text-wrap:pretty}
 .hero__ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
-.call-big{display:flex;align-items:center;gap:14px;padding:16px 22px;min-height:64px;flex:1 1 280px;max-width:420px}
+.call-big{display:flex;align-items:center;gap:14px;padding:16px 22px;min-height:64px;flex:1 1 260px;max-width:420px}
 .call-big__text{display:flex;flex-direction:column;line-height:1.05}
 .call-big__label{font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
-.call-big__num{font-size:clamp(24px,3vw,30px);font-weight:800;letter-spacing:-.01em}
+.call-big__num{font-size:clamp(24px,3vw,30px);font-weight:800;letter-spacing:-.01em;white-space:nowrap}
 .btn-outline{display:flex;align-items:center;justify-content:space-between;gap:14px;border:2px solid var(--white);color:var(--white);padding:16px 22px;min-height:64px;font-weight:800;font-size:15px;letter-spacing:.08em;text-transform:uppercase;flex:0 1 220px}
 .btn-outline:hover{background:var(--white);color:var(--ink)}
 .hero__byline{display:flex;flex-wrap:wrap;gap:6px 18px;font-size:15px;font-weight:600;color:var(--soft);padding-top:20px;border-top:2px solid var(--line-dark)}
 .hero__byline .slash{color:var(--yellow)}
 .chips{display:flex;flex-wrap:wrap;gap:8px}
 .chip{border:2px solid var(--yellow);color:var(--yellow);font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding:6px 10px}
-.hero__photo{position:relative;min-height:clamp(300px,52vw,640px);border-left:2px solid var(--yellow);overflow:hidden}
-.hero__photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:40% center}
-.hero__badge{position:absolute;left:0;bottom:0;background:var(--yellow);color:var(--ink);padding:14px 20px;display:flex;flex-direction:column;line-height:1.05}
-.hero__badge strong{font-size:clamp(28px,3.4vw,40px);font-weight:800;letter-spacing:-.02em}
+.hero__media{position:relative;min-width:0;margin-bottom:36px}
+.hero__photo{position:relative;aspect-ratio:1266/738;overflow:hidden;background:#1b1b1b;border-bottom:4px solid var(--yellow)}
+.hero__photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero__photo::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,var(--ink) 0%,rgba(17,17,17,.55) 9%,rgba(17,17,17,0) 26%)}
+.hero__badge{position:absolute;left:clamp(16px,7%,48px);bottom:0;transform:translateY(50%);background:var(--yellow);color:var(--ink);padding:14px 20px;display:flex;flex-direction:column;line-height:1.05;border:2px solid var(--ink)}
+@media (max-width:1023px){.hero__photo::after{display:none}}
+@media (max-width:639px){
+  .hero__media{margin-inline:calc(var(--hero-pad) * -1)}
+  .hero__badge{left:var(--hero-pad);padding:10px 14px}
+}
+.hero__badge strong{font-size:clamp(24px,2.6vw,36px);font-weight:800;letter-spacing:-.02em}
 .hero__badge span{font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
 
 /* Trust strip */
@@ -267,10 +278,10 @@ a.card:hover{background:#fffbe0}
 
 <main>
 <section id="top" class="hero">
-  <div class="wrap hero__grid">
+  <div class="hero__grid">
     <div class="hero__copy">
       <div class="hero__kicker">Garage door repair specialist · North Yorkshire</div>
-      <h1>Garage door <span>not working?</span></h1>
+      <h1>Garage<br> door <span>not<br> working?</span></h1>
       <p class="hero__lede">Don't struggle with it — give Steve a call.</p>
       <div class="hero__ctas">
         <a href="tel:07939500544" class="call-big btn-yellow">
@@ -294,8 +305,10 @@ a.card:hover{background:#fffbe0}
         <span class="chip">Remote controls</span>
       </div>
     </div>
-    <div class="hero__photo">
-      <img src="assets/hero-van.jpg" alt="The Lift Easy Garage Doors van parked outside a customer's garage" fetchpriority="high">
+    <div class="hero__media">
+      <div class="hero__photo">
+        <img src="assets/hero-van.jpg" alt="The Lift Easy Garage Doors van parked outside a customer's garage" width="1266" height="738" fetchpriority="high">
+      </div>
       <div class="hero__badge">
         <strong>30+ years</strong>
         <span>repairing garage doors</span>
