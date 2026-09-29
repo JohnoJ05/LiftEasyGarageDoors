@@ -276,7 +276,6 @@ a.card--dark:hover{background:#1c1c1c}
 /* Photo placeholder */
 .photo-slot{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;padding:20px;text-align:center;background:repeating-linear-gradient(135deg,#1c1c1c 0 14px,#171717 14px 28px);color:var(--grey);font-size:var(--fs-label);font-weight:800;letter-spacing:.12em;text-transform:uppercase}
 .photo-slot svg{color:var(--yellow)}
-.photo-slot__desc{max-width:34ch;font-size:.875rem;font-weight:600;line-height:1.4;letter-spacing:0;text-transform:none;color:var(--soft)}
 
 /* ---------- Service area strip ---------- */
 .area{background:var(--white);border-top:2px solid var(--ink);border-bottom:2px solid var(--ink)}
