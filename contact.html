@@ -6,7 +6,7 @@
 <!-- Preview build: keep search engines out. Remove this line when the site goes live. -->
 <meta name="robots" content="noindex, nofollow">
 <title>Contact Steve · Lift Easy Garage Doors</title>
-<meta name="description" content="Call or text Steve Procter on 07939 500544, email ste.procter@live.com, or send a message about your garage door repair, service or remote.">
+<meta name="description" content="Call or text Steve on 07939 500544, email ste.procter@live.com, or send a message about your garage door repair, service or remote.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&display=swap" rel="stylesheet">
@@ -20,6 +20,7 @@
   <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M20 6 9 17l-5-5"/></symbol>
   <symbol id="i-menu" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M3 6h18"/><path d="M3 12h18"/><path d="M3 18h18"/></g></symbol>
   <symbol id="i-camera" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></g></symbol>
+  <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
 </svg>
 
 <div class="page">
@@ -28,7 +29,7 @@
   <div class="wrap header__inner">
     <a href="index.html" class="brand">
       <span class="brand__name">Lift Easy</span>
-      <span class="brand__sub"><span>Garage Doors<span class="brand__dot"> ·</span></span><span>by Steve Procter</span></span>
+      <span class="brand__sub"><span>Garage Doors<span class="brand__dot"> ·</span></span><span>by Steve</span></span>
     </a>
     <nav class="nav" id="site-nav" aria-label="Main">
       <a href="repairs.html">Repairs</a>
@@ -55,16 +56,21 @@
     <div class="contact__info">
       <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Contact</span></nav>
       <h1 id="contact-title">Garage door <span>not working?</span></h1>
-      <p class="contact__lede">Don't struggle with it, call or text Steve, or send a message and he'll get back to you.</p>
+      <p class="contact__lede">Call or text Steve, or send the details with a photo of the door. He'll tell you what needs doing and what it'll cost.</p>
       <div class="contact__list">
         <div>
-          <span class="contact__name">Steve Procter</span>
+          <span class="contact__name">Steve</span>
           <span class="contact__org">Lift Easy Garage Doors</span>
         </div>
         <a href="tel:07939500544">
           <span class="contact__label">Phone (call or text)</span>
           <span class="contact__phone">07939 500544</span>
           <span class="contact__hint">For anything urgent, calling is quickest.</span>
+        </a>
+        <a href="https://wa.me/447939500544?text=Hi%20Steve%2C%20here%27s%20a%20photo%20of%20my%20garage%20door.">
+          <span class="contact__label">WhatsApp</span>
+          <span class="contact__email">Send Steve a photo</span>
+          <span class="contact__hint">Photos let Steve see the problem and price the repair.</span>
         </a>
         <a href="mailto:ste.procter@live.com">
           <span class="contact__label">Email</span>
@@ -75,31 +81,63 @@
           <span class="contact__areas">West Yorkshire, North Yorkshire, Teesside &amp; County Durham</span>
         </a>
       </div>
+      <ul class="contact__promises">
+        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-check"/></svg><span><strong>No call-out fee.</strong> If Steve can't fix it, there's no charge.</span></li>
+        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Fixed in one visit.</strong> Steve brings the spares needed.</span></li>
+        <li><svg width="18" height="18" aria-hidden="true"><use href="#i-check"/></svg><span><strong>Pay on completion</strong> by cash, cheque, bank transfer or card.</span></li>
+      </ul>
     </div>
-    <form class="form" id="enquiry">
+    <form class="form" id="enquiry" action="https://formsubmit.co/ste.procter@live.com" method="POST" enctype="multipart/form-data">
       <div class="form__head">
-        <strong>Send Steve a message</strong>
-        <span>Prefer to write? Tell Steve what's wrong and he'll get back to you.</span>
+        <strong>Send Steve the details</strong>
+        <span>Tell Steve what's wrong and add a photo if you can. He'll get back to you with what needs doing and a price.</span>
       </div>
+      <!-- FormSubmit settings. The first submission emails Steve an activation link; after that, the action URL can use the alias FormSubmit provides instead of the email address. -->
+      <input type="hidden" name="_subject" value="New garage door enquiry from the website">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://johnoj05.github.io/LiftEasyGarageDoors/contact.html?sent=1#enquiry">
+      <input type="text" name="_honey" class="form__honey" tabindex="-1" autocomplete="off">
       <label>Name
         <input name="name" required autocomplete="name">
       </label>
       <div class="form__row">
         <label>Phone
-          <input name="phone" type="tel" autocomplete="tel">
+          <input name="phone" type="tel" required autocomplete="tel">
         </label>
-        <label>Email
+        <label><span>Email <span class="form__optional">(optional)</span></span>
           <input name="email" type="email" autocomplete="email">
         </label>
       </div>
-      <label>Message
-        <textarea name="message" rows="6" required placeholder="e.g. My door has stopped halfway and won't close"></textarea>
+      <div class="form__row">
+        <label>Town or postcode
+          <input name="location" required autocomplete="postal-code">
+        </label>
+        <label>Make of door
+          <select name="door_make">
+            <option>Not sure</option>
+            <option>Hörmann</option>
+            <option>Garador</option>
+            <option>Henderson</option>
+            <option>Cardale</option>
+            <option>Wessex</option>
+            <option>Gliderol</option>
+            <option>Other</option>
+          </select>
+        </label>
+      </div>
+      <label>What's wrong with the door?
+        <textarea name="message" rows="5" required placeholder="e.g. My door has stopped halfway and won't close"></textarea>
+      </label>
+      <label><span>Photo of the door <span class="form__optional">(optional)</span></span>
+        <input type="file" name="attachment" accept="image/*">
+        <span class="form__hint">Most people send one. It lets Steve zoom in, see the problem and price the repair. More photos? <a href="https://wa.me/447939500544?text=Hi%20Steve%2C%20here%27s%20a%20photo%20of%20my%20garage%20door.">Send them on WhatsApp</a>.</span>
       </label>
       <button type="submit">
-        <span>Get in touch</span>
+        <span>Send to Steve</span>
         <svg width="20" height="20"><use href="#i-arrow-right"/></svg>
       </button>
-      <span class="form__sent" role="status" hidden>Your email app should open with your message ready to send. For anything urgent, call 07939 500544.</span>
+      <span class="form__error" role="alert" hidden></span>
+      <span class="form__sent" role="status" hidden>Thanks, your details have been sent to Steve. He'll be in touch soon. For anything urgent, call 07939 500544.</span>
     </form>
   </div>
 </section>
@@ -109,7 +147,7 @@
   <div class="wrap">
     <div class="footer__brand">
       <strong>Lift Easy Garage Doors</strong>
-      <span>by Steve Procter · West Yorkshire, North Yorkshire, Teesside &amp; County Durham</span>
+      <span>by Steve · West Yorkshire, North Yorkshire, Teesside &amp; County Durham</span>
       <span class="footer__note">Garage door repairs and servicing only. We don't sell or install new garage doors.</span>
     </div>
     <nav class="footer__nav" aria-label="Footer">

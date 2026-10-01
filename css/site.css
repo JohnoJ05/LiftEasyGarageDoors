@@ -320,6 +320,10 @@ a.card--dark:hover{background:#1c1c1c}
 .contact__phone{font-size:clamp(1.875rem,4vw,2.75rem);font-weight:800;letter-spacing:-.02em;color:var(--yellow)}
 .contact__email{font-size:clamp(1.125rem,2vw,1.375rem);font-weight:800;overflow-wrap:anywhere}
 .contact__areas{font-size:1.0625rem;font-weight:600}
+.contact__promises{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px;font-size:1rem;line-height:1.45;color:var(--soft)}
+.contact__promises li{display:flex;gap:10px;align-items:flex-start}
+.contact__promises svg{flex:none;margin-top:3px;color:var(--yellow)}
+.contact__promises strong{color:var(--white)}
 .contact__hint{font-size:.9375rem;color:var(--soft)}
 .form{background:var(--white);color:var(--ink);padding:clamp(20px,3vw,36px);display:flex;flex-direction:column;gap:16px;align-self:start;border-top:6px solid var(--yellow);min-width:0}
 .form__head{display:flex;flex-direction:column;gap:4px}
@@ -333,6 +337,17 @@ a.card--dark:hover{background:#1c1c1c}
 @media (min-width:480px){.form__row{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .form button{display:flex;align-items:center;justify-content:space-between;gap:12px;background:var(--ink);color:var(--white);border:0;border-radius:0;padding:16px 20px;min-height:56px;font-weight:800;font-size:.9375rem;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
 .form button:hover{background:var(--yellow);color:var(--ink)}
+.form select{width:100%;min-height:48px;border:2px solid var(--ink);border-radius:0;padding:10px 14px;font-size:1rem;font-weight:400;background:var(--white);color:var(--ink)}
+.form select:focus-visible{outline:3px solid var(--yellow);outline-offset:0}
+.form input[type=file]{padding:10px;font-size:.9375rem;cursor:pointer}
+.form input[type=file]::file-selector-button{margin-right:12px;border:0;background:var(--ink);color:var(--white);font:inherit;font-weight:800;font-size:.8125rem;letter-spacing:.06em;text-transform:uppercase;padding:8px 12px;cursor:pointer}
+.form__optional{font-weight:600;color:#6b6560}
+.form__hint{font-size:.875rem;font-weight:500;line-height:1.45;color:#5a5550}
+.form__hint a{font-weight:800;border-bottom:2px solid var(--yellow)}
+.form__honey{display:none}
+.form button[disabled]{opacity:.6;cursor:progress}
+.form__error{font-size:.875rem;font-weight:600;background:#ffe3df;color:#7c1405;padding:10px 12px}
+.form__error[hidden]{display:none}
 .form__sent{font-size:.875rem;font-weight:600;background:#fff6c2;padding:10px 12px}
 .form__sent[hidden]{display:none}
 
@@ -361,6 +376,14 @@ a.card--dark:hover{background:#1c1c1c}
 .tile a{font-weight:800;border-bottom:2px solid var(--yellow)}
 a.tile:hover{background:#fffbe0}
 .tile__more{margin-top:auto;display:flex;align-items:center;gap:8px;min-height:var(--tap);font-weight:800;font-size:.875rem;letter-spacing:.08em;text-transform:uppercase}
+
+/* Row of action buttons on a light background */
+.action-row{display:flex;flex-wrap:wrap;gap:12px;align-items:stretch}
+.call-big__num--sm{font-size:clamp(1.25rem,2.4vw,1.5rem)}
+@media (max-width:767px){
+  .action-row{flex-direction:column;align-items:stretch;gap:10px}
+  .action-row .call-big{max-width:none;flex:0 0 auto}
+}
 
 /* Numbered steps: 1, then 2x2, then 4 across */
 .steps{counter-reset:step;display:grid;grid-template-columns:minmax(0,1fr);gap:2px;background:var(--ink);border:2px solid var(--ink)}
