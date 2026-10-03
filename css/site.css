@@ -401,17 +401,22 @@ a.tile:hover{background:#fffbe0}
 .media-box img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 
 /* Before / after repairs: each pair is two stamped photo cells on an ink grid */
-.work{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--stack)}
-@media (min-width:1024px){.work{grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(1.5rem,3vw,2.5rem)}}
-.work__pair{margin:0;display:flex;flex-direction:column;border:2px solid var(--ink);background:var(--white)}
-.work__shots{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px;background:var(--ink);border-bottom:2px solid var(--ink)}
+.work{display:flex;flex-direction:column;gap:var(--stack)}
+.work__pair{margin:0;display:grid;grid-template-columns:minmax(0,1fr);border:2px solid var(--ink);background:var(--white)}
+.work__shots{display:grid;grid-template-columns:minmax(0,1fr);gap:2px;background:var(--ink)}
+@media (min-width:600px){.work__shots{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .work__shot{position:relative;aspect-ratio:5/4;overflow:hidden;background:#2a2a2a}
 .work__shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.work__tag{position:absolute;left:0;top:0;background:var(--ink);color:var(--white);font-size:var(--fs-label);font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:6px 10px;line-height:1.2}
+.work__tag{position:absolute;left:0;top:0;background:var(--ink);color:var(--white);font-size:var(--fs-label);font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:8px 12px;line-height:1.2}
 .work__tag--after{background:var(--yellow);color:var(--ink)}
-.work__pair figcaption{padding:clamp(18px,2.4vw,26px);display:flex;flex-direction:column;gap:6px}
-.work__pair figcaption strong{font-size:clamp(1.25rem,2vw,1.5rem);font-weight:800;line-height:1.1;letter-spacing:-.02em}
-.work__pair figcaption span{font-size:1rem;line-height:1.5;color:var(--muted)}
+.work__pair figcaption{padding:clamp(20px,2.6vw,32px);display:flex;flex-direction:column;gap:8px;border-top:2px solid var(--ink)}
+.work__pair figcaption strong{font-size:clamp(1.25rem,2vw,1.625rem);font-weight:800;line-height:1.1;letter-spacing:-.02em}
+.work__pair figcaption span{font-size:1rem;line-height:1.55;color:var(--muted);max-width:46ch}
+/* Desktop: caption becomes a side panel so both photos get the width */
+@media (min-width:1024px){
+  .work__pair{grid-template-columns:minmax(0,1fr) minmax(0,2.6fr)}
+  .work__pair figcaption{order:-1;justify-content:center;border-top:0;border-right:2px solid var(--ink)}
+}
 
 /* ---------- Footer ---------- */
 .footer{background:var(--ink);color:var(--grey);border-top:2px solid var(--yellow)}
