@@ -400,6 +400,19 @@ a.tile:hover{background:#fffbe0}
 .media-box{position:relative;aspect-ratio:4/3;border:2px solid var(--ink);overflow:hidden;background:#2a2a2a}
 .media-box img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 
+/* Before / after repairs: each pair is two stamped photo cells on an ink grid */
+.work{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--stack)}
+@media (min-width:1024px){.work{grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(1.5rem,3vw,2.5rem)}}
+.work__pair{margin:0;display:flex;flex-direction:column;border:2px solid var(--ink);background:var(--white)}
+.work__shots{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:2px;background:var(--ink);border-bottom:2px solid var(--ink)}
+.work__shot{position:relative;aspect-ratio:5/4;overflow:hidden;background:#2a2a2a}
+.work__shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.work__tag{position:absolute;left:0;top:0;background:var(--ink);color:var(--white);font-size:var(--fs-label);font-weight:800;letter-spacing:.12em;text-transform:uppercase;padding:6px 10px;line-height:1.2}
+.work__tag--after{background:var(--yellow);color:var(--ink)}
+.work__pair figcaption{padding:clamp(18px,2.4vw,26px);display:flex;flex-direction:column;gap:6px}
+.work__pair figcaption strong{font-size:clamp(1.25rem,2vw,1.5rem);font-weight:800;line-height:1.1;letter-spacing:-.02em}
+.work__pair figcaption span{font-size:1rem;line-height:1.5;color:var(--muted)}
+
 /* ---------- Footer ---------- */
 .footer{background:var(--ink);color:var(--grey);border-top:2px solid var(--yellow)}
 .footer .wrap{padding-block:28px;display:grid;grid-template-columns:minmax(0,1fr);gap:20px;font-size:.875rem}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Hero layout variants (preview only)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css">
+<style>
+  /* Preview-only scaffolding. Never part of the real site. */
+  .demo-label{background:#ff2fb0;color:#fff;font-family:Archivo,sans-serif;font-weight:800;font-size:.8rem;letter-spacing:.08em;text-transform:uppercase;padding:14px var(--gutter);}
+  .demo-label span{display:block;font-weight:400;text-transform:none;letter-spacing:0;font-size:.8125rem;margin-top:4px;opacity:.85}
+
+  /* ---- Variant 1: compact inset photo (smaller, contained, supporting) ---- */
+  .demo-v1 .hero__media{margin-inline:0;margin-bottom:20px}
+  .demo-v1 .hero__photo{aspect-ratio:16/10;border-bottom:2px solid var(--yellow)}
+  .demo-v1 .hero__badge{position:static;transform:none;display:inline-flex;flex-direction:row;align-items:center;gap:8px;margin-top:10px;border:2px solid var(--ink);padding:8px 12px}
+  .demo-v1 .hero__badge strong{font-size:1rem}
+  .demo-v1 .hero__badge span{font-size:.6875rem}
+
+  /* ---- Variant 2: banner leads, headline follows (reversed order, shorter strip) ---- */
+  .demo-v2 .hero__grid{grid-template-areas:"media" "copy"}
+  .demo-v2 .hero__media{margin-bottom:0;border-bottom:4px solid var(--yellow)}
+  .demo-v2 .hero__photo{aspect-ratio:21/9;border-bottom:0}
+  .demo-v2 .hero__badge{left:auto;right:var(--gutter)}
+  .demo-v2 .hero__copy{padding-top:22px}
+
+  /* ---- Variant 3: photo moved after the trust facts (structural reorder) ---- */
+  .demo-v3 .hero__media{display:none}
+  .demo-v3-photo{margin-inline:calc(var(--gutter) * -1);position:relative}
+  .demo-v3-photo .hero__photo{aspect-ratio:16/9;margin:0}
+  .demo-v3-photo .hero__badge{left:var(--gutter)}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+  <symbol id="i-arrow-right" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></g></symbol>
+  <symbol id="i-camera" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></g></symbol>
+</svg>
+
+<div class="page">
+<header class="header">
+  <div class="wrap header__inner">
+    <a href="index.html" class="brand">
+      <span class="brand__name">Lift Easy</span>
+      <span class="brand__sub"><span>Garage Doors<span class="brand__dot"> ·</span></span><span>by Steve Procter</span></span>
+    </a>
+    <a href="tel:07939500544" class="header__call" aria-label="Call Steve">
+      <svg width="18" height="18"><use href="#i-phone"/></svg>
+      <span>07939 500544</span>
+    </a>
+  </div>
+</header>
+
+<div class="demo-label">Variant 1 <span>Compact inset photo — smaller, contained, sits as a supporting element rather than a full-bleed slab</span></div>
+<section class="hero demo-v1">
+  <div class="hero__grid">
+    <div class="hero__copy">
+      <div class="hero__kicker"><span class="hero__kicker-text"><span>Garage door repair specialist</span></span></div>
+      <h1>Garage<br> door <span>not<br> working?</span></h1>
+      <p class="hero__lede">Don't struggle with it, give Steve a call.</p>
+      <div class="hero__ctas">
+        <a href="tel:07939500544" class="call-big btn-yellow">
+          <svg width="26" height="26"><use href="#i-phone"/></svg>
+          <span class="call-big__text"><span class="call-big__label">Call Steve</span><span class="call-big__num">07939 500544</span></span>
+        </a>
+        <a href="contact.html" class="btn-outline"><span>Get in touch</span><svg width="20" height="20"><use href="#i-arrow-right"/></svg></a>
+      </div>
+    </div>
+    <div class="hero__media">
+      <div class="hero__photo">
+        <div class="photo-slot" role="img" aria-label="Photo to add">
+          <svg width="32" height="32" aria-hidden="true"><use href="#i-camera"/></svg>
+          <span>Photo to add</span>
+        </div>
+      </div>
+      <div class="hero__badge"><strong>30+ years</strong><span>repairing garage doors</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="demo-label">Variant 2 <span>Banner leads, headline follows — shorter wide strip up top, copy and CTAs read below it</span></div>
+<section class="hero demo-v2">
+  <div class="hero__grid">
+    <div class="hero__copy">
+      <div class="hero__kicker"><span class="hero__kicker-text"><span>Garage door repair specialist</span></span></div>
+      <h1>Garage<br> door <span>not<br> working?</span></h1>
+      <p class="hero__lede">Don't struggle with it, give Steve a call.</p>
+      <div class="hero__ctas">
+        <a href="tel:07939500544" class="call-big btn-yellow">
+          <svg width="26" height="26"><use href="#i-phone"/></svg>
+          <span class="call-big__text"><span class="call-big__label">Call Steve</span><span class="call-big__num">07939 500544</span></span>
+        </a>
+        <a href="contact.html" class="btn-outline"><span>Get in touch</span><svg width="20" height="20"><use href="#i-arrow-right"/></svg></a>
+      </div>
+    </div>
+    <div class="hero__media">
+      <div class="hero__photo">
+        <div class="photo-slot" role="img" aria-label="Photo to add">
+          <svg width="32" height="32" aria-hidden="true"><use href="#i-camera"/></svg>
+          <span>Photo to add</span>
+        </div>
+      </div>
+      <div class="hero__badge"><strong>30+ years</strong><span>repairing garage doors</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="demo-label">Variant 3 <span>Photo moved after the trust facts — headline, CTAs and credibility read first; the photo becomes a break before the service cards</span></div>
+<section class="hero demo-v3">
+  <div class="hero__grid">
+    <div class="hero__copy">
+      <div class="hero__kicker"><span class="hero__kicker-text"><span>Garage door repair specialist</span></span></div>
+      <h1>Garage<br> door <span>not<br> working?</span></h1>
+      <p class="hero__lede">Don't struggle with it, give Steve a call.</p>
+      <div class="hero__ctas">
+        <a href="tel:07939500544" class="call-big btn-yellow">
+          <svg width="26" height="26"><use href="#i-phone"/></svg>
+          <span class="call-big__text"><span class="call-big__label">Call Steve</span><span class="call-big__num">07939 500544</span></span>
+        </a>
+        <a href="contact.html" class="btn-outline"><span>Get in touch</span><svg width="20" height="20"><use href="#i-arrow-right"/></svg></a>
+      </div>
+    </div>
+    <div class="hero__media"></div>
+  </div>
+</section>
+<section class="trust" aria-label="Why choose Lift Easy">
+  <div class="wrap"><div class="trust__grid">
+    <div class="trust__item"><strong>30+ years</strong><span>Experience with domestic garage doors</span></div>
+    <div class="trust__item"><strong>Fast response</strong><span>When your door lets you down</span></div>
+    <div class="trust__item"><strong>Same-day</strong><span>Repair service</span></div>
+    <div class="trust__item"><strong>Direct to Steve</strong><span>No call centre, no middleman</span></div>
+    <div class="trust__item"><strong>Repairs only</strong><span>No new door sales or installations</span></div>
+  </div></div>
+</section>
+<div class="demo-v3-photo">
+  <div class="hero__photo">
+    <div class="photo-slot" role="img" aria-label="Photo to add">
+      <svg width="32" height="32" aria-hidden="true"><use href="#i-camera"/></svg>
+      <span>Photo to add</span>
+    </div>
+  </div>
+  <div class="hero__badge"><strong>30+ years</strong><span>repairing garage doors</span></div>
+</div>
+
+</div>
+</body>
+</html>
