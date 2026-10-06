@@ -116,6 +116,8 @@ A near-monochrome black-and-white system pierced by exactly one accent. The acce
 ### Named Rules
 **The One Accent Rule.** Site Yellow is the only saturated color in the system. If a second bright color is ever needed, that's a sign the hierarchy is unclear, not a sign to add a color.
 
+**Sanctioned exception: Banner Red** (`#e3141b`, `--banner-red`). Used once only, on the homepage desktop hero's "Fast response / Same-day repairs" brush stamp, kept at the client's request to match Steve's printed banner. Don't reuse it anywhere else.
+
 ## Typography
 
 **Display/Body Font:** Archivo (with system-ui, sans-serif fallback)

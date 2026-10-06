@@ -10,6 +10,24 @@
   });
 })();
 
+// Fact tiles are <details>: collapsed to their headings on phones (tap to read),
+// always open from tablet up, where there's room to show everything.
+(function () {
+  var tiles = document.querySelectorAll('details.tile');
+  if (!tiles.length) return;
+  var phone = window.matchMedia('(max-width: 767px)');
+  function sync() {
+    for (var i = 0; i < tiles.length; i++) tiles[i].open = !phone.matches;
+  }
+  sync();
+  phone.addEventListener('change', sync);
+  for (var i = 0; i < tiles.length; i++) {
+    tiles[i].addEventListener('toggle', function (e) {
+      if (!phone.matches && !e.target.open) e.target.open = true;
+    });
+  }
+})();
+
 // Enquiry form: posts to FormSubmit, which emails the details and photo to Steve.
 // Large phone photos are shrunk in the browser first so they stay under FormSubmit's 10MB limit.
 (function () {
