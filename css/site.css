@@ -239,9 +239,8 @@ svg{display:block}
   .hero__call-text strong{font-size:clamp(2.25rem,3.4vw,3rem)}
 }
 
-/* Van photos: keep the whole van in frame at every hero shape. The side shot
- * has extra blurred sky and ground so it also fills the tall desktop panel. */
-.hero--home .hero__photo img.van-side{object-position:50% 63%}
+/* Van photos: keep the whole van in frame at every hero shape */
+.hero--home .hero__photo img.van-side{object-position:50% 68%}
 .hero__photo img.van-front{object-position:50% 55%}
 @media (min-width:768px) and (max-width:1023px){
   /* 21:9 would slice the van in half, so the homepage photo keeps a taller frame on tablets */
