@@ -13,6 +13,12 @@ colors:
   line-dark: "#333333"
   line-light: "#c9c6c3"
 typography:
+  brand:
+    fontFamily: "Poppins, Archivo, system-ui, sans-serif"
+    fontSize: "clamp(2.75rem, 8.6vw, 5rem)"
+    fontWeight: 900
+    lineHeight: 0.98
+    letterSpacing: "-0.0125em"
   display:
     fontFamily: "Archivo, system-ui, sans-serif"
     fontSize: "clamp(2.625rem, 6.2vw, 5.75rem)"
@@ -44,6 +50,7 @@ typography:
     letterSpacing: "0.12em"
 rounded:
   none: "0px"
+  button: "4px"
 spacing:
   gutter: "clamp(1.5rem, 4vw, 3.5rem)"
   stack: "clamp(2.25rem, 4vw, 3rem)"
@@ -83,13 +90,13 @@ components:
 
 This is the visual language of stencilled signage on the side of a work van, not a software product. Every surface reads as bold, load-bearing, and built to be understood at a glance from across a driveway: heavy uppercase Archivo type, hard black rules, and a single hazard-bright yellow that appears only where it means "look here" — a call button, a tick mark, a fact worth noticing. Nothing about the system is decorative; every line, border, and block of color is doing a structural job.
 
-The system is deliberately flat and edged, never soft. There are no rounded corners anywhere in the implementation and no shadows — depth and separation come from hard 2px borders, dark-background "grid dividers" (thin gaps between white/yellow cells that read as mortar lines), and strong color blocking between ink-black and paper-white sections. The layout alternates full-bleed black bands (hero, fast-response, footer) with lighter paper/white bands (services, about, area), giving the page a stamped, sign-panel rhythm rather than a continuous scroll.
+The system is deliberately flat and edged, never soft. Corners are square everywhere except a 4px radius on the main call-to-action buttons, and there are no shadows — depth and separation come from hard 2px borders, dark-background "grid dividers" (thin gaps between white/yellow cells that read as mortar lines), and strong color blocking between ink-black and paper-white sections. The layout alternates full-bleed black bands (hero, fast-response, footer) with lighter paper/white bands (services, about, area), giving the page a stamped, sign-panel rhythm rather than a continuous scroll.
 
 Mobile is treated as the primary reading device, not a shrunk desktop: the base CSS is phone-first, a fixed yellow call bar anchors the bottom of the screen below 768px, and a dedicated `max-width:767px` block actively removes repeated content (duplicate call-to-actions, restated facts, decorative badges) rather than just shrinking type — the phone experience is edited down, not just resized.
 
 **Key Characteristics:**
 - Hazard-bright single accent color used sparingly and always with intent (calls, checkmarks, key facts)
-- Zero border-radius anywhere; every edge is a hard 90° corner
+- Square corners throughout; the only exception is a 4px radius on the main call buttons (see Shapes)
 - No shadows; separation comes from 2px borders and thin dark "grid line" gaps between grouped cells
 - Heavy uppercase Archivo (weight 800) for all display type; tight, negative letter-spacing on large headings
 - Full-bleed alternating ink-black and paper/white section bands
@@ -116,16 +123,19 @@ A near-monochrome black-and-white system pierced by exactly one accent. The acce
 ### Named Rules
 **The One Accent Rule.** Site Yellow is the only saturated color in the system. If a second bright color is ever needed, that's a sign the hierarchy is unclear, not a sign to add a color.
 
-**Sanctioned exception: Banner Red** (`#e3141b`, `--banner-red`). Used once only, on the homepage desktop hero's "Fast response / Same-day repairs" brush stamp, kept at the client's request to match Steve's printed banner. Don't reuse it anywhere else.
+Banner Red (`#e3141b`) and the homepage brush stamp were retired with the October 2026 homepage redesign. There is no exception to this rule any more.
 
 ## Typography
 
 **Display/Body Font:** Archivo (with system-ui, sans-serif fallback)
 
+**Brand Font:** Poppins (`--font-display`), from the client-approved homepage design (October 2026). Used only for the header logo and phone button, the homepage hero (kicker, h1, call button) and the homepage feature bar titles. Everything else stays Archivo.
+
 **Character:** A single grotesque doing all the work — geometric, high-contrast between its default (body) and 800 (display) weights, and always set in true uppercase for headings and labels rather than `text-transform` as an afterthought. There is no serif or secondary display face; hierarchy comes entirely from size, weight, and case.
 
 ### Hierarchy
-- **Display** (800, `clamp(2.625rem, 6.2vw, 5.75rem)`, line-height 0.92): The h1 on the homepage hero. Uppercase, tight tracking (-0.035em), with the emphasis phrase set in Site Yellow.
+- **Brand** (Poppins 900, `clamp(2.75rem, 8.6vw, 5rem)`, line-height 0.98): The homepage hero h1, set on two lines with the second ("Not working?") in Site Yellow.
+- **Display** (800, `clamp(2.625rem, 6.2vw, 5.75rem)`, line-height 0.92): Reserved for a large Archivo h1; the homepage no longer uses it. Uppercase, tight tracking (-0.035em), with the emphasis phrase set in Site Yellow.
 - **Headline** (800, `clamp(1.875rem, 5vw, 3.75rem)`, line-height 0.98): Section h2s (`.h2-xl`). Uppercase, -0.03em tracking.
 - **Title** (800, `clamp(1.5rem, 2.4vw, 1.75rem)`, line-height 1.05): Card and tile h3s. Sentence case, not uppercase — this is the one hierarchy level that reads as a heading rather than a shout.
 - **Body** (400, 1.125rem, line-height 1.5–1.6): Paragraph copy, capped at 46–58ch max-width for readability.
@@ -151,15 +161,15 @@ Flat by design — there are no shadows anywhere in the system. Depth and groupi
 
 ## Shapes
 
-Every corner in the system is 0px. No `border-radius` is used anywhere, on buttons, cards, inputs, images, or badges. Borders are always solid and either 1px (hairline dividers), 2px (structural borders, focus rings, tick separators), or 4–6px (a small set of emphasis accents: the hero photo's yellow underline, the contact form's yellow top border). Corners are always square; the visual vocabulary is entirely rectilinear panels and thin rules, echoing the "stencilled signage" north star.
+Every corner in the system is 0px, with one exception: the main call-to-action buttons (the header phone button and the homepage hero's Call Steve and Send a message buttons) take a 4px radius, from the client-approved homepage design (October 2026). Cards, inputs, images, badges, grids and every other button stay square. Borders are always solid and either 1px (hairline dividers), 2px (structural borders, focus rings, tick separators), or 4–6px (a small set of emphasis accents: the hero photo's yellow underline, the contact form's yellow top border). Apart from those buttons, corners are always square; the visual vocabulary is entirely rectilinear panels and thin rules, echoing the "stencilled signage" north star.
 
 ### Named Rules
-**The Square Corner Rule.** `border-radius: 0` everywhere, without exception. A rounded corner would read as software chrome, not signage.
+**The Square Corner Rule.** `border-radius: 0` everywhere except the main call buttons' 4px. Don't extend the radius to anything else: a rounded card or image would read as software chrome, not signage.
 
 ## Components
 
 ### Buttons
-- **Shape:** Square corners (0px), 2px borders where outlined.
+- **Shape:** Square corners (0px) and 2px borders where outlined, except the header phone button and the homepage hero buttons, which use a 4px radius (the hero's outline button has a 1px border).
 - **Primary** (`.btn-yellow` / `.call-big` / `.cta__call`): Site Yellow background, Garage Black text, bold uppercase label line plus a larger phone-number line, generous padding (16–26px), minimum 64–72px tall — sized to be an unmissable tap target for a "call me now" action, not a standard button.
 - **Outline** (`.btn-outline`): Transparent background, 2px border in the current context's foreground color (white on dark, black on light), fills solid on hover.
 - **Text link** (`.more-link`): No button chrome at all — bold uppercase label with a 2px Site Yellow underline offset below the text, arrow icon trailing.
@@ -189,14 +199,14 @@ A recurring "grid of stamped facts" pattern (`.trust`, `.problems`, `.stats`, `.
 
 ### Do:
 - **Do** keep Site Yellow rare — it should mark "the thing to act on," never a general accent for decoration.
-- **Do** use square corners (0px radius) on every new element; a rounded corner is off-brand by construction.
+- **Do** use square corners (0px radius) on every new element; only the main call buttons take the 4px radius.
 - **Do** convey grouping and separation with hard borders and 2px grid gaps, not shadows.
 - **Do** set headings, labels, and buttons in true uppercase with weight 800 and negative letter-spacing at large sizes.
 - **Do** treat the phone layout as an edited version of the page (removing duplicate content), not just a shrunk one — follow the pattern already established in the `max-width:767px` block in `css/site.css`.
 - **Do** size any primary call-to-action (especially phone actions) as an oversized, unmissable tap target — this is a trade site where the phone call is the entire conversion goal.
 
 ### Don't:
-- **Don't** add `border-radius` anywhere, including on images, badges, or form controls.
+- **Don't** add `border-radius` anywhere beyond the main call buttons, including on cards, images, badges, or form controls.
 - **Don't** add `box-shadow` for depth or hover "lift" — use a background-color or border change instead.
 - **Don't** introduce a second saturated accent color alongside Site Yellow.
 - **Don't** set body copy or card/tile titles in uppercase — that register is reserved for display type, labels, and buttons.

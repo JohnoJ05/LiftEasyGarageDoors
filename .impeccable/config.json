@@ -64,24 +64,6 @@
         "reason": "Agent: background of the same temporary photo placeholder; superseded once real photos are added, not a persistent token gap"
       },
       {
-        "rule": "organic-clip-path",
-        "value": "*",
-        "files": [
-          "index.html"
-        ],
-        "createdAt": "2026-10-20T16:38:10.498Z",
-        "reason": "DESIGN.md sanctioned exception: Banner Red brush stamp on homepage hero kept at client's request to match Steve's printed banner"
-      },
-      {
-        "rule": "organic-clip-path",
-        "value": "*",
-        "files": [
-          "about.html"
-        ],
-        "createdAt": "2026-10-20T16:45:45.047Z",
-        "reason": "DESIGN.md sanctioned exception: Banner Red brush stamp in shared site.css, kept at client's request to match Steve's printed banner"
-      },
-      {
         "rule": "cramped-padding",
         "value": "*",
         "files": [
