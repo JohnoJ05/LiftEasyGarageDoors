@@ -52,6 +52,11 @@
 
 <main>
 <section id="top" class="hero hero--home">
+  <!-- BACKGROUND TO ADD (laptop and up only): a garage door being repaired, ideally Steve's hands/tools on a UK up-and-over or roller door, no faces.
+       Landscape, 2000px+ wide. Replace the .hero__bg-slot span with <img src="assets/..." alt="">; site.css greys it out and darkens it so the copy stays readable. -->
+  <div class="hero__bg" aria-hidden="true">
+    <span class="hero__bg-slot"><svg width="16" height="16"><use href="#i-camera"/></svg>Background photo to add</span>
+  </div>
   <div class="hero__grid">
     <div class="hero__copy">
       <!-- Desktop-only banner lockup (the header already carries the brand on smaller screens) -->
@@ -97,11 +102,8 @@
     </div>
     <div class="hero__media">
       <div class="hero__photo">
-        <!-- PHOTO TO ADD: Steve's Lift Easy van parked on a customer's driveway, landscape, van towards the right of the frame (on desktop the left side fades into the black). Replace this placeholder with <img src="assets/..." alt="..."> -->
-        <div class="photo-slot" role="img" aria-label="Photo to add">
-          <svg width="40" height="40" aria-hidden="true"><use href="#i-camera"/></svg>
-          <span>Photo to add</span>
-        </div>
+        <!-- Background and number plate blurred in the source image -->
+        <img class="van-side" src="assets/van/van-side.webp" alt="Steve's red Lift Easy Garage Doors van, signwritten with his number, 07939 500544" fetchpriority="high">
       </div>
       <div class="hero__badge">
         <strong>30+ years</strong>

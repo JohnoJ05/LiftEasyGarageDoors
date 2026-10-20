@@ -62,6 +62,42 @@
         "value": "rgb(27, 27, 27)",
         "createdAt": "2026-09-28T14:11:04.436Z",
         "reason": "Agent: background of the same temporary photo placeholder; superseded once real photos are added, not a persistent token gap"
+      },
+      {
+        "rule": "organic-clip-path",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-20T16:38:10.498Z",
+        "reason": "DESIGN.md sanctioned exception: Banner Red brush stamp on homepage hero kept at client's request to match Steve's printed banner"
+      },
+      {
+        "rule": "organic-clip-path",
+        "value": "*",
+        "files": [
+          "about.html"
+        ],
+        "createdAt": "2026-10-20T16:45:45.047Z",
+        "reason": "DESIGN.md sanctioned exception: Banner Red brush stamp in shared site.css, kept at client's request to match Steve's printed banner"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "about.html"
+        ],
+        "createdAt": "2026-10-20T16:45:45.053Z",
+        "reason": "Claude verified: flagged sections are full-bleed bands whose text sits inside .wrap (gutter padding); .note has 18-24px padding visible in screenshots"
+      },
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "about.html"
+        ],
+        "createdAt": "2026-10-20T16:45:49.417Z",
+        "reason": "DESIGN.md Shapes: hero photo's 4px yellow underline is an intended accent, not a card side-tab"
       }
     ]
   }
