@@ -202,12 +202,12 @@ svg{display:block}
   .hero__alt{display:inline-flex;align-items:center;gap:8px;min-height:var(--tap);font-size:.875rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--soft);text-decoration:underline 2px var(--yellow);text-underline-offset:8px}
   .hero__alt:hover{color:var(--white)}
 
-  /* Van photo: full height, flush to the right edge, fading into the black on its left */
-  .hero--home .hero__media{grid-area:auto;align-self:stretch;justify-self:stretch;position:absolute;top:0;right:0;bottom:0;width:49%;margin:0}
-  .hero--home .hero__photo{height:100%;aspect-ratio:auto;border-bottom:0}
-  .hero--home .hero__photo img{object-position:70% 50%}
-  .hero--home .hero__photo::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,var(--ink) 0%,rgba(17,17,17,.6) 14%,rgba(17,17,17,0) 38%)}
-  .hero--home .hero__badge{left:auto;right:var(--gutter);bottom:var(--gutter);transform:none}
+  /* Van photo: a hard-edged framed panel in the right column, no fade */
+  .hero--home .hero__grid{grid-template-columns:minmax(0,11fr) minmax(0,9fr);grid-template-areas:"copy media";column-gap:clamp(40px,4vw,72px)}
+  .hero--home .hero__copy{max-width:640px}
+  .hero--home .hero__media{position:relative;z-index:1;align-self:center;margin:0 0 36px}
+  .hero--home .hero__photo{aspect-ratio:4/3;outline:2px solid var(--line-dark)}
+  .hero--home .hero__photo::after{content:none}
 }
 /* Homepage hero background photo (laptop and up). Greyed and darkened so the
  * yellow copy stays readable; the van photo sits on top of its right half.
