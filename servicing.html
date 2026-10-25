@@ -6,202 +6,507 @@
 <!-- Preview build: keep search engines out. Remove this line when the site goes live. -->
 <meta name="robots" content="noindex, nofollow">
 <title>Garage Door Servicing · Lift Easy Garage Doors</title>
-<meta name="description" content="Garage door servicing across West Yorkshire, North Yorkshire, Teesside and County Durham. Inspection, adjustment and full servicing to keep your existing door safe and reliable. Call Steve on 07939 500544.">
+<meta name="description" content="Garage door servicing across North Yorkshire, Teesside and County Durham. Inspection, adjustment and full servicing to keep your existing door safe and reliable. Call Steve on 07939 500544.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/site.css?v=3">
-<script src="js/site.js?v=3" defer></script>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=Inter:wght@400;500;600&amp;family=Poppins:wght@600;700;800;900&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/site.css?v=4">
+<style>
+/* Desktop layout */
+.view-d a:hover{opacity:.85}
+@media (max-width:1100px){.sv-nav{display:none !important}}
+@media (max-width:900px){
+.sv-two,.sv-included{grid-template-columns:minmax(0,1fr) !important}
+.sv-h1{font-size:52px !important}
+.sv-h2{font-size:40px !important}
+.sv-h2-xl{font-size:52px !important}
+}
+@media (max-width:820px){.sv-headphone{display:none !important}}
+@media (max-width:520px){.sv-signs{grid-template-columns:minmax(0,1fr) !important}}
+/* Phone layout */
+.m-scroll{scrollbar-width:none}.m-scroll::-webkit-scrollbar{display:none}
+</style>
 </head>
 <body>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
-  <symbol id="i-arrow-right" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></g></symbol>
-  <symbol id="i-check" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" d="M20 6 9 17l-5-5"/></symbol>
-  <symbol id="i-menu" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="square"><path d="M3 6h18"/><path d="M3 12h18"/><path d="M3 18h18"/></g></symbol>
-  <symbol id="i-camera" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></g></symbol>
-  <symbol id="i-chat" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></symbol>
+<div class="view-d"></div>
+<template id="tpl-d">
+<div style="width: 100%; background: #111111; color: #ffffff; font-family: 'Archivo', system-ui, sans-serif">
+
+<!-- ===== Header ===== -->
+<header style="background: #111111; border-bottom: 2px solid #D7141A">
+<div style="max-width: 1180px; margin: 0 auto; padding: 12px 40px; box-sizing: border-box; display: flex; align-items: center; gap: 24px; flex-wrap: wrap">
+<a href="index.html" aria-label="Lift Easy Garage Doors home" style="display: flex; align-items: center; gap: 14px; color: #ffffff">
+<svg width="62" height="52" viewBox="0 0 64 54" fill="none" aria-hidden="true">
+<path d="M4 24 L32 4 L60 24" stroke="#FFD401" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"></path>
+<path d="M11 22 V50 H53 V22" stroke="#FFD401" stroke-width="4" stroke-linejoin="round"></path>
+<rect x="17" y="24" width="30" height="24" fill="#ffffff"></rect>
+<path d="M17 29 H47 M17 34 H47 M17 39 H47 M17 44 H47" stroke="#111111" stroke-width="2"></path>
 </svg>
-
-<div class="page">
-
-<header class="header">
-  <div class="wrap header__inner">
-    <a href="index.html" class="brand">
-      <svg class="brand__mark" viewBox="0 0 64 54" fill="none" aria-hidden="true"><path d="M4 24 32 4l28 20" stroke="#FFD400" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/><path d="M11 22v28h42V22" stroke="#FFD400" stroke-width="4" stroke-linejoin="round"/><rect x="17" y="24" width="30" height="24" fill="#fff"/><path d="M17 29h30M17 34h30M17 39h30M17 44h30" stroke="#111" stroke-width="2"/></svg>
-      <span class="brand__text">
-        <span class="brand__name">Lift <span>Easy</span></span>
-        <span class="brand__sub"><span>Garage Doors<span class="brand__dot"> ·</span></span><span>by Steve</span></span>
-      </span>
-    </a>
-    <nav class="nav" id="site-nav" aria-label="Main">
-      <a href="repairs.html">Repairs</a>
-      <a href="servicing.html" aria-current="page">Servicing</a>
-      <a href="remotes.html">Remotes</a>
-      <a href="about.html">About Steve</a>
-      <a href="areas.html">Areas</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <a href="tel:07939500544" class="header__call" aria-label="Call Steve on 07939 500544">
-      <svg width="18" height="18"><use href="#i-phone"/></svg>
-      <span>07939 500544</span>
-    </a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-      <svg width="22" height="22" aria-hidden="true"><use href="#i-menu"/></svg>
-      <span class="sr-only">Menu</span>
-    </button>
-  </div>
+<div style="display: flex; flex-direction: column; gap: 4px">
+<div style="font-weight: 800; font-stretch: 110%; font-size: 34px; line-height: 1; letter-spacing: -0.5px"><span style="color: #ffffff">LIFT</span> <span style="color: #FFD401">EASY</span></div>
+<div style="font-weight: 700; font-stretch: 112%; font-size: 12px; letter-spacing: 2px; color: #ffffff">REPAIR SPECIALIST · BY STEVE</div>
+</div>
+</a>
+<nav class="sv-nav" aria-label="Main" style="display: flex; align-items: center; gap: 28px; font-size: 15px; font-weight: 700; margin-left: auto">
+<a href="index.html#repairs" style="color: #ffffff">Repairs</a>
+<a href="servicing.html" aria-current="page" style="color: #FF3B3B">Servicing</a>
+<a href="remotes.html" style="color: #ffffff">Remotes</a>
+<a href="about.html" style="color: #ffffff">About Steve</a>
+<a href="areas.html" style="color: #ffffff">Areas</a>
+<a href="contact.html" style="color: #ffffff">Contact</a>
+</nav>
+<a class="sv-headphone" href="tel:07939500544" style="display: flex; align-items: center; gap: 12px; background: #D7141A; color: #ffffff; padding: 14px 26px; font-weight: 800; font-stretch: 105%; font-size: 20px; margin-left: 12px">
+<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg>
+<span>07939 500544</span>
+</a>
+</div>
 </header>
 
-<main>
-<section class="hero hero--page">
-  <div class="hero__grid">
-    <div class="hero__copy">
-      <nav class="crumbs" aria-label="Breadcrumb"><a href="index.html">Home</a><span aria-hidden="true">/</span><span aria-current="page">Servicing</span></nav>
-      <h1>Garage door <span>servicing</span></h1>
-      <p class="hero__lede">Regular servicing helps keep your garage door operating safely and smoothly, and catches small problems before they become bigger, more expensive ones.</p>
-      <div class="hero__ctas">
-        <a href="tel:07939500544" class="call-big btn-yellow">
-          <svg width="26" height="26"><use href="#i-phone"/></svg>
-          <span class="call-big__text">
-            <span class="call-big__label">Call or text Steve</span>
-            <span class="call-big__num">07939 500544</span>
-          </span>
-        </a>
-        <a href="contact.html" class="btn-outline">
-          <span>Send a message</span>
-          <svg width="20" height="20"><use href="#i-arrow-right"/></svg>
-        </a>
-      </div>
-    </div>
-    <div class="hero__media">
-      <div class="hero__photo">
-        <!-- PHOTO TO ADD: Steve servicing a door, lubricating the tracks and checking the rollers and springs. Replace this placeholder with <img src="assets/..." alt="..."> -->
-        <div class="photo-slot" role="img" aria-label="Photo to add">
-          <svg width="40" height="40" aria-hidden="true"><use href="#i-camera"/></svg>
-          <span>Photo to add</span>
-        </div>
-      </div>
-    </div>
-  </div>
+<!-- ===== Hero ===== -->
+<section style="background: #111111; padding: 90px 0 110px">
+<div class="sv-two" style="max-width: 1180px; margin: 0 auto; padding: 0 40px; box-sizing: border-box; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px 64px; align-items: center">
+<div style="display: flex; flex-direction: column">
+<nav aria-label="Breadcrumb" style="font-size: 13px; font-weight: 800; font-stretch: 125%; letter-spacing: 2px; color: #cccccc"><a href="index.html" style="color: #cccccc">HOME</a> <span aria-hidden="true">/</span> <span style="color: #FF3B3B">SERVICING</span></nav>
+<h1 class="sv-h1" style="margin: 30px 0 0; font-size: 76px; font-weight: 900; font-stretch: 112%; line-height: 0.95; letter-spacing: -2px; text-transform: uppercase"><span style="display: block; color: #ffffff">Garage door</span><span style="display: block; color: #FF3B3B">Servicing</span></h1>
+<p style="margin: 34px 0 0; font-size: 22px; line-height: 1.4; color: #e8e8e8; max-width: 490px">Regular servicing helps keep your garage door operating safely and smoothly, and catches small problems before they become bigger, more expensive ones.</p>
+<div style="margin-top: 36px; display: flex; flex-wrap: wrap; gap: 12px">
+<a href="tel:07939500544" style="display: flex; align-items: center; gap: 18px; background: #D7141A; color: #ffffff; padding: 0 28px 0 22px; min-height: 76px; box-sizing: border-box">
+<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg>
+<span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 12px; font-weight: 800; font-stretch: 125%; letter-spacing: 1.6px">CALL OR TEXT STEVE</span><span style="font-size: 30px; font-weight: 800; font-stretch: 105%; line-height: 1">07939 500544</span></span>
+</a>
+<a href="contact.html" style="display: flex; align-items: center; gap: 16px; border: 2px solid #ffffff; color: #ffffff; padding: 0 22px; min-height: 76px; box-sizing: border-box; font-size: 14px; font-weight: 800; font-stretch: 115%; letter-spacing: 1.6px">SEND A MESSAGE <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+</div>
+</div>
+<div>
+<div style="font-size: 12px; font-weight: 800; letter-spacing: 1.8px; font-stretch: 125%; color: #999999">ALL COMMON DOOR TYPES</div>
+<div style="margin-top: 12px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; padding-bottom: 10px; border-bottom: 4px solid #D7141A">
+<button type="button" onClick="{{ flip0 }}" aria-pressed="{{ pressed0 }}" style="height: 244px; padding: 14px; background: rgba(215,20,26,0.10); border: 1px solid rgba(255,59,59,0.45); color: #ffffff; text-align: left; font-family: 'Archivo', system-ui, sans-serif; cursor: pointer; overflow: hidden; box-sizing: border-box">
+<sc-if value="{{ front0 }}" hint-placeholder-val="{{ true }}"><div style="display: flex; flex-direction: column">
+<svg viewBox="0 0 160 120" width="100%" height="150" fill="none" stroke="#FF3B3B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Up-and-over garage door, half open, with overhead track and motor"><path d="M8 112h144" stroke-opacity="0.6"></path><path d="M26 112V30h108v82" stroke-width="2.4"></path><path d="M32 112V36h96v76" stroke-opacity="0.7"></path><path d="M30 24h112"></path><rect x="140" y="18" width="16" height="11" rx="2" fill="rgba(255,59,59,0.18)"></rect><path d="M44 42h72l12 50H32z" fill="rgba(255,59,59,0.14)"></path><path d="M51 43l-9 48M58 43l-7 48M66 43l-5 48M73 43l-3 48M80 43v48M87 43l3 48M94 43l5 48M102 43l7 48M109 43l9 48" stroke-opacity="0.75"></path><circle cx="80" cy="82" r="2.2" fill="#FF3B3B"></circle><path d="M128 50v28" stroke-width="2.4"></path><path d="M128 60l-10 6"></path><path d="M80 24v12" stroke-opacity="0.7"></path></svg>
+<div style="margin-top: 10px; display: flex; justify-content: space-between; align-items: center"><span style="font-size: 16px; font-weight: 800">Up-and-over</span><span style="font-size: 12px; font-weight: 700; color: #FF3B3B">Click to learn ↻</span></div>
+</div></sc-if>
+<sc-if value="{{ back0 }}" hint-placeholder-val="{{ false }}"><div style="margin: -14px; height: 244px; padding: 20px; box-sizing: border-box; background: #D7141A; display: flex; flex-direction: column"><span style="font-size: 12px; font-weight: 800; letter-spacing: 1.6px; font-stretch: 120%">UP-AND-OVER</span><span style="margin-top: 8px; font-size: 14px; line-height: 1.45; font-weight: 600">The classic one-piece door. It tilts up and slides back into the garage on overhead tracks, with springs or counterbalances doing the heavy lifting. Very common on UK homes.</span><span style="margin-top: auto; font-size: 12px; font-weight: 700">Click to flip back ↻</span></div></sc-if>
+</button>
+<button type="button" onClick="{{ flip1 }}" aria-pressed="{{ pressed1 }}" style="height: 244px; padding: 14px; background: rgba(215,20,26,0.10); border: 1px solid rgba(255,59,59,0.45); color: #ffffff; text-align: left; font-family: 'Archivo', system-ui, sans-serif; cursor: pointer; overflow: hidden; box-sizing: border-box">
+<sc-if value="{{ front1 }}" hint-placeholder-val="{{ true }}"><div style="display: flex; flex-direction: column">
+<svg viewBox="0 0 160 120" width="100%" height="150" fill="none" stroke="#FF3B3B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Sectional garage door rising on curved tracks"><path d="M8 112h144" stroke-opacity="0.6"></path><path d="M26 112V30h108v82" stroke-width="2.4"></path><path d="M32 112V36h96v76" stroke-opacity="0.7"></path><path d="M128 58V44q0-12 12-12h14" stroke-width="2"></path><path d="M32 58V44q0-12 12-12" stroke-width="2" stroke-opacity="0.6"></path><rect x="36" y="56" width="88" height="56" fill="rgba(255,59,59,0.14)"></rect><path d="M36 70h88M36 84h88M36 98h88" stroke-width="2"></path><path d="M40 62h80M40 76h80M40 90h80M40 104h80" stroke-opacity="0.45"></path><path d="M80 48V36M75 41l5-5 5 5" stroke-width="2"></path><path d="M138 44h14M148 40l4 4-4 4" stroke-width="2"></path></svg>
+<div style="margin-top: 10px; display: flex; justify-content: space-between; align-items: center"><span style="font-size: 16px; font-weight: 800">Sectional</span><span style="font-size: 12px; font-weight: 700; color: #FF3B3B">Click to learn ↻</span></div>
+</div></sc-if>
+<sc-if value="{{ back1 }}" hint-placeholder-val="{{ false }}"><div style="margin: -14px; height: 244px; padding: 20px; box-sizing: border-box; background: #D7141A; display: flex; flex-direction: column"><span style="font-size: 12px; font-weight: 800; letter-spacing: 1.6px; font-stretch: 120%">SECTIONAL</span><span style="margin-top: 8px; font-size: 14px; line-height: 1.45; font-weight: 600">Made of horizontal panels that lift straight up and curve back along tracks under the ceiling. It doesn’t swing out, so it’s handy for short driveways.</span><span style="margin-top: auto; font-size: 12px; font-weight: 700">Click to flip back ↻</span></div></sc-if>
+</button>
+<button type="button" onClick="{{ flip2 }}" aria-pressed="{{ pressed2 }}" style="height: 244px; padding: 14px; background: rgba(215,20,26,0.10); border: 1px solid rgba(255,59,59,0.45); color: #ffffff; text-align: left; font-family: 'Archivo', system-ui, sans-serif; cursor: pointer; overflow: hidden; box-sizing: border-box">
+<sc-if value="{{ front2 }}" hint-placeholder-val="{{ true }}"><div style="display: flex; flex-direction: column">
+<svg viewBox="0 0 160 120" width="100%" height="150" fill="none" stroke="#FF3B3B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Canopy garage door tilted out over the opening"><path d="M8 112h144" stroke-opacity="0.6"></path><path d="M26 112V30h108v82" stroke-width="2.4"></path><path d="M32 112V36h96v76" stroke-opacity="0.7"></path><path d="M32 40h96l20 22H12z" fill="rgba(255,59,59,0.14)"></path><path d="M44 42l-8 18M56 42l-5 18M68 42l-3 18M80 42v18M92 42l3 18M104 42l5 18M116 42l8 18" stroke-opacity="0.75"></path><circle cx="80" cy="56" r="2.2" fill="#FF3B3B"></circle><path d="M32 82l12-20M128 82l-12-20" stroke-width="2"></path><circle cx="32" cy="82" r="2"></circle><circle cx="128" cy="82" r="2"></circle></svg>
+<div style="margin-top: 10px; display: flex; justify-content: space-between; align-items: center"><span style="font-size: 16px; font-weight: 800">Canopy</span><span style="font-size: 12px; font-weight: 700; color: #FF3B3B">Click to learn ↻</span></div>
+</div></sc-if>
+<sc-if value="{{ back2 }}" hint-placeholder-val="{{ false }}"><div style="margin: -14px; height: 244px; padding: 20px; box-sizing: border-box; background: #D7141A; display: flex; flex-direction: column"><span style="font-size: 12px; font-weight: 800; letter-spacing: 1.6px; font-stretch: 120%">CANOPY</span><span style="margin-top: 8px; font-size: 14px; line-height: 1.45; font-weight: 600">A one-piece door that pivots up, leaving part of it sticking out over the driveway like a canopy when it’s open. Simple and sturdy, with fewer moving parts.</span><span style="margin-top: auto; font-size: 12px; font-weight: 700">Click to flip back ↻</span></div></sc-if>
+</button>
+<button type="button" onClick="{{ flip3 }}" aria-pressed="{{ pressed3 }}" style="height: 244px; padding: 14px; background: rgba(215,20,26,0.10); border: 1px solid rgba(255,59,59,0.45); color: #ffffff; text-align: left; font-family: 'Archivo', system-ui, sans-serif; cursor: pointer; overflow: hidden; box-sizing: border-box">
+<sc-if value="{{ front3 }}" hint-placeholder-val="{{ true }}"><div style="display: flex; flex-direction: column">
+<svg viewBox="0 0 160 120" width="100%" height="150" fill="none" stroke="#FF3B3B" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Roller garage door with drum housing and slatted curtain"><path d="M8 112h144" stroke-opacity="0.6"></path><rect x="22" y="14" width="116" height="18" rx="9" fill="rgba(255,59,59,0.16)" stroke-width="2.2"></rect><circle cx="31" cy="23" r="5"></circle><circle cx="31" cy="23" r="1.6" fill="#FF3B3B"></circle><path d="M28 32v80M132 32v80" stroke-width="2.4"></path><rect x="32" y="32" width="96" height="56" fill="rgba(255,59,59,0.14)"></rect><path d="M32 38h96M32 44h96M32 50h96M32 56h96M32 62h96M32 68h96M32 74h96M32 80h96" stroke-opacity="0.8"></path><rect x="32" y="86" width="96" height="5" fill="#FF3B3B"></rect><rect x="32" y="91" width="96" height="21" fill="rgba(0,0,0,0.45)" stroke="none"></rect></svg>
+<div style="margin-top: 10px; display: flex; justify-content: space-between; align-items: center"><span style="font-size: 16px; font-weight: 800">Roller</span><span style="font-size: 12px; font-weight: 700; color: #FF3B3B">Click to learn ↻</span></div>
+</div></sc-if>
+<sc-if value="{{ back3 }}" hint-placeholder-val="{{ false }}"><div style="margin: -14px; height: 244px; padding: 20px; box-sizing: border-box; background: #D7141A; display: flex; flex-direction: column"><span style="font-size: 12px; font-weight: 800; letter-spacing: 1.6px; font-stretch: 120%">ROLLER</span><span style="margin-top: 8px; font-size: 14px; line-height: 1.45; font-weight: 600">Thin slats that roll up into a drum above the opening. It takes up no room inside the garage or on the drive.</span><span style="margin-top: auto; font-size: 12px; font-weight: 700">Click to flip back ↻</span></div></sc-if>
+</button>
+</div>
+</div>
+</div>
 </section>
 
-<section class="block">
-  <div class="wrap">
-    <div class="grid-2 section-head">
-      <div class="section-head__title">
-        <span class="eyebrow">01 - What's included</span>
-        <h2 class="h2-lg">Inspect, adjust and service</h2>
-      </div>
-      <p class="intro">Steve can inspect, adjust and service your existing garage door and identify potential problems before they become bigger and more expensive.</p>
-    </div>
-    <div class="tiles">
-      <details class="tile"><summary><h3>Inspection of your existing door</h3></summary><p>A thorough look over the door and its moving parts (springs, cables, rollers, hinges, tracks, locks and fixings), checking for wear or damage.</p></details>
-      <details class="tile"><summary><h3>Adjustments</h3></summary><p>Setting the door up so it opens and closes evenly, sits properly in the frame and isn't straining its springs or opener.</p></details>
-      <details class="tile"><summary><h3>Full servicing</h3></summary><p>Cleaning and lubricating the moving parts and tightening fittings, so the door runs quietly and smoothly.</p></details>
-      <details class="tile"><summary><h3>Spotting problems early</h3></summary><p>Worn parts are pointed out while they're still a small job, not after they've failed and left the door stuck.</p></details>
-      <details class="tile"><summary><h3>Automatic openers</h3></summary><p>If your door is electric, the opener can be looked at too. See <a href="remotes.html">remotes &amp; automatic doors</a>.</p></details>
-      <details class="tile"><summary><h3>Honest advice</h3></summary><p>If anything needs repairing, Steve will explain what's required and discuss the options with you.</p></details>
-    </div>
-  </div>
+<!-- ===== 01 What's included ===== -->
+<section style="background: #f2f2f2; color: #111111; padding: 110px 0 110px">
+<div style="max-width: 1180px; margin: 0 auto; padding: 0 40px; box-sizing: border-box">
+<div class="sv-two" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px 64px; align-items: end">
+<div style="display: flex; flex-direction: column; gap: 18px">
+<div style="font-size: 13px; font-weight: 800; letter-spacing: 2px; font-stretch: 125%; color: #555555">01 - WHAT’S INCLUDED</div>
+<h2 class="sv-h2" style="margin: 0; font-size: 56px; font-weight: 800; font-stretch: 108%; line-height: 1; letter-spacing: -1.5px">Inspect, adjust<br>and <span style="background: linear-gradient(transparent 64%, #FFD401 64%, #FFD401 92%, transparent 92%)">service</span></h2>
+</div>
+<p style="margin: 0 0 6px; font-size: 18px; line-height: 1.5; max-width: 470px">Steve can inspect, adjust and service your existing garage door and identify potential problems before they become bigger and more expensive.</p>
+</div>
+<div class="sv-included" style="margin-top: 52px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 2px solid #111111; border-left: 2px solid #111111; background: #ffffff">
+<div style="padding: 32px 32px 34px; border-right: 2px solid #111111; border-bottom: 2px solid #111111">
+<div aria-hidden="true" style="width: 32px; height: 4px; background: #D7141A"></div>
+<h3 style="margin: 14px 0 0; font-size: 23px; font-weight: 800; font-stretch: 105%; letter-spacing: -0.3px">Inspection of your existing door</h3>
+<p style="margin: 12px 0 0; font-size: 16px; line-height: 1.55; color: #222222">A thorough look over the door and its moving parts (springs, cables, rollers, hinges, tracks, locks and fixings), checking for wear or damage.</p>
+</div>
+<div style="padding: 32px 32px 34px; border-right: 2px solid #111111; border-bottom: 2px solid #111111">
+<div aria-hidden="true" style="width: 32px; height: 4px; background: #D7141A"></div>
+<h3 style="margin: 14px 0 0; font-size: 23px; font-weight: 800; font-stretch: 105%; letter-spacing: -0.3px">Adjustments</h3>
+<p style="margin: 12px 0 0; font-size: 16px; line-height: 1.55; color: #222222">Setting the door up so it opens and closes evenly, sits properly in the frame and isn’t straining its springs or opener.</p>
+</div>
+<div style="padding: 32px 32px 34px; border-right: 2px solid #111111; border-bottom: 2px solid #111111">
+<div aria-hidden="true" style="width: 32px; height: 4px; background: #D7141A"></div>
+<h3 style="margin: 14px 0 0; font-size: 23px; font-weight: 800; font-stretch: 105%; letter-spacing: -0.3px">Full servicing</h3>
+<p style="margin: 12px 0 0; font-size: 16px; line-height: 1.55; color: #222222">Cleaning and lubricating the moving parts and tightening fittings, so the door runs quietly and smoothly.</p>
+</div>
+<div style="padding: 32px 32px 34px; border-right: 2px solid #111111; border-bottom: 2px solid #111111">
+<div aria-hidden="true" style="width: 32px; height: 4px; background: #D7141A"></div>
+<h3 style="margin: 14px 0 0; font-size: 23px; font-weight: 800; font-stretch: 105%; letter-spacing: -0.3px">Spotting problems early</h3>
+<p style="margin: 12px 0 0; font-size: 16px; line-height: 1.55; color: #222222">Worn parts are pointed out while they’re still a small job, not after they’ve failed and left the door stuck.</p>
+</div>
+<div style="padding: 32px 32px 34px; border-right: 2px solid #111111; border-bottom: 2px solid #111111">
+<div aria-hidden="true" style="width: 32px; height: 4px; background: #D7141A"></div>
+<h3 style="margin: 14px 0 0; font-size: 23px; font-weight: 800; font-stretch: 105%; letter-spacing: -0.3px">Automatic openers</h3>
+<p style="margin: 12px 0 0; font-size: 16px; line-height: 1.55; color: #222222">If your door is electric, the opener can be looked at too. See <a href="remotes.html" style="font-weight: 800; color: #111111; border-bottom: 2px solid #D7141A">remotes &amp; automatic doors</a>.</p>
+</div>
+<div style="padding: 32px 32px 34px; border-right: 2px solid #111111; border-bottom: 2px solid #111111">
+<div aria-hidden="true" style="width: 32px; height: 4px; background: #D7141A"></div>
+<h3 style="margin: 14px 0 0; font-size: 23px; font-weight: 800; font-stretch: 105%; letter-spacing: -0.3px">Honest advice</h3>
+<p style="margin: 12px 0 0; font-size: 16px; line-height: 1.55; color: #222222">Steve will always give it to you straight. If your door can’t be repaired, he’ll point you to a company who can help.</p>
+</div>
+</div>
+</div>
 </section>
 
-<section class="fast">
-  <div class="wrap">
-    <div class="fast__copy">
-      <span class="eyebrow eyebrow--yellow">02 - Warning signs</span>
-      <h2 class="h2-lg">Is your door telling you something?</h2>
-      <p>Doors rarely fail without warning. If you notice any of these, a service now could save a breakdown, and a bigger bill, later.</p>
-    </div>
-    <div class="fast__side">
-      <div class="problems">
-        <div>Grinding, squeaking or banging</div>
-        <div>Jerky or uneven movement</div>
-        <div>Heavier to lift than it used to be</div>
-        <div>Doesn't close fully or evenly</div>
-        <div>Frayed cables or worn parts</div>
-        <div>Opener struggling or slow</div>
-      </div>
-      <a href="tel:07939500544" class="call-bar btn-yellow">
-        <span class="call-bar__msg">Noticed one of these? Give Steve a call.</span>
-        <span class="call-bar__num"><svg width="22" height="22"><use href="#i-phone"/></svg><span>07939 500544</span></span>
-      </a>
-    </div>
-  </div>
+<!-- ===== 02 Warning signs ===== -->
+<section style="background: #111111; color: #ffffff; padding: 110px 0 114px">
+<div class="sv-two" style="max-width: 1180px; margin: 0 auto; padding: 0 40px; box-sizing: border-box; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px 64px; align-items: center">
+<div style="display: flex; flex-direction: column">
+<div style="font-size: 13px; font-weight: 800; letter-spacing: 2px; font-stretch: 125%; color: #FF3B3B">02 - WARNING SIGNS</div>
+<h2 class="sv-h2" style="margin: 26px 0 0; font-size: 54px; font-weight: 800; font-stretch: 108%; line-height: 1.02; letter-spacing: -1.5px">Is your door telling you something?</h2>
+<p style="margin: 26px 0 0; font-size: 18px; line-height: 1.55; color: #dddddd; max-width: 480px">Doors rarely fail without warning. If you notice any of these, a service now could save a breakdown, and a bigger bill, later.</p>
+</div>
+<div style="display: flex; flex-direction: column; gap: 26px">
+<ul class="sv-signs" style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid #3a3a3a; border-left: 1px solid #3a3a3a">
+<li style="display: flex; align-items: center; gap: 14px; padding: 18px 20px; min-height: 60px; box-sizing: border-box; border-right: 1px solid #3a3a3a; border-bottom: 1px solid #3a3a3a; font-size: 17px; font-weight: 700"><span aria-hidden="true" style="width: 9px; height: 9px; background: #D7141A; flex-shrink: 0"></span>Grinding, squeaking or banging</li>
+<li style="display: flex; align-items: center; gap: 14px; padding: 18px 20px; min-height: 60px; box-sizing: border-box; border-right: 1px solid #3a3a3a; border-bottom: 1px solid #3a3a3a; font-size: 17px; font-weight: 700"><span aria-hidden="true" style="width: 9px; height: 9px; background: #D7141A; flex-shrink: 0"></span>Jerky or uneven movement</li>
+<li style="display: flex; align-items: center; gap: 14px; padding: 18px 20px; min-height: 60px; box-sizing: border-box; border-right: 1px solid #3a3a3a; border-bottom: 1px solid #3a3a3a; font-size: 17px; font-weight: 700"><span aria-hidden="true" style="width: 9px; height: 9px; background: #D7141A; flex-shrink: 0"></span>Heavier to lift than it used to be</li>
+<li style="display: flex; align-items: center; gap: 14px; padding: 18px 20px; min-height: 60px; box-sizing: border-box; border-right: 1px solid #3a3a3a; border-bottom: 1px solid #3a3a3a; font-size: 17px; font-weight: 700"><span aria-hidden="true" style="width: 9px; height: 9px; background: #D7141A; flex-shrink: 0"></span>Doesn’t close fully or evenly</li>
+<li style="display: flex; align-items: center; gap: 14px; padding: 18px 20px; min-height: 60px; box-sizing: border-box; border-right: 1px solid #3a3a3a; border-bottom: 1px solid #3a3a3a; font-size: 17px; font-weight: 700"><span aria-hidden="true" style="width: 9px; height: 9px; background: #D7141A; flex-shrink: 0"></span>Frayed cables or worn parts</li>
+<li style="display: flex; align-items: center; gap: 14px; padding: 18px 20px; min-height: 60px; box-sizing: border-box; border-right: 1px solid #3a3a3a; border-bottom: 1px solid #3a3a3a; font-size: 17px; font-weight: 700"><span aria-hidden="true" style="width: 9px; height: 9px; background: #D7141A; flex-shrink: 0"></span>Opener struggling or slow</li>
+</ul>
+<a href="tel:07939500544" style="display: flex; flex-direction: column; gap: 14px; background: #D7141A; color: #ffffff; padding: 26px 24px 28px">
+<span style="font-size: 22px; font-weight: 800; font-stretch: 102%">Noticed one of these? Give Steve a call.</span>
+<span style="display: flex; align-items: center; gap: 12px; font-size: 30px; font-weight: 800; font-stretch: 105%"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg>07939 500544</span>
+</a>
+</div>
+</div>
 </section>
 
-<section class="block block--white">
-  <div class="wrap split">
-    <div class="prose">
-      <span class="eyebrow">03 - Why service</span>
-      <h2 class="h2-md">Small jobs now, fewer breakdowns later</h2>
-      <p>Every time a garage door opens and closes, its moving parts wear a little. A regular service keeps your existing door safe, quiet and reliable, and spots that wear before it turns into a breakdown or a bigger, more expensive repair.</p>
-      <p>Lift Easy doesn't sell new doors, so the aim is always to keep the door you already have working well for as long as possible.</p>
-      <p>Having a repair? A service of the door is included in the price Steve quotes for the repair.</p>
-      <a href="contact.html" class="more-link"><span>Book a service</span><svg width="18" height="18"><use href="#i-arrow-right"/></svg></a>
-    </div>
-    <div class="media-box">
-      <!-- PHOTO TO ADD: A worn roller or hinge found during a service, next to the new replacement part. Replace this placeholder with <img src="assets/..." alt="..."> -->
-      <div class="photo-slot" role="img" aria-label="Photo to add">
-        <svg width="40" height="40" aria-hidden="true"><use href="#i-camera"/></svg>
-        <span>Photo to add</span>
-      </div>
-    </div>
-  </div>
+<!-- ===== 03 Why service ===== -->
+<section style="background: #ffffff; color: #111111; padding: 112px 0 112px">
+<div class="sv-two" style="max-width: 1180px; margin: 0 auto; padding: 0 40px; box-sizing: border-box; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px 72px; align-items: start">
+<div style="display: flex; flex-direction: column">
+<div style="font-size: 13px; font-weight: 800; letter-spacing: 2px; font-stretch: 125%; color: #555555">03 - WHY SERVICE</div>
+<h2 class="sv-h2" style="margin: 24px 0 0; font-size: 46px; font-weight: 800; font-stretch: 108%; line-height: 1; letter-spacing: -1.4px">Small jobs now, <span style="background: linear-gradient(transparent 64%, #FFD401 64%, #FFD401 92%, transparent 92%); -webkit-box-decoration-break: clone; box-decoration-break: clone">fewer breakdowns</span> later</h2>
+<p style="margin: 28px 0 0; font-size: 18px; line-height: 1.6">Every time a garage door opens and closes, its moving parts wear a little. A regular service keeps your existing door safe, quiet and reliable, and spots that wear before it turns into a breakdown or a bigger, more expensive repair.</p>
+<p style="margin: 18px 0 0; font-size: 18px; line-height: 1.6"><strong style="font-weight: 900">Lift Easy doesn’t sell new doors</strong>, so the aim is always to keep the door you already have working well for as long as possible.</p>
+<p style="margin: 18px 0 0; font-size: 18px; line-height: 1.6">If a garage door is maintained and serviced, it should last 20 to 30 years, and sometimes longer. So don’t think that when your door is broken, it always needs replacing. Steve will leave you with a smooth-operating, well-balanced, easy-to-use garage door that will give you many more years of service.</p>
+<p style="margin: 18px 0 0; font-size: 18px; line-height: 1.6">Having a repair? A service of the door is included in the price Steve quotes for the repair.</p>
+<div style="margin-top: 36px"><a href="contact.html" style="display: inline-flex; align-items: center; gap: 12px; color: #111111; font-size: 15px; font-weight: 800; font-stretch: 112%; letter-spacing: 1.4px"><span style="border-bottom: 3px solid #D7141A; padding-bottom: 4px">BOOK A SERVICE</span> <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
+</div>
+<div style="background-color: #1c1c1c; background-image: repeating-linear-gradient(135deg, #1c1c1c 0px, #1c1c1c 22px, #232323 22px, #232323 44px); min-height: 460px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px" role="img" aria-label="Photo to add">
+<svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="#FF3B3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"></path><circle cx="12" cy="13" r="3"></circle></svg>
+<span style="font-size: 13px; font-weight: 800; font-stretch: 125%; letter-spacing: 1.8px; color: #aaaaaa">PHOTO TO ADD</span>
+</div>
+</div>
 </section>
 
-<section class="cta cta--compact">
-  <div class="wrap">
-    <h2>Keep your door running smoothly.</h2>
-    <div class="cta__row">
-      <a href="tel:07939500544" class="cta__call">
-        <svg width="30" height="30"><use href="#i-phone"/></svg>
-        <span class="call-big__text">
-          <span class="call-big__label">Call or text Steve</span>
-          <span class="call-big__num">07939 500544</span>
-        </span>
-      </a>
-      <a href="contact.html" class="btn-outline btn-outline--dark">
-        <span>Send a message</span>
-        <svg width="20" height="20"><use href="#i-arrow-right"/></svg>
-      </a>
-      <div class="cta__facts">
-        <span>Fast response · Same-day repair service</span>
-        <span>No call-out fee · Over 30 years' experience</span>
-      </div>
-    </div>
-  </div>
+<!-- ===== CTA ===== -->
+<section id="contact" style="background: #D7141A; color: #ffffff; padding: 110px 0 110px; border-top: 2px solid #111111">
+<div style="max-width: 1180px; margin: 0 auto; padding: 0 40px; box-sizing: border-box">
+<h2 class="sv-h2-xl" style="margin: 0; font-size: 78px; font-weight: 900; font-stretch: 112%; line-height: 0.95; letter-spacing: -2.5px; text-transform: uppercase">Keep your door<br>running smoothly.</h2>
+<div style="margin-top: 32px; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 12px">
+<a href="tel:07939500544" style="display: flex; align-items: center; gap: 18px; background: #111111; color: #ffffff; padding: 0 26px 0 22px; min-height: 86px; box-sizing: border-box">
+<svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#FF3B3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg>
+<span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 13px; font-weight: 800; font-stretch: 125%; letter-spacing: 1.6px">CALL OR TEXT STEVE</span><span style="font-size: 36px; font-weight: 800; font-stretch: 105%; color: #FF3B3B; line-height: 1">07939 500544</span></span>
+</a>
+<a href="mailto:steve@lifteasygaragedoors.co.uk" style="display: flex; align-items: center; gap: 16px; border: 2px solid #ffffff; color: #ffffff; padding: 0 22px; min-height: 86px; box-sizing: border-box; font-size: 15px; font-weight: 800; font-stretch: 115%; letter-spacing: 1.6px">SEND A MESSAGE <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
+<div style="font-size: 17px; font-weight: 700; line-height: 1.75; margin-left: 10px">Fast response · Same-day repair service<br>No call-out fee · Over 30 years’ experience</div>
+</div>
+</div>
 </section>
-</main>
 
-<footer class="footer">
-  <div class="wrap">
-    <div class="footer__brand">
-      <strong>Lift Easy Garage Doors</strong>
-      <span>by Steve · West Yorkshire, North Yorkshire, Teesside &amp; County Durham</span>
-      <span class="footer__note">Garage door repairs and servicing only. We don't sell or install new garage doors.</span>
-    </div>
-    <nav class="footer__nav" aria-label="Footer">
-      <a href="repairs.html">Repairs</a>
-      <a href="servicing.html">Servicing</a>
-      <a href="remotes.html">Remotes</a>
-      <a href="about.html">About Steve</a>
-      <a href="areas.html">Areas</a>
-      <a href="contact.html">Contact</a>
-    </nav>
-    <div class="footer__links">
-      <a href="tel:07939500544">07939 500544</a>
-      <a href="mailto:ste.procter@live.com">ste.procter@live.com</a>
-      <span>lifteasygaragedoors.co.uk</span>
-    </div>
-  </div>
+<!-- ===== Footer ===== -->
+<footer style="background: #111111; color: #ffffff; padding: 48px 0 52px; border-top: 2px solid #2a2a2a">
+<div style="max-width: 1180px; margin: 0 auto; padding: 0 40px; box-sizing: border-box; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 24px 48px">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<a href="index.html" aria-label="Lift Easy Garage Doors home" style="display: flex; align-items: center; gap: 12px; color: #ffffff; align-self: flex-start">
+<svg width="46" height="39" viewBox="0 0 64 54" fill="none" aria-hidden="true"><path d="M4 24 L32 4 L60 24" stroke="#FFD401" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"></path><path d="M11 22 V50 H53 V22" stroke="#FFD401" stroke-width="4" stroke-linejoin="round"></path><rect x="17" y="24" width="30" height="24" fill="#ffffff"></rect><path d="M17 29 H47 M17 34 H47 M17 39 H47 M17 44 H47" stroke="#111111" stroke-width="2"></path></svg>
+<span style="display: flex; flex-direction: column"><span style="font-weight: 800; font-stretch: 110%; font-size: 24px; line-height: 1">LIFT <span style="color: #FFD401">EASY</span></span><span style="margin-top: 4px; font-size: 9px; font-weight: 700; font-stretch: 112%; letter-spacing: 1.6px">REPAIR SPECIALIST · BY STEVE</span></span>
+</a>
+<div style="margin-top: 12px; font-size: 14px; color: #b0b0b0">Steve Procter trading as Lift Easy Garage Doors · Northallerton, DL6 2BL</div>
+<div style="font-size: 14px; color: #b0b0b0">Covering North Yorkshire, Teesside &amp; County Durham</div>
+<div style="font-size: 14px; font-weight: 700; color: #ffffff; margin-top: 8px">Garage door repairs and servicing only. <strong style="font-weight: 900">We don’t sell or install new garage doors.</strong></div>
+<div style="margin-top: 4px; font-size: 13px; color: #dddddd">Calls 7am–8pm · Message online any time · Steve replies on WhatsApp</div>
+</div>
+<div style="display: flex; flex-direction: column; align-items: flex-end; gap: 26px">
+<nav aria-label="Footer" style="display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 14px; font-weight: 700; color: #ffffff">
+<a href="index.html#repairs">Repairs</a><a href="servicing.html">Servicing</a><a href="remotes.html">Remotes</a><a href="about.html">About Steve</a><a href="areas.html">Areas</a><a href="contact.html">Contact</a>
+</nav>
+<div style="display: flex; flex-wrap: wrap; gap: 8px 24px; font-size: 14px">
+<a href="tel:07939500544" style="font-weight: 800; color: #ffffff">07939 500544</a>
+<a href="mailto:steve@lifteasygaragedoors.co.uk" style="color: #ffffff">steve@lifteasygaragedoors.co.uk</a>
+<a href="https://lifteasygaragedoors.co.uk" style="color: #a8a8a8">lifteasygaragedoors.co.uk</a>
+<a href="https://www.facebook.com/share/1A9jixm1Us/" target="_blank" rel="noopener" aria-label="Lift Easy Garage Doors on Facebook" style="display: inline-flex; align-items: center; gap: 6px; color: #ffffff"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#ffffff"></circle><path d="M13.4 21.9v-7.3h2.5l.4-2.9h-2.9V9.9c0-.8.2-1.4 1.4-1.4h1.6V5.9c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2H8v2.9h2.5v7.3" fill="#111111"></path></svg>Facebook</a>
+</div>
+</div>
+</div>
 </footer>
 
-<a href="tel:07939500544" class="mobile-call">
-  <span class="mobile-call__label"><svg width="24" height="24"><use href="#i-phone"/></svg>Call Steve</span>
-  <span class="mobile-call__num">07939 500544</span>
+</div>
+</template>
+<div class="view-m"></div>
+<template id="tpl-m">
+<div style="position: relative; background: #111111; color: #ffffff; font-family: 'Archivo', system-ui, sans-serif">
+<div class="m-scroll">
+
+<!-- Header -->
+<header style="position: sticky; top: 0; z-index: 5; background: #111111; border-bottom: 2px solid #D7141A; height: 64px; box-sizing: border-box; padding: 0 16px; display: flex; align-items: center; gap: 8px">
+<a href="index.html" aria-label="Lift Easy Garage Doors home" style="display: flex; align-items: center; gap: 10px; color: #ffffff; margin-right: auto">
+<svg width="40" height="34" viewBox="0 0 64 54" fill="none" aria-hidden="true"><path d="M4 24 L32 4 L60 24" stroke="#FFD401" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"></path><path d="M11 22 V50 H53 V22" stroke="#FFD401" stroke-width="4" stroke-linejoin="round"></path><rect x="17" y="24" width="30" height="24" fill="#ffffff"></rect><path d="M17 29 H47 M17 34 H47 M17 39 H47 M17 44 H47" stroke="#111111" stroke-width="2"></path></svg>
+<span style="display: flex; flex-direction: column"><span style="font-weight: 800; font-stretch: 110%; font-size: 20px; line-height: 1">LIFT <span style="color: #FFD401">EASY</span></span><span style="font-size: 8px; font-weight: 700; letter-spacing: 1.4px; font-stretch: 112%; margin-top: 4px">REPAIR SPECIALIST · BY STEVE</span></span>
 </a>
+<a href="tel:07939500544" aria-label="Call Steve on 07939 500544" style="width: 44px; height: 44px; background: #D7141A; display: flex; align-items: center; justify-content: center"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg></a>
+<button type="button" aria-label="Open menu" onClick="{{ toggleMenu }}" style="width: 44px; height: 44px; background: transparent; border: 2px solid #ffffff; display: flex; align-items: center; justify-content: center; padding: 0; cursor: pointer"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#FF3B3B" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button>
+</header>
+
+<!-- Hero -->
+<section style="background: #111111; padding: 28px 20px 32px">
+<div style="position: sticky; top: 64px; z-index: 3; background: #111111; margin: -10px -20px 0; padding: 10px 20px 12px">
+<nav aria-label="Breadcrumb" style="font-size: 11px; font-weight: 800; font-stretch: 125%; letter-spacing: 1.8px; color: #cccccc"><a href="index.html">HOME</a> / <span style="color: #FF3B3B">SERVICING</span></nav>
+<h1 style="margin: 16px 0 0; font-size: 44px; font-weight: 900; font-stretch: 112%; line-height: 0.95; letter-spacing: -1.2px; text-transform: uppercase"><span style="display: block">Garage door</span><span style="display: block; color: #FF3B3B">Servicing</span></h1>
+</div>
+<p style="margin: 16px 0 0; font-size: 17px; line-height: 1.45; color: #e6e6e6">Regular servicing keeps your door running safely and smoothly, and catches small problems before they become bigger, more expensive ones.</p>
+<div style="margin-top: 24px">
+<div style="display: flex; justify-content: space-between; align-items: center"><span style="font-size: 11px; font-weight: 800; letter-spacing: 1.6px; font-stretch: 125%; color: #999999">ALL COMMON DOOR TYPES</span><span style="font-size: 12px; font-weight: 700; color: #FF3B3B">Swipe →</span></div>
+<div class="m-scroll" style="margin: 10px -20px 0; display: flex; gap: 10px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 0 20px 4px; scroll-padding: 0 20px">
+<button type="button" onClick="{{ flip0 }}" aria-pressed="{{ pressed0 }}" style="flex: 0 0 250px; scroll-snap-align: start; height: 236px; padding: 12px; background: rgba(215,20,26,0.10); border: 1px solid rgba(255,59,59,0.45); color: #ffffff; text-align: left; font-family: 'Archivo', system-ui, sans-serif; cursor: pointer; overflow: hidden; box-sizing: border-box">
+<sc-if value="{{ front0 }}" hint-placeholder-val="{{ true }}"><div style="display: flex; flex-direction: column">
+<svg viewBox="0 0 160 120" width="100%" height="160" fill="none" stroke="#FF3B3B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Up-and-over garage door, half open, with overhead track and motor"><path d="M8 112h144" stroke-opacity="0.6"></path><path d="M26 112V30h108v82" stroke-width="2.6"></path><path d="M32 112V36h96v76" stroke-opacity="0.7"></path><path d="M30 24h112"></path><rect x="140" y="18" width="16" height="11" rx="2" fill="rgba(255,59,59,0.18)"></rect><path d="M44 42h72l12 50H32z" fill="rgba(255,59,59,0.14)"></path><path d="M51 43l-9 48M58 43l-7 48M66 43l-5 48M73 43l-3 48M80 43v48M87 43l3 48M94 43l5 48M102 43l7 48M109 43l9 48" stroke-opacity="0.75"></path><circle cx="80" cy="82" r="2.2" fill="#FF3B3B"></circle><path d="M128 50v28" stroke-width="2.6"></path><path d="M128 60l-10 6"></path><path d="M80 24v12" stroke-opacity="0.7"></path></svg>
+<div style="margin-top: 8px; display: flex; justify-content: space-between; align-items: center"><span style="font-size: 15px; font-weight: 800">Up-and-over</span><span style="font-size: 11px; font-weight: 700; color: #FF3B3B">Tap to learn ↻</span></div>
+</div></sc-if>
+<sc-if value="{{ back0 }}" hint-placeholder-val="{{ false }}"><div style="margin: -12px; height: 236px; padding: 16px; box-sizing: border-box; background: #D7141A; display: flex; flex-direction: column"><span style="font-size: 11px; font-weight: 800; letter-spacing: 1.4px; font-stretch: 120%">UP-AND-OVER</span><span style="margin-top: 8px; font-size: 14px; line-height: 1.45; font-weight: 600">The classic one-piece door. It tilts up and slides back into the garage on overhead tracks, with springs or counterbalances doing the heavy lifting. Very common on UK homes.</span><span style="margin-top: auto; font-size: 11px; font-weight: 700">Tap to flip back ↻</span></div></sc-if>
+</button>
+<button type="button" onClick="{{ flip1 }}" aria-pressed="{{ pressed1 }}" style="flex: 0 0 250px; scroll-snap-align: start; height: 236px; padding: 12px; background: rgba(215,20,26,0.10); border: 1px solid rgba(255,59,59,0.45); color: #ffffff; text-align: left; font-family: 'Archivo', system-ui, sans-serif; cursor: pointer; overflow: hidden; box-sizing: border-box">
+<sc-if value="{{ front1 }}" hint-placeholder-val="{{ true }}"><div style="display: flex; flex-direction: column">
+<svg viewBox="0 0 160 120" width="100%" height="160" fill="none" stroke="#FF3B3B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Sectional garage door rising on curved tracks"><path d="M8 112h144" stroke-opacity="0.6"></path><path d="M26 112V30h108v82" stroke-width="2.6"></path><path d="M32 112V36h96v76" stroke-opacity="0.7"></path><path d="M128 58V44q0-12 12-12h14" stroke-width="2.2"></path><path d="M32 58V44q0-12 12-12" stroke-width="2.2" stroke-opacity="0.6"></path><rect x="36" y="56" width="88" height="56" fill="rgba(255,59,59,0.14)"></rect><path d="M36 70h88M36 84h88M36 98h88" stroke-width="2.2"></path><path d="M40 62h80M40 76h80M40 90h80M40 104h80" stroke-opacity="0.45"></path><path d="M80 48V36M75 41l5-5 5 5" stroke-width="2.2"></path><path d="M138 44h14M148 40l4 4-4 4" stroke-width="2.2"></path></svg>
+<div style="margin-top: 8px; display: flex; justify-content: space-between; align-items: center"><span style="font-size: 15px; font-weight: 800">Sectional</span><span style="font-size: 11px; font-weight: 700; color: #FF3B3B">Tap to learn ↻</span></div>
+</div></sc-if>
+<sc-if value="{{ back1 }}" hint-placeholder-val="{{ false }}"><div style="margin: -12px; height: 236px; padding: 16px; box-sizing: border-box; background: #D7141A; display: flex; flex-direction: column"><span style="font-size: 11px; font-weight: 800; letter-spacing: 1.4px; font-stretch: 120%">SECTIONAL</span><span style="margin-top: 8px; font-size: 14px; line-height: 1.45; font-weight: 600">Made of horizontal panels that lift straight up and curve back along tracks under the ceiling. It doesn’t swing out, so it’s handy for short driveways.</span><span style="margin-top: auto; font-size: 11px; font-weight: 700">Tap to flip back ↻</span></div></sc-if>
+</button>
+<button type="button" onClick="{{ flip2 }}" aria-pressed="{{ pressed2 }}" style="flex: 0 0 250px; scroll-snap-align: start; height: 236px; padding: 12px; background: rgba(215,20,26,0.10); border: 1px solid rgba(255,59,59,0.45); color: #ffffff; text-align: left; font-family: 'Archivo', system-ui, sans-serif; cursor: pointer; overflow: hidden; box-sizing: border-box">
+<sc-if value="{{ front2 }}" hint-placeholder-val="{{ true }}"><div style="display: flex; flex-direction: column">
+<svg viewBox="0 0 160 120" width="100%" height="160" fill="none" stroke="#FF3B3B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Canopy garage door tilted out over the opening"><path d="M8 112h144" stroke-opacity="0.6"></path><path d="M26 112V30h108v82" stroke-width="2.6"></path><path d="M32 112V36h96v76" stroke-opacity="0.7"></path><path d="M32 40h96l20 22H12z" fill="rgba(255,59,59,0.14)"></path><path d="M44 42l-8 18M56 42l-5 18M68 42l-3 18M80 42v18M92 42l3 18M104 42l5 18M116 42l8 18" stroke-opacity="0.75"></path><circle cx="80" cy="56" r="2.2" fill="#FF3B3B"></circle><path d="M32 82l12-20M128 82l-12-20" stroke-width="2.2"></path><circle cx="32" cy="82" r="2"></circle><circle cx="128" cy="82" r="2"></circle></svg>
+<div style="margin-top: 8px; display: flex; justify-content: space-between; align-items: center"><span style="font-size: 15px; font-weight: 800">Canopy</span><span style="font-size: 11px; font-weight: 700; color: #FF3B3B">Tap to learn ↻</span></div>
+</div></sc-if>
+<sc-if value="{{ back2 }}" hint-placeholder-val="{{ false }}"><div style="margin: -12px; height: 236px; padding: 16px; box-sizing: border-box; background: #D7141A; display: flex; flex-direction: column"><span style="font-size: 11px; font-weight: 800; letter-spacing: 1.4px; font-stretch: 120%">CANOPY</span><span style="margin-top: 8px; font-size: 14px; line-height: 1.45; font-weight: 600">A one-piece door that pivots up, leaving part of it sticking out over the driveway like a canopy when it’s open. Simple and sturdy, with fewer moving parts.</span><span style="margin-top: auto; font-size: 11px; font-weight: 700">Tap to flip back ↻</span></div></sc-if>
+</button>
+<button type="button" onClick="{{ flip3 }}" aria-pressed="{{ pressed3 }}" style="flex: 0 0 250px; scroll-snap-align: start; height: 236px; padding: 12px; background: rgba(215,20,26,0.10); border: 1px solid rgba(255,59,59,0.45); color: #ffffff; text-align: left; font-family: 'Archivo', system-ui, sans-serif; cursor: pointer; overflow: hidden; box-sizing: border-box">
+<sc-if value="{{ front3 }}" hint-placeholder-val="{{ true }}"><div style="display: flex; flex-direction: column">
+<svg viewBox="0 0 160 120" width="100%" height="160" fill="none" stroke="#FF3B3B" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" role="img" aria-label="Roller garage door with drum housing and slatted curtain"><path d="M8 112h144" stroke-opacity="0.6"></path><rect x="22" y="14" width="116" height="18" rx="9" fill="rgba(255,59,59,0.16)" stroke-width="2.4"></rect><circle cx="31" cy="23" r="5"></circle><circle cx="31" cy="23" r="1.6" fill="#FF3B3B"></circle><path d="M28 32v80M132 32v80" stroke-width="2.6"></path><rect x="32" y="32" width="96" height="56" fill="rgba(255,59,59,0.14)"></rect><path d="M32 38h96M32 44h96M32 50h96M32 56h96M32 62h96M32 68h96M32 74h96M32 80h96" stroke-opacity="0.8"></path><rect x="32" y="86" width="96" height="5" fill="#FF3B3B"></rect><rect x="32" y="91" width="96" height="21" fill="rgba(0,0,0,0.45)" stroke="none"></rect></svg>
+<div style="margin-top: 8px; display: flex; justify-content: space-between; align-items: center"><span style="font-size: 15px; font-weight: 800">Roller</span><span style="font-size: 11px; font-weight: 700; color: #FF3B3B">Tap to learn ↻</span></div>
+</div></sc-if>
+<sc-if value="{{ back3 }}" hint-placeholder-val="{{ false }}"><div style="margin: -12px; height: 236px; padding: 16px; box-sizing: border-box; background: #D7141A; display: flex; flex-direction: column"><span style="font-size: 11px; font-weight: 800; letter-spacing: 1.4px; font-stretch: 120%">ROLLER</span><span style="margin-top: 8px; font-size: 14px; line-height: 1.45; font-weight: 600">Thin slats that roll up into a drum above the opening. It takes up no room inside the garage or on the drive.</span><span style="margin-top: auto; font-size: 11px; font-weight: 700">Tap to flip back ↻</span></div></sc-if>
+</button>
+<div aria-hidden="true" style="flex: 0 0 10px"></div>
+</div>
+</div>
+</section>
+
+<!-- What's included (accordion) -->
+<section style="background: #f2f2f2; color: #111111; padding: 36px 20px 36px">
+<div style="position: sticky; top: 64px; z-index: 3; background: #f2f2f2; margin: -10px -20px 0; padding: 10px 20px 12px">
+<div style="font-size: 11px; font-weight: 800; letter-spacing: 1.8px; font-stretch: 125%; color: #555555">01 - WHAT’S INCLUDED</div>
+<h2 style="margin: 12px 0 0; font-size: 32px; font-weight: 800; font-stretch: 108%; line-height: 1; letter-spacing: -0.8px">Inspect, adjust and <span style="background: linear-gradient(transparent 64%, #FFD401 64%, #FFD401 92%, transparent 92%)">service</span></h2>
+<p style="margin: 10px 0 0; font-size: 15px; color: #333333">Tap each one to see what Steve does.</p>
+</div>
+<div style="margin-top: 18px; border-top: 2px solid #111111; background: #ffffff; border-left: 2px solid #111111; border-right: 2px solid #111111">
+<sc-for list="{{ included }}" as="it" hint-placeholder-count="6">
+<div style="border-bottom: 2px solid #111111">
+<button type="button" aria-expanded="{{ it.expanded }}" onClick="{{ it.toggle }}" style="width: 100%; min-height: 58px; display: flex; align-items: center; gap: 12px; padding: 12px 16px; background: transparent; border: 0; text-align: left; cursor: pointer; font-family: 'Archivo', system-ui, sans-serif; color: #111111">
+<span style="font-size: 12px; font-weight: 800; font-stretch: 125%; color: #777777; width: 22px">{{ it.num }}</span>
+<span style="flex: 1; font-size: 17px; font-weight: 800; font-stretch: 105%">{{ it.title }}</span>
+<sc-if value="{{ it.open }}" hint-placeholder-val="{{ false }}"><span aria-hidden="true" style="width: 28px; height: 28px; background: #D7141A; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="3" stroke-linecap="round"><path d="M5 12h14"></path></svg></span></sc-if>
+<sc-if value="{{ it.closed }}" hint-placeholder-val="{{ true }}"><span aria-hidden="true" style="width: 28px; height: 28px; border: 2px solid #111111; box-sizing: border-box; display: flex; align-items: center; justify-content: center"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="3" stroke-linecap="round"><path d="M5 12h14M12 5v14"></path></svg></span></sc-if>
+</button>
+<sc-if value="{{ it.open }}" hint-placeholder-val="{{ false }}">
+<div style="padding: 0 16px 18px 50px; font-size: 15px; line-height: 1.5; color: #222222">{{ it.text }}</div>
+</sc-if>
+</div>
+</sc-for>
+</div>
+</section>
+
+<!-- Warning sign checker -->
+<section style="background: #111111; color: #ffffff; padding: 38px 20px 38px">
+<div style="position: sticky; top: 64px; z-index: 3; background: #111111; margin: -10px -20px 0; padding: 10px 20px 12px">
+<div style="font-size: 11px; font-weight: 800; letter-spacing: 1.8px; font-stretch: 125%; color: #FF3B3B">02 - WARNING SIGNS</div>
+<h2 style="margin: 12px 0 0; font-size: 30px; font-weight: 800; font-stretch: 108%; line-height: 1.04; letter-spacing: -0.8px">Is your door telling you something?</h2>
+<p style="margin: 12px 0 0; font-size: 15px; line-height: 1.5; color: #dddddd">Tick anything you’ve noticed.</p>
+</div>
+<div style="margin-top: 18px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px">
+<sc-for list="{{ signs }}" as="sg" hint-placeholder-count="6">
+<sc-if value="{{ sg.on }}" hint-placeholder-val="{{ false }}"><button type="button" aria-pressed="true" onClick="{{ sg.toggle }}" style="min-height: 76px; display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start; gap: 8px; padding: 12px; background: #D7141A; color: #ffffff; border: 2px solid #D7141A; text-align: left; cursor: pointer; font-family: 'Archivo', system-ui, sans-serif; font-size: 14px; font-weight: 800; line-height: 1.25"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12.5l5 5L20 6.5"></path></svg>{{ sg.label }}</button></sc-if>
+<sc-if value="{{ sg.off }}" hint-placeholder-val="{{ true }}"><button type="button" aria-pressed="false" onClick="{{ sg.toggle }}" style="min-height: 76px; display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start; gap: 8px; padding: 12px; background: transparent; color: #ffffff; border: 2px solid #3a3a3a; text-align: left; cursor: pointer; font-family: 'Archivo', system-ui, sans-serif; font-size: 14px; font-weight: 700; line-height: 1.25"><span aria-hidden="true" style="width: 18px; height: 18px; border: 2px solid #777777; box-sizing: border-box; display: block"></span>{{ sg.label }}</button></sc-if>
+</sc-for>
+</div>
+<div aria-live="polite" style="margin-top: 18px; border: 2px solid #3a3a3a; padding: 18px 16px">
+<div style="display: flex; gap: 4px" aria-hidden="true">
+<sc-for list="{{ meter }}" as="m" hint-placeholder-count="6">
+<sc-if value="{{ m.on }}" hint-placeholder-val="{{ false }}"><span style="flex: 1; height: 8px; background: #D7141A"></span></sc-if>
+<sc-if value="{{ m.off }}" hint-placeholder-val="{{ true }}"><span style="flex: 1; height: 8px; background: #333333"></span></sc-if>
+</sc-for>
+</div>
+<div style="margin-top: 14px; font-size: 12px; font-weight: 800; letter-spacing: 1.4px; font-stretch: 125%; color: #FF3B3B">{{ verdict.tag }}</div>
+<div style="margin-top: 6px; font-size: 18px; font-weight: 800; line-height: 1.3">{{ verdict.text }}</div>
+<a href="{{ verdict.sms }}" style="margin-top: 16px; min-height: 50px; background: #D7141A; color: #ffffff; display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 15px; font-weight: 800; font-stretch: 105%">{{ verdict.cta }}</a>
+</div>
+</section>
+
+<!-- Why service -->
+<section style="background: #ffffff; color: #111111; padding: 36px 20px 36px">
+<div style="position: sticky; top: 64px; z-index: 3; background: #ffffff; margin: -10px -20px 0; padding: 10px 20px 12px">
+<div style="font-size: 11px; font-weight: 800; letter-spacing: 1.8px; font-stretch: 125%; color: #555555">03 - WHY SERVICE</div>
+<h2 style="margin: 12px 0 0; font-size: 30px; font-weight: 800; font-stretch: 108%; line-height: 1.02; letter-spacing: -0.8px">Small jobs now, <span style="background: linear-gradient(transparent 64%, #FFD401 64%, #FFD401 92%, transparent 92%); -webkit-box-decoration-break: clone; box-decoration-break: clone">fewer breakdowns</span> later</h2>
+</div>
+<p style="margin: 14px 0 0; font-size: 15px; line-height: 1.55">Every time a garage door opens and closes, its moving parts wear a little. A regular service keeps your existing door safe, quiet and reliable, and spots that wear before it turns into a breakdown.</p>
+<p style="margin: 12px 0 0; font-size: 15px; line-height: 1.55"><strong style="font-weight: 900">Lift Easy doesn’t sell new doors</strong>, so the aim is always to keep the door you already have working well for as long as possible.</p>
+<p style="margin: 12px 0 0; font-size: 15px; line-height: 1.55">If a garage door is maintained and serviced, it should last 20 to 30 years, and sometimes longer. So don’t think that when your door is broken, it always needs replacing. Steve will leave you with a smooth-operating, well-balanced, easy-to-use garage door that will give you many more years of service.</p>
+<div style="margin-top: 18px; background: #D7141A; color: #ffffff; padding: 16px 16px 18px; border: 2px solid #111111">
+<div style="font-size: 11px; font-weight: 800; letter-spacing: 1.6px; font-stretch: 125%">HAVING A REPAIR?</div>
+<div style="margin-top: 6px; font-size: 16px; font-weight: 700; line-height: 1.4">A service of the door is included in the price Steve quotes for the repair.</div>
+</div>
+<a href="contact.html" style="margin-top: 20px; display: inline-flex; align-items: center; gap: 10px; min-height: 44px; font-size: 13px; font-weight: 800; font-stretch: 115%; letter-spacing: 1.4px"><span style="border-bottom: 3px solid #D7141A; padding-bottom: 3px">BOOK A SERVICE</span> →</a>
+</section>
+
+<!-- CTA -->
+<section style="background: #D7141A; color: #ffffff; padding: 38px 20px 38px; border-top: 2px solid #111111">
+<div style="position: sticky; top: 64px; z-index: 3; background: #D7141A; margin: -10px -20px 0; padding: 10px 20px 12px">
+<h2 style="margin: 0; font-size: 40px; font-weight: 900; font-stretch: 112%; line-height: 0.95; letter-spacing: -1.2px; text-transform: uppercase">Keep your door running smoothly.</h2>
+</div>
+<a href="tel:07939500544" style="margin-top: 22px; display: flex; align-items: center; gap: 14px; background: #111111; color: #ffffff; padding: 14px 18px">
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FF3B3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg>
+<span style="display: flex; flex-direction: column"><span style="font-size: 11px; font-weight: 800; font-stretch: 125%; letter-spacing: 1.4px">CALL OR TEXT STEVE</span><span style="font-size: 28px; font-weight: 800; font-stretch: 105%; color: #FF3B3B; line-height: 1.05">07939 500544</span></span>
+</a>
+<p style="margin: 16px 0 0; font-size: 14px; font-weight: 700; line-height: 1.6">Fast response · Same-day repair service<br>No call-out fee · Over 30 years’ experience</p>
+</section>
+
+<!-- Footer -->
+<footer style="background: #111111; color: #ffffff; padding: 28px 20px 24px; border-top: 2px solid #2a2a2a">
+<a href="index.html" aria-label="Lift Easy Garage Doors home" style="display: inline-flex; align-items: center; gap: 10px; color: #ffffff">
+<svg width="42" height="36" viewBox="0 0 64 54" fill="none" aria-hidden="true"><path d="M4 24 L32 4 L60 24" stroke="#FFD401" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"></path><path d="M11 22 V50 H53 V22" stroke="#FFD401" stroke-width="4" stroke-linejoin="round"></path><rect x="17" y="24" width="30" height="24" fill="#ffffff"></rect><path d="M17 29 H47 M17 34 H47 M17 39 H47 M17 44 H47" stroke="#111111" stroke-width="2"></path></svg>
+<span style="display: flex; flex-direction: column"><span style="font-weight: 800; font-stretch: 110%; font-size: 22px; line-height: 1">LIFT <span style="color: #FFD401">EASY</span></span><span style="margin-top: 4px; font-size: 8px; font-weight: 700; font-stretch: 112%; letter-spacing: 1.4px">REPAIR SPECIALIST · BY STEVE</span></span>
+</a>
+<div style="margin-top: 14px; font-size: 13px; color: #b0b0b0; line-height: 1.45">Steve Procter trading as Lift Easy Garage Doors<br>Northallerton, DL6 2BL · Covering North Yorkshire, Teesside &amp; County Durham</div>
+<div style="margin-top: 10px; font-size: 13px; font-weight: 700; line-height: 1.4">Garage door repairs and servicing only. <strong style="font-weight: 900">We don’t sell or install new garage doors.</strong></div>
+<div style="margin-top: 8px; font-size: 13px; color: #dddddd; line-height: 1.45">Calls 7am–8pm · Message online any time<br>Steve replies on WhatsApp</div>
+<div style="margin-top: 16px; display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 13px"><a href="mailto:steve@lifteasygaragedoors.co.uk">steve@lifteasygaragedoors.co.uk</a><a href="https://lifteasygaragedoors.co.uk" style="color: #a8a8a8">lifteasygaragedoors.co.uk</a><a href="https://www.facebook.com/share/1A9jixm1Us/" target="_blank" rel="noopener" aria-label="Lift Easy Garage Doors on Facebook" style="display: inline-flex; align-items: center; gap: 6px; color: #ffffff"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="11" fill="#ffffff"></circle><path d="M13.4 21.9v-7.3h2.5l.4-2.9h-2.9V9.9c0-.8.2-1.4 1.4-1.4h1.6V5.9c-.3 0-1.2-.1-2.2-.1-2.2 0-3.7 1.3-3.7 3.8v2H8v2.9h2.5v7.3" fill="#111111"></path></svg>Facebook</a></div>
+</footer>
+<div aria-hidden="true" style="height: 78px; background: #111111"></div>
+</div>
+
+<!-- Sticky action bar -->
+<div style="position: fixed; left: 0; right: 0; bottom: 0; z-index: 10; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; padding: 10px 12px 14px; background: #111111; border-top: 1px solid #2e2e2e">
+<a href="tel:07939500544" style="height: 50px; background: #D7141A; color: #ffffff; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 15px; font-weight: 800; font-stretch: 105%"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg>Call Steve</a>
+<a href="https://wa.me/447939500544?text=Hi%20Steve%2C%20here%27s%20a%20photo%20of%20my%20garage%20door." style="height: 50px; border: 2px solid #ffffff; color: #ffffff; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 15px; font-weight: 800; font-stretch: 105%; box-sizing: border-box"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF3B3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"></path><circle cx="12" cy="13" r="3"></circle></svg>Send a photo</a>
+</div>
+
+<!-- Menu overlay -->
+<sc-if value="{{ menuOpen }}" hint-placeholder-val="{{ false }}">
+<div role="dialog" aria-label="Menu" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 20; background: #111111; display: flex; flex-direction: column">
+<div style="height: 64px; box-sizing: border-box; display: flex; align-items: center; justify-content: space-between; padding: 0 16px; border-bottom: 2px solid #D7141A">
+<span style="font-size: 12px; font-weight: 800; letter-spacing: 2px; font-stretch: 125%; color: #FF3B3B">MENU</span>
+<button type="button" aria-label="Close menu" onClick="{{ toggleMenu }}" style="width: 44px; height: 44px; background: transparent; border: 2px solid #ffffff; display: flex; align-items: center; justify-content: center; padding: 0; cursor: pointer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+</div>
+<nav aria-label="Main" style="padding: 8px 20px; display: flex; flex-direction: column">
+<a href="index.html" style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid #2e2e2e; font-size: 28px; font-weight: 800; font-stretch: 108%">Home <span aria-hidden="true" style="color: #FF3B3B">→</span></a>
+<a href="servicing.html" aria-current="page" style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid #2e2e2e; font-size: 28px; font-weight: 800; font-stretch: 108%; color: #FF3B3B">Servicing <span aria-hidden="true">→</span></a>
+<a href="remotes.html" style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid #2e2e2e; font-size: 28px; font-weight: 800; font-stretch: 108%">Remotes <span aria-hidden="true" style="color: #FF3B3B">→</span></a>
+<a href="about.html" style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid #2e2e2e; font-size: 28px; font-weight: 800; font-stretch: 108%">About Steve <span aria-hidden="true" style="color: #FF3B3B">→</span></a>
+<a href="areas.html" style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid #2e2e2e; font-size: 28px; font-weight: 800; font-stretch: 108%">Areas <span aria-hidden="true" style="color: #FF3B3B">→</span></a>
+<a href="contact.html" style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid #2e2e2e; font-size: 28px; font-weight: 800; font-stretch: 108%">Contact <span aria-hidden="true" style="color: #FF3B3B">→</span></a>
+</nav>
+<a href="tel:07939500544" style="margin: auto 20px 24px; background: #D7141A; color: #ffffff; padding: 16px 18px; display: flex; flex-direction: column"><span style="font-size: 11px; font-weight: 800; letter-spacing: 1.4px; font-stretch: 125%">CALL OR TEXT STEVE</span><span style="font-size: 28px; font-weight: 800; font-stretch: 105%">07939 500544</span></a>
+</div>
+</sc-if>
 
 </div>
+</template>
+<script src="js/dc.js?v=4"></script>
+<script src="js/site.js?v=4"></script>
+<script>
+var DesktopView = (function () {
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { doors: [] };
+  }
+  renderVals() {
+    const dz = this.state.doors;
+    const dv = {};
+    [0, 1, 2, 3].forEach((i) => {
+      const on = dz.indexOf(i) !== -1;
+      dv['front' + i] = !on;
+      dv['back' + i] = on;
+      dv['pressed' + i] = on ? 'true' : 'false';
+      dv['flip' + i] = () => this.setState({ doors: on ? dz.filter((x) => x !== i) : dz.concat([i]) });
+    });
+    return dv;
+  }
+}
+return Component;
+})();
+var PhoneView = (function () {
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { menuOpen: false, open: 0, picked: [], doors: [] };
+  }
+  renderVals() {
+    const inc = [
+      ['Inspection of your existing door', 'A thorough look over the door and its moving parts (springs, cables, rollers, hinges, tracks, locks and fixings), checking for wear or damage.'],
+      ['Adjustments', 'Setting the door up so it opens and closes evenly, sits properly in the frame and isn’t straining its springs or opener.'],
+      ['Full servicing', 'Cleaning and lubricating the moving parts and tightening fittings, so the door runs quietly and smoothly.'],
+      ['Spotting problems early', 'Worn parts are pointed out while they’re still a small job, not after they’ve failed and left the door stuck.'],
+      ['Automatic openers', 'If your door is electric, the opener can be looked at too.'],
+      ['Honest advice', 'Steve will always give it to you straight. If your door can’t be repaired, he’ll point you to a company who can help.']
+    ];
+    const included = inc.map((d, i) => {
+      const isOpen = this.state.open === i;
+      return { num: '0' + (i + 1), title: d[0], text: d[1], open: isOpen, closed: !isOpen, expanded: isOpen ? 'true' : 'false', toggle: () => this.setState({ open: isOpen ? -1 : i }) };
+    });
+    const labels = ['Grinding, squeaking or banging', 'Jerky or uneven movement', 'Heavier to lift than it used to be', 'Doesn’t close fully or evenly', 'Frayed cables or worn parts', 'Opener struggling or slow'];
+    const picked = this.state.picked;
+    const signs = labels.map((l, i) => {
+      const on = picked.indexOf(i) !== -1;
+      return { label: l, on: on, off: !on, toggle: () => this.setState({ picked: on ? picked.filter((p) => p !== i) : picked.concat([i]) }) };
+    });
+    const n = picked.length;
+    const meter = labels.map((l, i) => ({ on: i < n, off: i >= n }));
+    const chosen = picked.map((i) => labels[i].toLowerCase()).join(', ');
+    let verdict;
+    if (n === 0) {
+      verdict = { tag: 'NOTHING TICKED YET', text: 'Doors rarely fail without warning. Tap any signs you’ve spotted.', cta: 'Text Steve a question' };
+    } else if (n <= 2) {
+      verdict = { tag: n + ' SIGN' + (n > 1 ? 'S' : '') + ' SPOTTED', text: 'Worth getting it looked at. A service now could save a breakdown, and a bigger bill, later.', cta: 'Text Steve about a service' };
+    } else {
+      verdict = { tag: n + ' SIGNS SPOTTED', text: 'Your door is telling you something. Give Steve a call before it leaves you stuck.', cta: 'Text Steve now' };
+    }
+    verdict.sms = 'sms:07939500544?&body=' + encodeURIComponent(n ? 'Hi Steve, my garage door has: ' + chosen + '. Could you take a look?' : 'Hi Steve, I have a question about servicing my garage door.');
+    const dz = this.state.doors;
+    const dv = {};
+    [0, 1, 2, 3].forEach((i) => {
+      const on = dz.indexOf(i) !== -1;
+      dv['front' + i] = !on;
+      dv['back' + i] = on;
+      dv['pressed' + i] = on ? 'true' : 'false';
+      dv['flip' + i] = () => this.setState({ doors: on ? dz.filter((x) => x !== i) : dz.concat([i]) });
+    });
+    return Object.assign(dv, {
+      menuOpen: this.state.menuOpen,
+      toggleMenu: () => this.setState({ menuOpen: !this.state.menuOpen }),
+      included: included,
+      signs: signs,
+      meter: meter,
+      verdict: verdict
+    });
+  }
+}
+return Component;
+})();
+DC.view('.view-d', DC.DESKTOP, function (host) { LE.desktop = DC.mount(host, document.getElementById('tpl-d'), DesktopView, LE.hooks.desktop); });
+DC.view('.view-m', DC.PHONE, function (host) { LE.phone = DC.mount(host, document.getElementById('tpl-m'), PhoneView, LE.hooks.phone); });
+</script>
 </body>
 </html>

@@ -10,7 +10,7 @@
           "index.html"
         ],
         "createdAt": "2026-09-28T14:11:04.366Z",
-        "reason": "Agent: pre-existing .hero__photo border-bottom:4px yellow underline, a documented DESIGN.md emphasis-border accent, not an AI-slop card side-tab"
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
       },
       {
         "rule": "cramped-padding",
@@ -19,7 +19,7 @@
           "index.html"
         ],
         "createdAt": "2026-09-28T14:11:04.372Z",
-        "reason": "Agent: outer section/div wrappers intentionally carry no padding of their own (padding lives on nested .wrap/.trust__item/.note per the site's full-bleed color-band pattern); the .note div specifically already has 18-24px padding in source, confirming this is a detector miss"
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
       },
       {
         "rule": "all-caps-body",
@@ -37,7 +37,7 @@
           "index.html"
         ],
         "createdAt": "2026-09-28T14:11:04.417Z",
-        "reason": "Agent: pre-existing site-wide numbered eyebrow pattern (01-05) used consistently on every page; independent design critique on 2026-09-28 called this a positive wayfinding characteristic, not slop"
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
       },
       {
         "rule": "numbered-section-labels",
@@ -70,7 +70,7 @@
           "about.html"
         ],
         "createdAt": "2026-10-20T16:45:45.053Z",
-        "reason": "Claude verified: flagged sections are full-bleed bands whose text sits inside .wrap (gutter padding); .note has 18-24px padding visible in screenshots"
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
       },
       {
         "rule": "side-tab",
@@ -79,7 +79,565 @@
           "about.html"
         ],
         "createdAt": "2026-10-20T16:45:49.417Z",
-        "reason": "DESIGN.md Shapes: hero photo's 4px yellow underline is an intended accent, not a card side-tab"
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "wide-tracking",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.088Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "extreme-negative-tracking",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.104Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "tiny-text",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.119Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "overused-font",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.134Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "marquee",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.149Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "hero-eyebrow-chip",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.165Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "icon-tile-stack",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.224Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "wide-tracking",
+        "value": "*",
+        "files": [
+          "servicing.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.239Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "extreme-negative-tracking",
+        "value": "*",
+        "files": [
+          "servicing.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.254Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "tiny-text",
+        "value": "*",
+        "files": [
+          "servicing.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.270Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "overused-font",
+        "value": "*",
+        "files": [
+          "servicing.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.285Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "marquee",
+        "value": "*",
+        "files": [
+          "servicing.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.300Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "hero-eyebrow-chip",
+        "value": "*",
+        "files": [
+          "servicing.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.316Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "kicker-above-heading",
+        "value": "*",
+        "files": [
+          "servicing.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.332Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "servicing.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.347Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "servicing.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.362Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "icon-tile-stack",
+        "value": "*",
+        "files": [
+          "servicing.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.378Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "wide-tracking",
+        "value": "*",
+        "files": [
+          "remotes.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.393Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "extreme-negative-tracking",
+        "value": "*",
+        "files": [
+          "remotes.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.409Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "tiny-text",
+        "value": "*",
+        "files": [
+          "remotes.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.424Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "overused-font",
+        "value": "*",
+        "files": [
+          "remotes.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.440Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "marquee",
+        "value": "*",
+        "files": [
+          "remotes.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.456Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "hero-eyebrow-chip",
+        "value": "*",
+        "files": [
+          "remotes.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.472Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "kicker-above-heading",
+        "value": "*",
+        "files": [
+          "remotes.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.488Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "remotes.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.504Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "remotes.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.520Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "icon-tile-stack",
+        "value": "*",
+        "files": [
+          "remotes.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.536Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "wide-tracking",
+        "value": "*",
+        "files": [
+          "about.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.552Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "extreme-negative-tracking",
+        "value": "*",
+        "files": [
+          "about.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.568Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "tiny-text",
+        "value": "*",
+        "files": [
+          "about.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.585Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "overused-font",
+        "value": "*",
+        "files": [
+          "about.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.601Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "marquee",
+        "value": "*",
+        "files": [
+          "about.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.618Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "hero-eyebrow-chip",
+        "value": "*",
+        "files": [
+          "about.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.635Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "kicker-above-heading",
+        "value": "*",
+        "files": [
+          "about.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.653Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "icon-tile-stack",
+        "value": "*",
+        "files": [
+          "about.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.701Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "wide-tracking",
+        "value": "*",
+        "files": [
+          "areas.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.717Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "extreme-negative-tracking",
+        "value": "*",
+        "files": [
+          "areas.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.734Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "tiny-text",
+        "value": "*",
+        "files": [
+          "areas.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.750Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "overused-font",
+        "value": "*",
+        "files": [
+          "areas.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.766Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "marquee",
+        "value": "*",
+        "files": [
+          "areas.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.782Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "hero-eyebrow-chip",
+        "value": "*",
+        "files": [
+          "areas.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.798Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "kicker-above-heading",
+        "value": "*",
+        "files": [
+          "areas.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.815Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "areas.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.831Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "areas.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.846Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "icon-tile-stack",
+        "value": "*",
+        "files": [
+          "areas.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.863Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "wide-tracking",
+        "value": "*",
+        "files": [
+          "contact.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.880Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "extreme-negative-tracking",
+        "value": "*",
+        "files": [
+          "contact.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.896Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "tiny-text",
+        "value": "*",
+        "files": [
+          "contact.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.913Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "overused-font",
+        "value": "*",
+        "files": [
+          "contact.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.931Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "marquee",
+        "value": "*",
+        "files": [
+          "contact.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.948Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "hero-eyebrow-chip",
+        "value": "*",
+        "files": [
+          "contact.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.964Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "kicker-above-heading",
+        "value": "*",
+        "files": [
+          "contact.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.981Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "contact.html"
+        ],
+        "createdAt": "2026-10-25T23:10:30.999Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          "contact.html"
+        ],
+        "createdAt": "2026-10-25T23:10:31.016Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "icon-tile-stack",
+        "value": "*",
+        "files": [
+          "contact.html"
+        ],
+        "createdAt": "2026-10-25T23:10:31.033Z",
+        "reason": "user confirmed: asked for the Claude design canvas to be implemented exactly, regardless of the previous site (2026-10-25)"
+      },
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          "css/site.css"
+        ],
+        "createdAt": "2026-10-25T23:10:41.943Z",
+        "reason": "Claude: .le-status form message copies the design's own red-edged WhatsApp note on the contact form (user asked for the design exactly)"
+      },
+      {
+        "rule": "undersized-ui-text",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-25T23:11:57.400Z",
+        "reason": "user confirmed 2026-10-25: keep the 8-9px REPAIR SPECIALIST · BY STEVE logo tagline exactly as designed"
+      },
+      {
+        "rule": "undersized-ui-text",
+        "value": "*",
+        "files": [
+          "servicing.html"
+        ],
+        "createdAt": "2026-10-25T23:11:57.418Z",
+        "reason": "user confirmed 2026-10-25: keep the 8-9px REPAIR SPECIALIST · BY STEVE logo tagline exactly as designed"
+      },
+      {
+        "rule": "undersized-ui-text",
+        "value": "*",
+        "files": [
+          "remotes.html"
+        ],
+        "createdAt": "2026-10-25T23:11:57.456Z",
+        "reason": "user confirmed 2026-10-25: keep the 8-9px REPAIR SPECIALIST · BY STEVE logo tagline exactly as designed"
+      },
+      {
+        "rule": "undersized-ui-text",
+        "value": "*",
+        "files": [
+          "about.html"
+        ],
+        "createdAt": "2026-10-25T23:11:57.473Z",
+        "reason": "user confirmed 2026-10-25: keep the 8-9px REPAIR SPECIALIST · BY STEVE logo tagline exactly as designed"
+      },
+      {
+        "rule": "undersized-ui-text",
+        "value": "*",
+        "files": [
+          "areas.html"
+        ],
+        "createdAt": "2026-10-25T23:11:57.492Z",
+        "reason": "user confirmed 2026-10-25: keep the 8-9px REPAIR SPECIALIST · BY STEVE logo tagline exactly as designed"
+      },
+      {
+        "rule": "undersized-ui-text",
+        "value": "*",
+        "files": [
+          "contact.html"
+        ],
+        "createdAt": "2026-10-25T23:11:57.509Z",
+        "reason": "user confirmed 2026-10-25: keep the 8-9px REPAIR SPECIALIST · BY STEVE logo tagline exactly as designed"
       }
     ]
   }
