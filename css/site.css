@@ -20,6 +20,30 @@ button,input,select,textarea{font:inherit}
   .view-m{display:block}
 }
 
+/* Desktop header: the design was drawn at exactly 1440px with no scrollbar,
+ * where it just fits. Keep it on one line at real laptop widths by letting
+ * the gaps tighten instead of wrapping the phone button onto a second row. */
+@media (min-width:601px){
+  .view-d header > div{max-width:1440px !important;flex-wrap:nowrap !important;padding-left:clamp(24px,4vw,80px) !important;padding-right:clamp(24px,4vw,80px) !important}
+  .view-d header > div > a:first-child{flex-shrink:0}
+  .view-d header nav{gap:clamp(14px,1.9vw,36px) !important}
+  .view-d header nav a{white-space:nowrap}
+  .view-d header > div > a[href^="tel:"]{flex-shrink:0;white-space:nowrap;margin-left:clamp(4px,1vw,16px) !important}
+}
+/* The design hides the menu links below 1100px; they need room up to ~1240px */
+@media (min-width:601px) and (max-width:1239px){
+  .view-d header nav{display:none !important}
+}
+@media (min-width:601px) and (max-width:1300px){
+  .view-d header > div > a[href^="tel:"]{padding-left:18px !important;padding-right:18px !important}
+}
+
+/* Areas page map (js/map.js: MapLibre + OpenFreeMap). Once it loads, it
+ * replaces the design's drawn map in the same frame; without it the drawn map stays. */
+.le-map,.le-map.maplibregl-map{position:absolute;inset:0}
+.le-map-ready [data-map-frame] > :not(.le-map),
+.le-map-ready [data-map-host] > :not(.le-map){display:none !important}
+
 /* Contact form helpers (hidden spam trap, send status) */
 .le-honey{position:absolute;left:-9999px;width:1px;height:1px;opacity:0}
 .le-status{margin:0;padding:10px 12px;border-left:4px solid #D7141A;background:#fdeced;color:#111111;font-size:15px;font-weight:700;line-height:1.45}
