@@ -7,7 +7,7 @@
 (function () {
   'use strict';
   var LE = window.LE = { hooks: {} };
-  var ENDPOINT = 'https://formsubmit.co/ste.procter@live.com';
+  var ENDPOINT = 'https://formsubmit.co/steve@lifteasygaragedoors.co.uk';
   var MAX_BYTES = 10 * 1024 * 1024;
   var sent = /[?&]sent=1/.test(location.search);
   var page = location.pathname.split('/').pop() || 'index.html';
