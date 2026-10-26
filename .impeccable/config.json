@@ -638,6 +638,15 @@
         ],
         "createdAt": "2026-10-25T23:11:57.509Z",
         "reason": "user confirmed 2026-10-25: keep the 8-9px REPAIR SPECIALIST · BY STEVE logo tagline exactly as designed"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "inter",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-10-26T11:53:32.418Z",
+        "reason": "user confirmed 2026-10-25: Claude design implemented exactly; its desktop home hero uses Inter"
       }
     ]
   }
