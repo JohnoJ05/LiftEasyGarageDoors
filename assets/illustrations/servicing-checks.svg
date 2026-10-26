@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 460" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" role="img" aria-label="Drawing of an up-and-over garage door showing what Steve checks on a service: rollers and tracks, cables and pulleys, tension springs, pivot arms, frame fixings, and the lock and handle" fill="none" stroke="#FF3B3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+<text x="310" y="44" text-anchor="middle" fill="#FF3B3B" stroke="none" font-family="Archivo, system-ui, sans-serif" font-size="13" font-weight="800" letter-spacing="2.2">WHAT STEVE CHECKS ON A SERVICE</text>
+<path d="M150 404H470" stroke-opacity="0.5"/>
+<path d="M170 122H450" stroke-width="3"/>
+<path d="M200 404V140H420V404" stroke-width="3"/>
+<rect x="212" y="152" width="196" height="248" fill="rgba(255,59,59,0.12)" stroke-opacity="0.9"/>
+<path d="M226 160V392" stroke-opacity="0.45" stroke-width="1.4"/>
+<path d="M240 160V392" stroke-opacity="0.45" stroke-width="1.4"/>
+<path d="M254 160V392" stroke-opacity="0.45" stroke-width="1.4"/>
+<path d="M268 160V392" stroke-opacity="0.45" stroke-width="1.4"/>
+<path d="M282 160V392" stroke-opacity="0.45" stroke-width="1.4"/>
+<path d="M296 160V392" stroke-opacity="0.45" stroke-width="1.4"/>
+<path d="M310 160V392" stroke-opacity="0.45" stroke-width="1.4"/>
+<path d="M324 160V392" stroke-opacity="0.45" stroke-width="1.4"/>
+<path d="M338 160V392" stroke-opacity="0.45" stroke-width="1.4"/>
+<path d="M352 160V392" stroke-opacity="0.45" stroke-width="1.4"/>
+<path d="M366 160V392" stroke-opacity="0.45" stroke-width="1.4"/>
+<path d="M380 160V392" stroke-opacity="0.45" stroke-width="1.4"/>
+<path d="M394 160V392" stroke-opacity="0.45" stroke-width="1.4"/>
+<circle cx="212" cy="122" r="6" fill="rgba(255,59,59,0.28)"/>
+<path d="M212 128V152" stroke-width="1.6"/>
+<circle cx="408" cy="122" r="6" fill="rgba(255,59,59,0.28)"/>
+<path d="M408 128V152" stroke-width="1.6"/>
+<path d="M186 250 L193 255.1 L179 265.2 L193 275.4 L179 285.6 L193 295.8 L179 305.9 L193 316.1 L179 326.2 L193 336.4 L179 346.6 L193 356.8 L179 366.9 L186 372" stroke-width="1.8"/>
+<path d="M434 250 L441 255.1 L427 265.2 L441 275.4 L427 285.6 L441 295.8 L427 305.9 L441 316.1 L427 326.2 L441 336.4 L427 346.6 L441 356.8 L427 366.9 L434 372" stroke-width="1.8"/>
+<circle cx="186" cy="240" r="6" fill="rgba(255,59,59,0.28)"/>
+<path d="M186 234V144" stroke-width="1.3" stroke-opacity="0.9"/>
+<path d="M192 240L212 398" stroke-width="1.3" stroke-dasharray="4 4"/>
+<circle cx="434" cy="240" r="6" fill="rgba(255,59,59,0.28)"/>
+<path d="M434 234V144" stroke-width="1.3" stroke-opacity="0.9"/>
+<path d="M428 240L408 398" stroke-width="1.3" stroke-dasharray="4 4"/>
+<path d="M420 190l-22 -14" stroke-width="2.6"/><circle cx="420" cy="190" r="4" fill="#FF3B3B" stroke="none"/>
+<path d="M200 190l22 -14" stroke-width="2.6"/><circle cx="200" cy="190" r="4" fill="#FF3B3B" stroke="none"/>
+<path d="M420 330l-22 -14" stroke-width="2.6"/><circle cx="420" cy="330" r="4" fill="#FF3B3B" stroke="none"/>
+<path d="M200 330l22 -14" stroke-width="2.6"/><circle cx="200" cy="330" r="4" fill="#FF3B3B" stroke="none"/>
+<rect x="296.0" y="334" width="28" height="14" rx="3" fill="rgba(255,59,59,0.28)"/>
+<circle cx="310.0" cy="362" r="4" fill="#FF3B3B" stroke="none"/>
+<circle cx="200" cy="160" r="2.6" fill="#ffffff" stroke="none"/><circle cx="420" cy="160" r="2.6" fill="#ffffff" stroke="none"/>
+<circle cx="200" cy="270" r="2.6" fill="#ffffff" stroke="none"/><circle cx="420" cy="270" r="2.6" fill="#ffffff" stroke="none"/>
+<circle cx="200" cy="390" r="2.6" fill="#ffffff" stroke="none"/><circle cx="420" cy="390" r="2.6" fill="#ffffff" stroke="none"/>
+<path d="M169 116L212 122" stroke="#8a8a8a" stroke-width="1.2"/><circle cx="212" cy="122" r="3.2" fill="#FF3B3B" stroke="none"/><text x="22" y="120" text-anchor="start" fill="#ffffff" stroke="none" font-family="Archivo, system-ui, sans-serif" font-size="13" font-weight="800" letter-spacing="1.4">ROLLERS &amp; TRACKS</text>
+<path d="M169 210L186 240" stroke="#8a8a8a" stroke-width="1.2"/><circle cx="186" cy="240" r="3.2" fill="#FF3B3B" stroke="none"/><text x="22" y="214" text-anchor="start" fill="#ffffff" stroke="none" font-family="Archivo, system-ui, sans-serif" font-size="13" font-weight="800" letter-spacing="1.4">CABLES &amp; PULLEYS</text>
+<path d="M160 314L186 320" stroke="#8a8a8a" stroke-width="1.2"/><circle cx="186" cy="320" r="3.2" fill="#FF3B3B" stroke="none"/><text x="22" y="318" text-anchor="start" fill="#ffffff" stroke="none" font-family="Archivo, system-ui, sans-serif" font-size="13" font-weight="800" letter-spacing="1.4">TENSION SPRINGS</text>
+<path d="M503 174L420 190" stroke="#8a8a8a" stroke-width="1.2"/><circle cx="420" cy="190" r="3.2" fill="#FF3B3B" stroke="none"/><text x="598" y="178" text-anchor="end" fill="#ffffff" stroke="none" font-family="Archivo, system-ui, sans-serif" font-size="13" font-weight="800" letter-spacing="1.4">PIVOT ARMS</text>
+<path d="M477 268L420 270" stroke="#8a8a8a" stroke-width="1.2"/><circle cx="420" cy="270" r="3.2" fill="#FF3B3B" stroke="none"/><text x="598" y="272" text-anchor="end" fill="#ffffff" stroke="none" font-family="Archivo, system-ui, sans-serif" font-size="13" font-weight="800" letter-spacing="1.4">FRAME FIXINGS</text>
+<path d="M477 356L324.0 341" stroke="#8a8a8a" stroke-width="1.2"/><circle cx="324.0" cy="341" r="3.2" fill="#FF3B3B" stroke="none"/><text x="598" y="360" text-anchor="end" fill="#ffffff" stroke="none" font-family="Archivo, system-ui, sans-serif" font-size="13" font-weight="800" letter-spacing="1.4">LOCK &amp; HANDLE</text>
+<text x="310" y="440" text-anchor="middle" fill="#cfcfcf" stroke="none" font-family="Archivo, system-ui, sans-serif" font-size="14" font-weight="600">Cleaned, lubricated, adjusted and safety-checked.</text>
+</svg>
