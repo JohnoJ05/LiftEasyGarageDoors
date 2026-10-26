@@ -38,6 +38,13 @@ button,input,select,textarea{font:inherit}
   .view-d header > div > a[href^="tel:"]{padding-left:18px !important;padding-right:18px !important}
 }
 
+/* Phone header: the buttons keep their size; on the narrowest phones the red call
+ * icon goes, since the number now shows under the logo */
+.view-m header > a,.view-m header > button{flex-shrink:0}
+@media (max-width:340px){
+  .view-m header > a[href^="tel:"]{display:none !important}
+}
+
 /* Areas page map (js/map.js: MapLibre + OpenFreeMap). Once it loads, it
  * replaces the design's drawn map in the same frame; without it the drawn map stays. */
 .le-map,.le-map.maplibregl-map{position:absolute;inset:0}
