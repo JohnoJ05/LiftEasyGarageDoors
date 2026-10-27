@@ -1,0 +1,11 @@
+services:
+  website:
+    build: .
+    container_name: lift-easy-garage-doors
+    restart: unless-stopped
+    networks:
+      - web
+
+networks:
+  web:
+    external: true

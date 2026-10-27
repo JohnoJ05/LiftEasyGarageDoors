@@ -1,0 +1,9 @@
+.git
+.impeccable
+DESIGN.md
+PRODUCT.md
+Dockerfile
+compose.yaml
+.dockerignore
+_mobile-test.html
+hero-compare.html
