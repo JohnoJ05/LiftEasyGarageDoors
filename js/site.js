@@ -68,7 +68,12 @@
     ['Remote or opener not working', 'my garage door remote or opener isn’t working'],
     ['Something else', 'I’ve got a problem with my garage door']
   ];
-  /* Two kinds of picker: sending a photo, or a plain message ("WhatsApp Steve") */
+  /* Three kinds of picker: sending a photo, a WhatsApp message ("WhatsApp Steve"),
+   * or an email (any email link to Steve) */
+  var EMAIL = 'steve@lifteasygaragedoors.co.uk';
+  var MESSAGE_ITEMS = ISSUES.slice(0, -1).concat([
+    ['General question', 'I’ve got a question about my garage door']
+  ]);
   var MODES = {
     photo: {
       tag: 'SEND STEVE A PHOTO',
@@ -79,12 +84,24 @@
     message: {
       tag: 'WHATSAPP STEVE',
       help: 'Pick one and WhatsApp opens with your message ready to send.',
-      items: ISSUES.slice(0, -1).concat([
-        ['General question', 'I’ve got a question about my garage door']
-      ]),
+      items: MESSAGE_ITEMS,
       end: '. Can you help?'
+    },
+    email: {
+      tag: 'EMAIL STEVE',
+      help: 'Pick one and your email opens with the message ready. Add your details and send.',
+      items: MESSAGE_ITEMS,
+      end: '. Can you help?',
+      email: true
     }
   };
+  function link(mode, it) {
+    var msg = 'Hi Steve, ' + it[1] + mode.end;
+    if (!mode.email) return WA + encodeURIComponent(msg);
+    var body = 'Hi Steve,\n\n' + it[1].charAt(0).toUpperCase() + it[1].slice(1) + mode.end +
+      '\n\nName: \nPhone: \nTown or postcode: \n\nThanks';
+    return 'mailto:' + EMAIL + '?subject=' + encodeURIComponent('Garage door enquiry: ' + it[0]) + '&body=' + encodeURIComponent(body);
+  }
   var sheet = null, opener = null;
   function closeSheet() {
     if (!sheet) return;
@@ -98,8 +115,7 @@
     sheet = document.createElement('div');
     sheet.className = 'le-sheet';
     var items = mode.items.map(function (it) {
-      var msg = 'Hi Steve, ' + it[1] + mode.end;
-      return '<a class="le-sheet__opt" data-le-direct href="' + WA + encodeURIComponent(msg) + '" target="_blank" rel="noopener">' +
+      return '<a class="le-sheet__opt" data-le-direct href="' + link(mode, it) + '"' + (mode.email ? '' : ' target="_blank" rel="noopener"') + '>' +
         '<span>' + it[0] + '</span><span aria-hidden="true">→</span></a>';
     }).join('');
     sheet.innerHTML = '<div class="le-sheet__backdrop" data-close></div>' +
@@ -120,10 +136,10 @@
   document.addEventListener('click', function (e) {
     // The generic "here's a photo" links and links marked data-le-pick ("WhatsApp Steve");
     // WhatsApp links that already carry a specific message go straight through
-    var a = e.target.closest && e.target.closest('a[href^="https://wa.me/"][href*="here%27s%20a%20photo"], a[data-le-pick]');
+    var a = e.target.closest && e.target.closest('a[href^="https://wa.me/"][href*="here%27s%20a%20photo"], a[data-le-pick], a[href^="mailto:' + EMAIL + '"]');
     if (!a || a.hasAttribute('data-le-direct') || e.ctrlKey || e.metaKey || e.shiftKey) return;
     e.preventDefault();
-    openSheet(a, a.getAttribute('data-le-pick') || 'photo');
+    openSheet(a, a.getAttribute('data-le-pick') || (/^mailto:/.test(a.getAttribute('href')) ? 'email' : 'photo'));
   }, true);
   document.addEventListener('keydown', function (e) {
     if (!sheet) return;
