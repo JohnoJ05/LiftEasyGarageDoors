@@ -68,6 +68,23 @@
     ['Remote or opener not working', 'my garage door remote or opener isn’t working'],
     ['Something else', 'I’ve got a problem with my garage door']
   ];
+  /* Two kinds of picker: sending a photo, or a plain message ("WhatsApp Steve") */
+  var MODES = {
+    photo: {
+      tag: 'SEND STEVE A PHOTO',
+      help: 'Pick one and WhatsApp opens with a message ready. Then just attach your photo and send.',
+      items: ISSUES,
+      end: '. Here’s a photo:'
+    },
+    message: {
+      tag: 'WHATSAPP STEVE',
+      help: 'Pick one and WhatsApp opens with your message ready to send.',
+      items: ISSUES.slice(0, -1).concat([
+        ['General question', 'I’ve got a question about my garage door']
+      ]),
+      end: '. Can you help?'
+    }
+  };
   var sheet = null, opener = null;
   function closeSheet() {
     if (!sheet) return;
@@ -75,21 +92,22 @@
     document.documentElement.style.overflow = '';
     if (opener && opener.focus) opener.focus();
   }
-  function openSheet(from) {
+  function openSheet(from, kind) {
+    var mode = MODES[kind] || MODES.photo;
     opener = from;
     sheet = document.createElement('div');
     sheet.className = 'le-sheet';
-    var items = ISSUES.map(function (it) {
-      var msg = 'Hi Steve, ' + it[1] + '. Here’s a photo:';
+    var items = mode.items.map(function (it) {
+      var msg = 'Hi Steve, ' + it[1] + mode.end;
       return '<a class="le-sheet__opt" data-le-direct href="' + WA + encodeURIComponent(msg) + '" target="_blank" rel="noopener">' +
         '<span>' + it[0] + '</span><span aria-hidden="true">→</span></a>';
     }).join('');
     sheet.innerHTML = '<div class="le-sheet__backdrop" data-close></div>' +
       '<div class="le-sheet__panel" role="dialog" aria-modal="true" aria-labelledby="le-sheet-title">' +
-      '<div class="le-sheet__head"><div><div class="le-sheet__tag">SEND STEVE A PHOTO</div>' +
+      '<div class="le-sheet__head"><div><div class="le-sheet__tag">' + mode.tag + '</div>' +
       '<h2 id="le-sheet-title">What’s the problem?</h2></div>' +
       '<button type="button" class="le-sheet__x" data-close aria-label="Close">✕</button></div>' +
-      '<p class="le-sheet__help">Pick one and WhatsApp opens with a message ready. Then just attach your photo and send.</p>' +
+      '<p class="le-sheet__help">' + mode.help + '</p>' +
       '<div class="le-sheet__list">' + items + '</div></div>';
     document.body.appendChild(sheet);
     document.documentElement.style.overflow = 'hidden';
@@ -100,11 +118,12 @@
     sheet.querySelector('.le-sheet__opt').focus();
   }
   document.addEventListener('click', function (e) {
-    // Only the generic "here's a photo" links; WhatsApp links that already carry a specific message go straight through
-    var a = e.target.closest && e.target.closest('a[href^="https://wa.me/"][href*="here%27s%20a%20photo"]');
+    // The generic "here's a photo" links and links marked data-le-pick ("WhatsApp Steve");
+    // WhatsApp links that already carry a specific message go straight through
+    var a = e.target.closest && e.target.closest('a[href^="https://wa.me/"][href*="here%27s%20a%20photo"], a[data-le-pick]');
     if (!a || a.hasAttribute('data-le-direct') || e.ctrlKey || e.metaKey || e.shiftKey) return;
     e.preventDefault();
-    openSheet(a);
+    openSheet(a, a.getAttribute('data-le-pick') || 'photo');
   }, true);
   document.addEventListener('keydown', function (e) {
     if (!sheet) return;
