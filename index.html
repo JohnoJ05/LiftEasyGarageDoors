@@ -50,7 +50,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&amp;family=Inter:wght@400;500;600&amp;family=Poppins:wght@600;700;800;900&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/site.css?v=7">
+<link rel="stylesheet" href="css/site.css?v=8">
 <style>
 /* Desktop layout */
 .view-d a:hover{opacity:.85}
@@ -229,7 +229,7 @@
 <div style="font-size: 12px; font-weight: 700; letter-spacing: 1.6px; font-stretch: 125%; color: #FF3B3B">02 - FAST RESPONSE REPAIRS</div>
 <h2 class="le-h2" style="margin: 22px 0 0; font-size: 52px; font-weight: 800; font-stretch: 110%; line-height: 1.02; letter-spacing: -1.2px">Garage doors don’t always choose a convenient time to stop working<span style="color: #FFD401">.</span></h2>
 <p style="margin: 22px 0 0; font-size: 17px; line-height: 1.55; color: #dddddd; max-width: 460px">That’s why Steve runs a reactive, fast-response repair service, with same-day repairs wherever possible, to get your door moving again quickly.</p>
-<p style="margin: 18px 0 0; font-size: 17px; line-height: 1.55; color: #dddddd; max-width: 460px">Text or WhatsApp a photo of the door and Steve will tell you what needs doing and what it’ll cost, then fix it in one visit.</p>
+<p style="margin: 18px 0 0; font-size: 17px; line-height: 1.55; color: #dddddd; max-width: 460px">WhatsApp a photo of the door and Steve will tell you what needs doing and what it’ll cost, then fix it in one visit.</p>
 <div style="margin-top: 34px"><a href="#how-it-works" style="display: inline-flex; align-items: center; gap: 10px; color: #ffffff; font-size: 12px; font-weight: 800; font-stretch: 125%; letter-spacing: 1.4px"><span style="border-bottom: 2px solid #D7141A; padding-bottom: 4px">HOW IT WORKS</span> <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a></div>
 </div>
 <div style="display: flex; flex-direction: column; gap: 22px">
@@ -327,7 +327,7 @@
 <div style="margin-top: 30px; display: flex; flex-wrap: wrap; align-items: center; gap: 14px 18px">
 <a href="tel:07939500544" style="display: flex; align-items: center; gap: 18px; background: #111111; color: #ffffff; padding: 14px 24px 14px 22px; min-height: 76px; box-sizing: border-box">
 <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#FF3B3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg>
-<span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 12px; font-weight: 800; font-stretch: 125%; letter-spacing: 1.4px">CALL OR TEXT STEVE</span><span style="font-size: 30px; font-weight: 800; font-stretch: 105%; color: #FF3B3B; line-height: 1">07939 500544</span></span>
+<span style="display: flex; flex-direction: column; gap: 2px"><span style="font-size: 12px; font-weight: 800; font-stretch: 125%; letter-spacing: 1.4px">CALL OR WHATSAPP STEVE</span><span style="font-size: 30px; font-weight: 800; font-stretch: 105%; color: #FF3B3B; line-height: 1">07939 500544</span></span>
 </a>
 <a href="mailto:steve@lifteasygaragedoors.co.uk" style="display: flex; align-items: center; gap: 14px; border: 1.5px solid #ffffff; color: #ffffff; padding: 0 22px; min-height: 76px; box-sizing: border-box; font-size: 14px; font-weight: 800; font-stretch: 112%; letter-spacing: 1.4px">SEND A MESSAGE <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111111" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
 <div style="font-size: 15px; font-weight: 600; line-height: 1.75; margin-left: 6px">Fast response · Same-day repair service<br>No call-out fee · Over 30 years’ experience</div>
@@ -479,7 +479,7 @@
 <h3 style="margin: 10px 0 0; font-size: 22px; font-weight: 800; font-stretch: 105%; line-height: 1.15">{{ result.title }}</h3>
 <p style="margin: 10px 0 0; font-size: 15px; line-height: 1.5; color: #e0e0e0">{{ result.text }}</p>
 <div style="margin-top: 18px; display: flex; flex-direction: column; gap: 10px">
-<a href="{{ result.sms }}" style="min-height: 48px; background: #D7141A; color: #ffffff; display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 15px; font-weight: 800; font-stretch: 105%">Text Steve about this</a>
+<a href="{{ result.sms }}" style="min-height: 48px; background: #D7141A; color: #ffffff; display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 15px; font-weight: 800; font-stretch: 105%">WhatsApp Steve about this</a>
 <a href="{{ result.href }}" style="min-height: 48px; border: 2px solid #ffffff; display: flex; align-items: center; justify-content: center; gap: 10px; font-size: 13px; font-weight: 800; font-stretch: 115%; letter-spacing: 1.4px">{{ result.cta }} <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></a>
 </div>
 </div>
@@ -526,7 +526,7 @@
 <div style="flex: 0 0 230px; scroll-snap-align: start; border: 1px solid #3a3a3a; padding: 20px 18px">
 <div style="width: 40px; height: 40px; background: #D7141A; color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 900">1</div>
 <div style="margin-top: 14px; font-size: 18px; font-weight: 800">Send a photo</div>
-<div style="margin-top: 6px; font-size: 14px; line-height: 1.45; color: #cfcfcf">Text or WhatsApp a photo of the door.</div>
+<div style="margin-top: 6px; font-size: 14px; line-height: 1.45; color: #cfcfcf">WhatsApp a photo of the door.</div>
 </div>
 <div style="flex: 0 0 230px; scroll-snap-align: start; border: 1px solid #3a3a3a; padding: 20px 18px">
 <div style="width: 40px; height: 40px; background: #D7141A; color: #ffffff; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 900">2</div>
@@ -598,7 +598,7 @@
 </div>
 <a href="tel:07939500544" style="margin-top: 22px; display: flex; align-items: center; gap: 14px; background: #111111; color: #ffffff; padding: 14px 18px">
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#FF3B3B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg>
-<span style="display: flex; flex-direction: column"><span style="font-size: 11px; font-weight: 800; font-stretch: 125%; letter-spacing: 1.4px">CALL OR TEXT STEVE</span><span style="font-size: 28px; font-weight: 800; font-stretch: 105%; color: #FF3B3B; line-height: 1.05">07939 500544</span></span>
+<span style="display: flex; flex-direction: column"><span style="font-size: 11px; font-weight: 800; font-stretch: 125%; letter-spacing: 1.4px">CALL OR WHATSAPP STEVE</span><span style="font-size: 28px; font-weight: 800; font-stretch: 105%; color: #FF3B3B; line-height: 1.05">07939 500544</span></span>
 </a>
 <p style="margin: 16px 0 0; font-size: 14px; font-weight: 700; line-height: 1.6">Fast response · Same-day repair service<br>No call-out fee · Over 30 years’ experience</p>
 </section>
@@ -640,14 +640,14 @@
 <a href="areas.html" style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid #2e2e2e; font-size: 28px; font-weight: 800; font-stretch: 108%">Areas <span aria-hidden="true" style="color: #FF3B3B">→</span></a>
 <a href="contact.html" style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid #2e2e2e; font-size: 28px; font-weight: 800; font-stretch: 108%">Contact <span aria-hidden="true" style="color: #FF3B3B">→</span></a>
 </nav>
-<a href="tel:07939500544" style="margin: auto 20px 24px; background: #D7141A; color: #ffffff; padding: 16px 18px; display: flex; flex-direction: column"><span style="font-size: 11px; font-weight: 800; letter-spacing: 1.4px; font-stretch: 125%">CALL OR TEXT STEVE</span><span style="font-size: 28px; font-weight: 800; font-stretch: 105%">07939 500544</span></a>
+<a href="tel:07939500544" style="margin: auto 20px 24px; background: #D7141A; color: #ffffff; padding: 16px 18px; display: flex; flex-direction: column"><span style="font-size: 11px; font-weight: 800; letter-spacing: 1.4px; font-stretch: 125%">CALL OR WHATSAPP STEVE</span><span style="font-size: 28px; font-weight: 800; font-stretch: 105%">07939 500544</span></a>
 </div>
 </sc-if>
 
 </div>
 </template>
-<script src="js/dc.js?v=7"></script>
-<script src="js/site.js?v=7"></script>
+<script src="js/dc.js?v=8"></script>
+<script src="js/site.js?v=8"></script>
 <script>
 var PhoneView = (function () {
 class Component extends DCLogic {
@@ -656,7 +656,7 @@ class Component extends DCLogic {
     this.state = { menuOpen: false, sym: 0, showBar: false };
   }
   renderVals() {
-    const sms = (t) => 'sms:07939500544?&body=' + encodeURIComponent('Hi Steve, my garage door: ' + t);
+    const sms = (t) => 'https://wa.me/447939500544?text=' + encodeURIComponent('Hi Steve, my garage door: ' + t);
     const data = [
       { label: 'Door stuck', tag: 'GARAGE DOOR REPAIRS', title: 'Steve will find the fault and put it right', text: 'Springs, cables, locks, rollers and motors. Same-day repairs wherever possible.', cta: 'GET A REPAIR', href: 'contact.html' },
       { label: 'Hit a bin or obstruction', tag: 'TANGLED CABLES', title: 'Door hit something and now it’s stuck?', text: 'On some doors, hitting an obstruction (a wheelie bin, for example) tangles the side tension cables so the door won’t move. Steve can fix it, sometimes with no new parts. Damaged cables are replaced as a pair, then the door gets a service so it works properly again.', cta: 'GET A REPAIR', href: 'contact.html' },
@@ -664,7 +664,7 @@ class Component extends DCLogic {
       { label: 'Heavy or sticking', tag: 'SERVICING & ADJUSTMENT', title: 'Get it set up properly again', text: 'Steve can adjust the door so it opens and closes evenly and isn’t straining its springs or opener.', cta: 'SEE SERVICING', href: 'servicing.html' },
       { label: 'Remote not working', tag: 'REMOTES & AUTOMATIC DOORS', title: 'Remote control system playing up?', text: 'Steve works out whether it’s the remote control system or the door itself, then puts it right.', cta: 'SEE REMOTES', href: 'remotes.html' },
       { label: 'Won’t close fully', tag: 'GARAGE DOOR REPAIRS', title: 'Let’s get it closing properly', text: 'Steve can set the door up so it sits properly in the frame, then fix any worn parts while he’s there.', cta: 'GET A REPAIR', href: 'contact.html' },
-      { label: 'Not sure', tag: 'NOT SURE?', title: 'Send Steve a photo', text: 'Text or WhatsApp a photo of the door and Steve will tell you what needs doing and what it’ll cost.', cta: 'CONTACT STEVE', href: 'contact.html' }
+      { label: 'Not sure', tag: 'NOT SURE?', title: 'Send Steve a photo', text: 'WhatsApp a photo of the door and Steve will tell you what needs doing and what it’ll cost.', cta: 'CONTACT STEVE', href: 'contact.html' }
     ];
     const sel = this.state.sym;
     const symptoms = data.map((d, i) => ({ label: d.label, on: i === sel, off: i !== sel, pick: () => this.setState({ sym: i }) }));

@@ -55,6 +55,67 @@
   }
   var tooBig = 'Those photos are too large to send together (over 10MB). Please send fewer, or send them to Steve on WhatsApp.';
 
+  /* "Send Steve a photo" (WhatsApp) buttons, on every page: ask what the problem
+   * is first, then open WhatsApp with a message ready so the customer only has
+   * to attach their photo. WhatsApp links can carry text but not photos. */
+  var WA = 'https://wa.me/447939500544?text=';
+  var ISSUES = [
+    ['Door stuck or won’t open', 'my garage door is stuck and won’t open'],
+    ['Hit a bin or obstruction', 'my garage door hit something and now it’s stuck'],
+    ['Noisy or grinding', 'my garage door is noisy or grinding'],
+    ['Heavy or sticking', 'my garage door is heavy or sticking'],
+    ['Won’t close fully', 'my garage door won’t close fully'],
+    ['Remote or opener not working', 'my garage door remote or opener isn’t working'],
+    ['Something else', 'I’ve got a problem with my garage door']
+  ];
+  var sheet = null, opener = null;
+  function closeSheet() {
+    if (!sheet) return;
+    sheet.remove(); sheet = null;
+    document.documentElement.style.overflow = '';
+    if (opener && opener.focus) opener.focus();
+  }
+  function openSheet(from) {
+    opener = from;
+    sheet = document.createElement('div');
+    sheet.className = 'le-sheet';
+    var items = ISSUES.map(function (it) {
+      var msg = 'Hi Steve, ' + it[1] + '. Here’s a photo:';
+      return '<a class="le-sheet__opt" data-le-direct href="' + WA + encodeURIComponent(msg) + '" target="_blank" rel="noopener">' +
+        '<span>' + it[0] + '</span><span aria-hidden="true">→</span></a>';
+    }).join('');
+    sheet.innerHTML = '<div class="le-sheet__backdrop" data-close></div>' +
+      '<div class="le-sheet__panel" role="dialog" aria-modal="true" aria-labelledby="le-sheet-title">' +
+      '<div class="le-sheet__head"><div><div class="le-sheet__tag">SEND STEVE A PHOTO</div>' +
+      '<h2 id="le-sheet-title">What’s the problem?</h2></div>' +
+      '<button type="button" class="le-sheet__x" data-close aria-label="Close">✕</button></div>' +
+      '<p class="le-sheet__help">Pick one and WhatsApp opens with a message ready. Then just attach your photo and send.</p>' +
+      '<div class="le-sheet__list">' + items + '</div></div>';
+    document.body.appendChild(sheet);
+    document.documentElement.style.overflow = 'hidden';
+    sheet.addEventListener('click', function (e) {
+      if (e.target.closest('[data-close]')) closeSheet();
+      else if (e.target.closest('.le-sheet__opt')) setTimeout(closeSheet, 0);
+    });
+    sheet.querySelector('.le-sheet__opt').focus();
+  }
+  document.addEventListener('click', function (e) {
+    // Only the generic "here's a photo" links; WhatsApp links that already carry a specific message go straight through
+    var a = e.target.closest && e.target.closest('a[href^="https://wa.me/"][href*="here%27s%20a%20photo"]');
+    if (!a || a.hasAttribute('data-le-direct') || e.ctrlKey || e.metaKey || e.shiftKey) return;
+    e.preventDefault();
+    openSheet(a);
+  }, true);
+  document.addEventListener('keydown', function (e) {
+    if (!sheet) return;
+    if (e.key === 'Escape') { closeSheet(); return; }
+    if (e.key === 'Tab') {   // keep focus inside the panel
+      var f = sheet.querySelectorAll('a,button'), first = f[0], last = f[f.length - 1];
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+  });
+
   if (page !== 'contact.html') return;
 
   /* Desktop form: a real <form> in the page */
