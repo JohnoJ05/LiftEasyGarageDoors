@@ -1,6 +1,6 @@
 /* Lift Easy: map of the areas Steve covers (Areas page).
  *
- * Draws North Yorkshire, Teesside and County Durham from official ONS council
+ * Draws North Yorkshire, West Yorkshire, Teesside and County Durham from official ONS council
  * boundaries (assets/map/areas.geojson), with Steve's base in Northallerton.
  * The map uses MapLibre (open source) and OpenFreeMap tiles: no API key, no
  * account and no usage limits, so it can never be billed. The library only
@@ -15,12 +15,13 @@
   var TILES = 'https://tiles.openfreemap.org/styles/positron';
 
   var LE = window.LE = window.LE || { hooks: {} };
-  var AREAS = ['north-yorkshire', 'teesside', 'county-durham'];   // same order as the design's region buttons
+  var AREAS = ['north-yorkshire', 'teesside', 'county-durham', 'west-yorkshire'];   // same order as the design's region buttons
   var BASE = { lng: -1.4339, lat: 54.3389, name: 'Northallerton' };
-  var LABEL_AT = {   // where each area's name sits, so the three don't overlap
+  var LABEL_AT = {   // where each area's name sits, so they don't overlap
     'north-yorkshire': [-1.45, 54.05],
     'teesside': [-1.15, 54.6],
-    'county-durham': [-1.85, 54.72]
+    'county-durham': [-1.85, 54.72],
+    'west-yorkshire': [-1.7, 53.72]
   };
   var RED = '#D7141A';
 
@@ -43,7 +44,7 @@
   }
   function loadAreas() {
     if (geojson) return Promise.resolve(geojson);
-    return fetch('assets/map/areas.geojson').then(function (r) { return r.json(); }).then(function (g) {
+    return fetch('assets/map/areas.geojson?v=2').then(function (r) { return r.json(); }).then(function (g) {
       geojson = g;
       var w = 180, s = 90, e = -180, n = -90;
       g.features.forEach(function (f) {
@@ -124,7 +125,7 @@
     var el = document.createElement('div');
     el.className = 'le-map';
     el.setAttribute('role', 'region');
-    el.setAttribute('aria-label', 'Map of the areas Steve covers: North Yorkshire, Teesside and County Durham');
+    el.setAttribute('aria-label', 'Map of the areas Steve covers: North Yorkshire, West Yorkshire, Teesside and County Durham');
     return el;
   }
   // Load everything once the slot is near the screen, then make the map
