@@ -147,28 +147,56 @@
 </svg>
 <div aria-hidden="true" style="position: absolute; left: 16px; top: 16px; width: 32px; height: 32px; border: 1px solid #555555; color: #cccccc; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 800">N</div>
 </figure>
-<div class="ar-four" style="margin-top: 52px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 2px solid #111111; border-left: 2px solid #111111; background: #ffffff">
-<div style="padding: 32px 28px 44px; border-right: 2px solid #111111; border-bottom: 2px solid #111111">
-<div aria-hidden="true" style="width: 32px; height: 4px; background: #D7141A"></div>
-<h3 style="margin: 14px 0 0; font-size: 23px; font-weight: 800; font-stretch: 105%; letter-spacing: -0.3px">North Yorkshire</h3>
-<p style="margin: 12px 0 0; font-size: 16px; line-height: 1.55; color: #222222">Fast-response garage door repairs, servicing and remote-control work for homes across North Yorkshire.</p>
+<div data-area-spin style="margin-top: 52px; background: #ffffff; border: 2px solid #111111; border-top: 6px solid #D7141A; padding: 44px 48px 40px">
+<div style="font-size: 13px; font-weight: 800; letter-spacing: 2px; font-stretch: 125%; color: #555555">COVERED ✓</div>
+<p style="margin: 16px 0 0; font-size: 34px; font-weight: 800; font-stretch: 105%; line-height: 1.15; letter-spacing: -0.6px; max-width: 900px">Fast-response garage door repairs, servicing and remote-control work for homes across<span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap"> North Yorkshire, West Yorkshire, Teesside and County Durham. North Yorkshire: Northallerton, Thirsk, Bedale, Richmond, Stokesley, Ripon. Teesside: Middlesbrough, Stockton, Yarm, Redcar, Hartlepool, Guisborough. County Durham: Darlington, Durham, Newton Aycliffe, Bishop Auckland, Barnard Castle, Chester-le-Street. West Yorkshire: Leeds, Wakefield, Bradford, Huddersfield, Halifax, Wetherby.</span></p>
+<div aria-hidden="true" style="margin-top: 6px; height: 72px; overflow: hidden; font-size: 58px; font-weight: 900; font-stretch: 108%; line-height: 72px; letter-spacing: -1.4px; color: #D7141A"><span data-place style="display: inline-block; background: linear-gradient(transparent 70%, #FFD401 70%, #FFD401 92%, transparent 92%); transition: transform .35s ease, opacity .35s ease">North Yorkshire</span></div>
+<div role="group" aria-label="Areas Steve covers" style="margin-top: 30px; padding-top: 24px; border-top: 1px solid #d6d6d6; display: flex; flex-wrap: wrap; gap: 10px"><button type="button" data-area="0" aria-pressed="true" style="min-height: 48px; padding: 0 18px; border: 2px solid #111111; background: #ffffff; color: #111111; font-family: 'Archivo', system-ui, sans-serif; font-size: 16px; font-weight: 800; cursor: pointer">North Yorkshire</button><button type="button" data-area="1" aria-pressed="false" style="min-height: 48px; padding: 0 18px; border: 2px solid #111111; background: #ffffff; color: #111111; font-family: 'Archivo', system-ui, sans-serif; font-size: 16px; font-weight: 800; cursor: pointer">Teesside</button><button type="button" data-area="2" aria-pressed="false" style="min-height: 48px; padding: 0 18px; border: 2px solid #111111; background: #ffffff; color: #111111; font-family: 'Archivo', system-ui, sans-serif; font-size: 16px; font-weight: 800; cursor: pointer">County Durham</button><button type="button" data-area="3" aria-pressed="false" style="min-height: 48px; padding: 0 18px; border: 2px solid #111111; background: #ffffff; color: #111111; font-family: 'Archivo', system-ui, sans-serif; font-size: 16px; font-weight: 800; cursor: pointer">West Yorkshire</button></div>
 </div>
-<div style="padding: 32px 28px 44px; border-right: 2px solid #111111; border-bottom: 2px solid #111111">
-<div aria-hidden="true" style="width: 32px; height: 4px; background: #D7141A"></div>
-<h3 style="margin: 14px 0 0; font-size: 23px; font-weight: 800; font-stretch: 105%; letter-spacing: -0.3px">Teesside</h3>
-<p style="margin: 12px 0 0; font-size: 16px; line-height: 1.55; color: #222222">Fast-response garage door repairs, servicing and remote-control work for homes across Teesside.</p>
-</div>
-<div style="padding: 32px 28px 44px; border-right: 2px solid #111111; border-bottom: 2px solid #111111">
-<div aria-hidden="true" style="width: 32px; height: 4px; background: #D7141A"></div>
-<h3 style="margin: 14px 0 0; font-size: 23px; font-weight: 800; font-stretch: 105%; letter-spacing: -0.3px">County Durham</h3>
-<p style="margin: 12px 0 0; font-size: 16px; line-height: 1.55; color: #222222">Fast-response garage door repairs, servicing and remote-control work for homes across County Durham.</p>
-</div>
-<div style="padding: 32px 28px 44px; border-right: 2px solid #111111; border-bottom: 2px solid #111111">
-<div aria-hidden="true" style="width: 32px; height: 4px; background: #D7141A"></div>
-<h3 style="margin: 14px 0 0; font-size: 23px; font-weight: 800; font-stretch: 105%; letter-spacing: -0.3px">West Yorkshire</h3>
-<p style="margin: 12px 0 0; font-size: 16px; line-height: 1.55; color: #222222">Fast-response garage door repairs, servicing and remote-control work for homes across West Yorkshire.</p>
-</div>
-</div>
+<script>
+/* Areas block (desktop): the place name cycles through each area and its towns,
+ * and the matching area button lights up. Buttons jump to an area. Stays still
+ * for people who prefer reduced motion. */
+(function () {
+  var box = document.querySelector('[data-area-spin]');
+  if (!box) return;
+  var AREAS = [['North Yorkshire', ['Northallerton', 'Thirsk', 'Bedale', 'Richmond', 'Stokesley', 'Ripon']], ['Teesside', ['Middlesbrough', 'Stockton', 'Yarm', 'Redcar', 'Hartlepool', 'Guisborough']], ['County Durham', ['Darlington', 'Durham', 'Newton Aycliffe', 'Bishop Auckland', 'Barnard Castle', 'Chester-le-Street']], ['West Yorkshire', ['Leeds', 'Wakefield', 'Bradford', 'Huddersfield', 'Halifax', 'Wetherby']]];
+  var list = [];
+  AREAS.forEach(function (a, i) { list.push([a[0], i]); a[1].forEach(function (t) { list.push([t, i]); }); });
+  var place = box.querySelector('[data-place]'), chips = box.querySelectorAll('[data-area]');
+  var still = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var at = 0, timer = null, slide = place.style.transition;
+  function light(i) {
+    for (var k = 0; k < chips.length; k++) {
+      var on = k === i;
+      chips[k].setAttribute('aria-pressed', on ? 'true' : 'false');
+      chips[k].style.background = on ? '#111111' : '#ffffff';
+      chips[k].style.color = on ? '#FF3B3B' : '#111111';
+    }
+  }
+  function show(n) {
+    at = (n + list.length) % list.length;
+    if (still) { place.textContent = list[at][0]; light(list[at][1]); return; }
+    place.style.transform = 'translateY(-60%)'; place.style.opacity = '0';
+    setTimeout(function () {
+      place.textContent = list[at][0];
+      place.style.transition = 'none'; place.style.transform = 'translateY(60%)';
+      place.offsetWidth;   // restart the slide from below
+      place.style.transition = slide; place.style.transform = ''; place.style.opacity = '1';
+      light(list[at][1]);
+    }, 350);
+  }
+  function run() { if (!still) { clearInterval(timer); timer = setInterval(function () { show(at + 1); }, 1800); } }
+  for (var k = 0; k < chips.length; k++) chips[k].addEventListener('click', function () {
+    var i = +this.getAttribute('data-area');
+    for (var j = 0; j < list.length; j++) if (list[j][0] === AREAS[i][0]) { show(j); break; }
+    run();
+  });
+  box.addEventListener('mouseenter', function () { clearInterval(timer); });
+  box.addEventListener('mouseleave', run);
+  light(0); run();
+})();
+</script>
 <div style="margin-top: 48px; background: #D7141A; color: #ffffff; padding: 26px 24px 28px">
 <div style="font-size: 13px; font-weight: 800; font-stretch: 125%; letter-spacing: 1.8px">DON’T SEE YOUR AREA LISTED?</div>
 <p style="margin: 14px 0 0; font-size: 17px">Give Steve a call on <a href="tel:07939500544" style="font-weight: 800; border-bottom: 2px solid #111111">07939 500544</a>, he may still be able to help.</p>
