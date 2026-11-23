@@ -7,3 +7,5 @@ compose.yaml
 .dockerignore
 _mobile-test.html
 hero-compare.html
+Images
+nginx.conf
