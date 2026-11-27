@@ -2,8 +2,8 @@
 """Lift Easy: build the town pages (garage-door-repairs-<town>.html).
 
 Each page reuses the Areas page's header, footer, phone menu and sticky call
-bar, and swaps in that town's own content from TOWNS below. Run it from the
-repo root after editing TOWNS:
+bar, and swaps in that town's own content from tools/towns.py. Run it from the
+repo root after editing the towns:
 
     python3 tools/town_pages.py
 
@@ -21,18 +21,9 @@ ROOT = Path(__file__).resolve().parent.parent
 SITE = 'https://lifteasygaragedoors.co.uk/'
 WA = 'https://wa.me/447939500544?text='
 
-TOWNS = [
-    {
-        'name': 'Northallerton',
-        'slug': 'northallerton',
-        'county': 'North Yorkshire',
-        'travel': 'Steve’s home base',
-        'intro': 'Northallerton is where Steve is based, so if your garage door is stuck, noisy or won’t close, he’s usually only a few minutes away. Most repairs are done the same day, in one visit, with the parts on the van.',
-        'local': 'Around Northallerton you’ll find everything from older up-and-over doors on the established streets around the town centre and Romanby, to electric sectional and roller doors on the newer estates to the north of town. Steve works on all of them, and as it’s his own patch, he’s often able to fit in a quick look between jobs.',
-        'villages': ['Romanby', 'Brompton', 'Yafforth', 'Ainderby Steeple', 'Morton-on-Swale', 'North Otterington', 'Thornton-le-Beans', 'Osmotherley', 'East Cowton', 'Great Smeaton'],
-        'neighbours': ['thirsk', 'bedale', 'richmond', 'stokesley'],
-    },
-]
+import sys
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from towns import TOWNS  # noqa: E402
 
 PHONE_SVG = '<svg width="{s}" height="{s}" viewBox="0 0 24 24" fill="none" stroke="{c}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg>'
 TICK = '<svg width="16" height="14" viewBox="0 0 16 14" fill="none" stroke="#FF3B3B" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink: 0; margin-top: 4px"><path d="M2 7.5 L6 11.5 L14 2.5"></path></svg>'
@@ -183,7 +174,7 @@ def phone(t, i, made):
     return f'''<!-- Hero -->
 <section style="background: #111111; padding: 28px 20px 32px">
 <nav aria-label="Breadcrumb" style="font-size: 11px; font-weight: 800; font-stretch: 125%; letter-spacing: 1.8px; color: #cccccc"><a href="index.html">HOME</a> / <a href="areas.html">AREAS</a> / <span style="color: #FF3B3B">{n.upper()}</span></nav>
-<h1 style="margin: 16px 0 0; overflow-wrap: anywhere; font-size: clamp(28px, 8.4vw, 40px); font-weight: 900; font-stretch: 112%; line-height: 0.95; letter-spacing: -1.2px; text-transform: uppercase">Garage door repairs <span style="color: #FF3B3B">in {n}</span></h1>
+<div role="heading" aria-level="1" style="margin: 16px 0 0; overflow-wrap: anywhere; font-size: clamp(28px, 8.4vw, 40px); font-weight: 900; font-stretch: 112%; line-height: 0.95; letter-spacing: -1.2px; text-transform: uppercase">Garage door repairs <span style="color: #FF3B3B">in {n}</span></div>
 <p style="margin: 16px 0 0; font-size: 16px; line-height: 1.5; color: #e6e6e6">{H(t["intro"])}</p>
 <a href="tel:07939500544" style="margin-top: 20px; display: flex; align-items: center; gap: 14px; background: #D7141A; color: #ffffff; padding: 14px 18px">{PHONE_SVG.format(s=24, c="#111111")}<span style="display: flex; flex-direction: column"><span style="font-size: 11px; font-weight: 800; font-stretch: 125%; letter-spacing: 1.4px">CALL OR WHATSAPP STEVE</span><span style="font-size: 28px; font-weight: 800; font-stretch: 105%; line-height: 1.05">07939 500544</span></span></a>
 <a href="{msg}" style="margin-top: 10px; min-height: 52px; display: flex; align-items: center; justify-content: center; border: 2px solid #ffffff; font-size: 14px; font-weight: 800; font-stretch: 115%; letter-spacing: 1.4px">SEND STEVE A PHOTO</a>
@@ -265,7 +256,75 @@ def build(t, i, made):
     return page_name(t['slug'])
 
 
+GROUPS = ['North Yorkshire', 'Teesside', 'County Durham', 'West Yorkshire']
+FOOTER_TOWNS = ['northallerton', 'thirsk', 'bedale', 'ripon', 'darlington', 'middlesbrough', 'stockton-on-tees', 'yarm', 'york', 'leeds']
+PAGES = ['index.html', 'servicing.html', 'remotes.html', 'about.html', 'contact.html', 'areas.html']
+
+
+def fill(s, key, body):
+    a = s.index(f'<!-- {key}:start -->') + len(f'<!-- {key}:start -->')
+    b = s.index(f'<!-- {key}:end -->')
+    return s[:a] + '\n' + body + s[b:]
+
+
+def town_chip(t, fs):
+    return f'<li><a href="{page_name(t["slug"])}" style="display: block; border: 1.5px solid #111111; background: #ffffff; padding: 6px 10px; font-size: {fs}px; font-weight: 700; line-height: 1.2; color: #111111">{H(t["name"])}</a></li>'
+
+
+def areas_lists():
+    by = {g: [t for t in TOWNS if t['county'] == g] for g in GROUPS}
+    cols = ''.join(f'<div><h3 style="margin: 0; font-size: 20px; font-weight: 800; font-stretch: 105%; padding-bottom: 10px; border-bottom: 3px solid #D7141A">{g}</h3><ul style="list-style: none; margin: 10px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px">{"".join(town_chip(t, 14) for t in ts)}</ul></div>\n' for g, ts in by.items())
+    desk = f'''<div style="margin-top: 64px">
+<div style="font-size: 13px; font-weight: 800; letter-spacing: 2px; font-stretch: 125%; color: #555555">TOWNS STEVE COVERS</div>
+<h2 style="margin: 12px 0 0; font-size: 40px; font-weight: 800; font-stretch: 108%; line-height: 1.05; letter-spacing: -1px">Garage door repairs in your town</h2>
+<p style="margin: 12px 0 0; font-size: 17px; line-height: 1.5; max-width: 640px">Pick your town to see what Steve fixes there and the villages around it. He covers the villages in between too.</p>
+<div class="ar-four" style="margin-top: 32px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 32px">
+{cols}</div>
+</div>
+'''
+    det = ''.join(f'<details style="border: 2px solid #111111; background: #ffffff; margin-top: 8px"><summary style="min-height: 52px; display: flex; align-items: center; justify-content: space-between; padding: 0 14px; font-size: 16px; font-weight: 800; cursor: pointer; list-style: none">{g}<span aria-hidden="true" style="color: #D7141A; font-size: 22px; font-weight: 800">+</span></summary><div style="padding: 0 14px 14px"><ul style="list-style: none; margin: 10px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px">{"".join(town_chip(t, 14) for t in ts)}</ul></div></details>\n' for g, ts in by.items())
+    mob = f'''<div style="margin-top: 24px">
+<div style="font-size: 11px; font-weight: 800; letter-spacing: 1.6px; font-stretch: 125%; color: #555555">TOWNS STEVE COVERS</div>
+<h3 style="margin: 8px 0 0; font-size: 24px; font-weight: 800; font-stretch: 105%; line-height: 1.1">Garage door repairs in your town</h3>
+<p style="margin: 8px 0 0; font-size: 15px; line-height: 1.5; color: #333333">Tap an area, then your town.</p>
+{det}</div>
+'''
+    return desk, mob
+
+
+def footer_towns(fs):
+    names = {t['slug']: t['name'] for t in TOWNS}
+    links = ' · '.join(f'<a href="{page_name(x)}" style="color: #dddddd">{H(names[x])}</a>' for x in FOOTER_TOWNS)
+    return f'<div style="margin-top: 8px; font-size: {fs}px; color: #b0b0b0; line-height: 1.6">Garage door repairs in {links} · <a href="areas.html" style="color: #ffffff; font-weight: 700">all areas</a></div>\n'
+
+
+def update_site():
+    desk, mob = areas_lists()
+    for f in PAGES:
+        s = (ROOT / f).read_text()
+        s = fill(s, 'footer-towns-d', footer_towns(13))
+        s = fill(s, 'footer-towns-m', footer_towns(13))
+        if f == 'areas.html':
+            s = fill(s, 'towns-d', desk)
+            s = fill(s, 'towns-m', mob)
+        if f == 'index.html':
+            m = re.search(r'(<script type="application/ld\+json">)(.*?)(</script>)', s, re.S)
+            d = json.loads(m.group(2))
+            d['areaServed'] = [a for a in d['areaServed'] if a.get('@type') != 'City'] + [{'@type': 'City', 'name': t['name']} for t in TOWNS]
+            s = s[:m.start(2)] + '\n' + json.dumps(d, indent=2, ensure_ascii=False) + '\n' + s[m.end(2):]
+        (ROOT / f).write_text(s)
+    # Sitemap: the main pages, then every town page
+    from datetime import date
+    today = date.today().isoformat()
+    sm = (ROOT / 'sitemap.xml').read_text()
+    sm = re.sub(r'\s*<url><loc>[^<]*garage-door-repairs-[^<]*</loc>.*?</url>', '', sm)
+    extra = ''.join(f'  <url><loc>{SITE}{page_name(t["slug"])}</loc><lastmod>{today}</lastmod><priority>0.7</priority></url>\n' for t in TOWNS)
+    sm = sm.replace('</urlset>', extra + '</urlset>')
+    (ROOT / 'sitemap.xml').write_text(sm)
+
+
 if __name__ == '__main__':
+    update_site()
     made = {t['slug']: t['name'] for t in TOWNS}
     for i, t in enumerate(TOWNS):
         print('wrote', build(t, i, made))
